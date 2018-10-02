@@ -1,0 +1,22 @@
+{
+  "name": "iamtravishall",
+  "version": "1.0.0",
+  "description": "Portfolio of Travis Hall, UX Designer and UI Developer",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/travhall/iamtravishall.git"
+  },
+  "author": "Travis Hall",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/travhall/iamtravishall/issues"
+  },
+  "homepage": "https://github.com/travhall/iamtravishall#readme",
+  "dependencies": {
+    "@angular/cli": "^7.0.0-rc.1"
+  }
+}
