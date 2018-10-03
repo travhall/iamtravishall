@@ -24,19 +24,19 @@ hr {
 }
 
 ::selection {
-  background: black;
-  color: white;
+  background: $white-shade;
+  color: $black;
   text-shadow: none;
 }
 
 ::-moz-selection {
-  background: black;
-  color: white;
+  background: $white-shade;
+  color: $black;
   text-shadow: none;
 }
 
 ::-webkit-selection {
-  background: black;
-  color: white;
+  background: $white-shade;
+  color: $black;
   text-shadow: none;
 }

@@ -20,5 +20,10 @@ $grey-lt: #EEE;
 $grey-dk: #7B7B7B;
 
 // BREAKPOINTS
+$screen-xs: 425px; // Tiny phones
+$screen-sm: 576px; // Small tablets and large smartphones (landscape view)
+$screen-md: 768px; // Small tablets (portrait view)
+$screen-lg: 992px; // Tablets and small desktops
+$screen-xl: 1200px; // Large tablets and desktops
 
 // Z-INDEX

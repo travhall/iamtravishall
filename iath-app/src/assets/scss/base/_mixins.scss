@@ -1,3 +1,37 @@
 // BUTTONS
 
 // BREAKPOINTS
+// Tiny devices
+@mixin break-xs {
+  @media (min-width: #{$screen-xs}) {
+    @content;
+  }
+}
+
+// Small devices
+@mixin break-sm {
+  @media (min-width: #{$screen-sm}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin break-md {
+  @media (min-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin break-lg {
+  @media (min-width: #{$screen-lg}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin break-xl {
+  @media (min-width: #{$screen-xl}) {
+    @content;
+  }
+}
