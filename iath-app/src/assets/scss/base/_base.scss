@@ -1,0 +1,42 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: white;
+  color: black;
+  font-family: -apple-system, Helvetica, Arial, sans-serif, BlinkMacSystemFont, "Segoe UI", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 300;
+  line-height: 1.333;
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  clear: both;
+  margin: 1rem auto;
+}
+
+::selection {
+  background: black;
+  color: white;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: black;
+  color: white;
+  text-shadow: none;
+}
+
+::-webkit-selection {
+  background: black;
+  color: white;
+  text-shadow: none;
+}

@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+/**
+ * Imports
+ */
+@import "../node_modules/normalize-scss/sass/_normalize.scss";
+
+/**
+ * Base
+ */
+@import "assets/scss/base/variables";
+@import "assets/scss/base/mixins";
+@import "assets/scss/base/grid";
+@import "assets/scss/base/base";
+
+/**
+ * Components - Structure
+ */
+@import "assets/scss/components/header";
+@import "assets/scss/components/nav";
+@import "assets/scss/components/main";
+@import "assets/scss/components/footer";
+
+/**
+ * Theme
+ */
+@import "assets/scss/theme/typography";
+@import "assets/scss/theme/buttons";
+@import "assets/scss/theme/theme";
+
+/**
+ * Components - Views
+ */
+@import "assets/scss/views/home";
+@import "assets/scss/views/not-found";

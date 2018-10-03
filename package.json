@@ -1,7 +1,7 @@
 {
   "name": "iamtravishall",
   "version": "1.0.0",
-  "description": "Portfolio of Travis Hall, UX Designer and UI Developer",
+  "description": "iamtravishall.com | the online portfolio of UX Designer and UI Developer Travis Hall",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

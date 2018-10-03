@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" height="24px" width="42px" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42 24"><!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+ <title>icon--chevron--up</title>
+ <desc>Created with Sketch.</desc>
+ <g id="Symbols" fill-rule="evenodd" fill="none">
+  <g id="Icon-/-UI-/-Chevron-Up" fill-rule="nonzero" fill="#111" transform="translate(0 -6)">
+   <path id="icon--chevron--up" transform="translate(21 18) rotate(-90) translate(-21 -18)" d="m27.474 18l-17.804-17.221c-0.8935-0.86414-0.8935-2.2659 0.0004-3.1305 0.8936-0.8647 2.3436-0.8647 3.2366 0l19.423 18.786c0.893 0.865 0.893 2.267 0 3.132l-19.423 18.786c-0.893 0.864-2.343 0.864-3.2366 0-0.8939-0.865-0.8939-2.267 0-3.131l17.804-17.221z"/>
+  </g>
+ </g>
+</svg>
