@@ -48,11 +48,14 @@ h6,
 
 p {
   font-size: 1em; // 16px
+  font-weight: 100;
   line-height: 1.333;
 }
 
 a {
   color: $primary;
+  font-weight: 700;
+  text-decoration: none;
 
   &:hover {
     color: $primary-dk;

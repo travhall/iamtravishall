@@ -1,0 +1,11 @@
+.grid {
+  display: grid;
+
+  &.-main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto auto auto;
+    grid-column-gap: $spacer;
+    grid-row-gap: $spacer;
+    padding: $spacer;
+  }
+}

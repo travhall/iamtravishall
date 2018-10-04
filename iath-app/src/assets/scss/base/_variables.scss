@@ -20,10 +20,21 @@ $grey-lt: #EEE;
 $grey-dk: #7B7B7B;
 
 // BREAKPOINTS
-$screen-xs: 425px; // Tiny phones
-$screen-sm: 576px; // Small tablets and large smartphones (landscape view)
-$screen-md: 768px; // Small tablets (portrait view)
-$screen-lg: 992px; // Tablets and small desktops
-$screen-xl: 1200px; // Large tablets and desktops
+$screen-xs: 26.25rem; // 420px - Tiny phones
+$screen-sm: 36rem; // 576px - Small tablets and large smartphones (landscape view)
+$screen-md: 48rem; // 768px - Small tablets (portrait view)
+$screen-lg: 62rem; // 992px - Tablets and small desktops
+$screen-xl: 75rem; // 1200px - Large tablets and desktops
 
 // Z-INDEX
+$z-index: (modal: 500,
+overlay: 450,
+logo: 400,
+nav: 350,
+header: 300,
+footer: 250,
+main: 200,
+);
+
+// SPACER - 18px column gap and vertical spacing
+$spacer: 1.125rem;

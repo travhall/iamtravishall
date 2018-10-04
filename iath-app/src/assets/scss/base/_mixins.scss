@@ -1,6 +1,7 @@
 // BUTTONS
 
 // BREAKPOINTS
+// usage: @include break-sm {…}
 // Tiny devices
 @mixin break-xs {
   @media (min-width: #{$screen-xs}) {
