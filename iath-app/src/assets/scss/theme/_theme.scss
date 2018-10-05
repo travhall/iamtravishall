@@ -2,13 +2,18 @@
   display: block;
   margin: 0 auto;
   width: 95%;
-  max-width: 8rem;
+  max-width: 6.25rem;
   position: relative;
-  transition: all .5s ease-in-out;
   z-index: map-get($z-index, logo);
 
   &:hover {
     fill: $primary;
+  }
+
+  @include break-md {
+    position: absolute;
+    top: $spacer;
+    left: $spacer;
   }
 }
 
