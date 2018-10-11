@@ -1,19 +1,45 @@
 .grid {
   display: grid;
+  padding: 0;
+  margin: 0;
 
   &.-main {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto 4rem;
-    grid-column-gap: $spacer;
-    grid-row-gap: $spacer;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: $spacer/2;
+    // min-height: 100vh;
+    // padding: 0 $spacer/2;
     position: relative;
 
-    // @include break-md {
-    //   grid-template-columns: repeat(6, 1fr);
-    // }
+    @include break-md {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-gap: $spacer;
+      // padding: 0 $spacer;
+    }
 
-    // @include break-lg {
-    //   grid-template-columns: repeat(12, 1fr);
-    // }
+    @include break-lg {
+      grid-template-columns: repeat(12, 1fr);
+    }
+  }
+
+  &.-container {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    position: relative;
+
+    @include break-md {
+      grid-column-end: 7;
+    }
+
+    @include break-lg {
+      grid-column-end: 13;
+    }
+  }
+}
+
+section {
+  padding: $spacer/2;
+
+  @include break-md {
+    padding: $spacer;
   }
 }

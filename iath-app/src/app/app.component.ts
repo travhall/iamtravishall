@@ -4,10 +4,12 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <div class="grid -main">
-      <app-header></app-header>
-      <app-main></app-main>
-      <!-- <router-outlet></router-outlet> -->
-      <app-footer></app-footer>
+      <div class="grid -container">
+        <app-header></app-header>
+        <app-main></app-main>
+        <!-- <router-outlet></router-outlet> REPLACE MAIN LATER -->
+        <app-footer></app-footer>
+      </div>
     </div>
   `
 })

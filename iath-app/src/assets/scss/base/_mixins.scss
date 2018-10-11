@@ -36,3 +36,10 @@
     @content;
   }
 }
+
+// Whoa dude devices
+@mixin break-whoa {
+  @media (min-width: #{$screen-whoa}) {
+    @content;
+  }
+}

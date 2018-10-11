@@ -1,49 +1,75 @@
 .logo {
   display: block;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 6.25rem;
+
   position: relative;
   z-index: map-get($z-index, logo);
 
-  &:hover {
-    fill: $primary;
+  .header & {
+    margin: $spacer auto (-$spacer * 2);
+    @include break-md {
+      margin: 0;
+      position: absolute;
+      top: $spacer/2;
+      left: $spacer/2;
+    }
   }
-
-  @include break-md {
+  .footer & {
+    bottom: 0;
+    left: 0;
     position: absolute;
-    top: $spacer;
-    left: $spacer;
   }
 }
 
 .hero {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 5rem auto 1fr;
+  grid-template-rows: $spacer * 5 auto $spacer * 2;
   position: relative;
 
-  &__bg {
+  &::after {
+    background-attachment: fixed;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+      url(../src/assets/img/bg-hero.jpg);
+    // background-image: linear-gradient(rgba(1, 1, 1, 0), rgba(1, 1, 1, 0.8)),linear-gradient(#168683, #367067);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    content: '';
+    display: block;
     position: absolute;
-    top: -1rem;
+    top: 0;
     bottom: 0;
     right: 0;
     left: 0;
     width: 100%;
-    height: 160%;
-    // background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .5)), url(../src/assets/img/bg-hero.png);
-    background-image: linear-gradient(rgba(1, 1, 1, 0), rgba(1, 1, 1, .8)), linear-gradient(#168683, #367067);
-    background-size: cover;
+    height: 150%;
     transform: skewY(-5deg);
     transform-origin: top left;
-    z-index: -1;
+    will-change: transform;
+    z-index: map-get($z-index, background);
+
+    @include break-lg {
+      background-size: 100% auto;
+    }
   }
 
   .banner {
-    grid-column-start: 3;
-    grid-column-end: 10;
+    grid-column-start: 1;
+    grid-column-end: 13;
     grid-row-start: 2;
     grid-row-end: 3;
+    position: relative;
+    @include break-lg {
+      grid-column-start: 3;
+      grid-column-end: 10;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+    @include break-whoa {
+      grid-column-start: 4;
+      grid-column-end: 8;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
   }
 }
 

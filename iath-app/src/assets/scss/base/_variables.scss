@@ -1,30 +1,31 @@
 // COLORS
 $primary: #168683;
-$primary-lt: #56BFAF;
+$primary-lt: #56bfaf;
 $primary-dk: #367067;
-$cream: #FBFAF0;
+$cream: #fbfaf0;
 $bronze: #999779;
-$gold: #D4AF37;
-$goldenrod: #FFDF00;
+$gold: #d4af37;
+$goldenrod: #ffdf00;
 
-$success: #09D42E;
-$caution: #EFE705;
-$danger: #C84242;
+$success: #09d42e;
+$caution: #efe705;
+$danger: #c84242;
 
-$white: #FFF;
-$white-shade: #FEFEFE;
+$white: #fff;
+$white-shade: #fefefe;
 $black: #111;
-$black-tint: #4A4A4A;
-$grey: #9B9B9B;
-$grey-lt: #EEE;
-$grey-dk: #7B7B7B;
+$black-tint: #4a4a4a;
+$grey: #9b9b9b;
+$grey-lt: #eee;
+$grey-dk: #7b7b7b;
 
 // BREAKPOINTS
-$screen-xs: 26.25rem; // 420px - Tiny phones
+$screen-xs: 25rem; // 400px - Tiny phones
 $screen-sm: 36rem; // 576px - Small tablets and large smartphones (landscape view)
 $screen-md: 48rem; // 768px - Small tablets (portrait view)
 $screen-lg: 62rem; // 992px - Tablets and small desktops
 $screen-xl: 75rem; // 1200px - Large tablets and desktops
+$screen-whoa: 100rem; // 1600px - Whoa dude
 
 // Z-INDEX
 $z-index: (modal: 500,
@@ -34,7 +35,7 @@ nav: 350,
 header: 300,
 footer: 250,
 main: 200,
-);
+background: -1);
 
-// SPACER - 18px column gap and vertical spacing
+// SPACER : 18px column gap and vertical spacing
 $spacer: 1.125rem;
