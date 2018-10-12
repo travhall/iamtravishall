@@ -27,7 +27,7 @@ $screen-lg: 62rem; // 992px - Tablets and small desktops
 $screen-xl: 75rem; // 1200px - Large tablets and desktops
 $screen-whoa: 100rem; // 1600px - Whoa dude
 
-// Z-INDEX
+// Z-INDEX : @include z
 $z-index: (modal: 500,
 overlay: 450,
 logo: 400,

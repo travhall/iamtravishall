@@ -1,1 +1,5 @@
-.header {}
+.header {
+  display: grid;
+  grid-area: header;
+  position: relative;
+}

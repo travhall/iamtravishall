@@ -1,1 +1,5 @@
-.main {}
+.main {
+  display: grid;
+  grid-area: main;
+  position: relative;
+}

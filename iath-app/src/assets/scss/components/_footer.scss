@@ -1,4 +1,7 @@
 .footer {
+  display: grid;
+  grid-area: footer;
+  position: relative;
   text-align: right;
   margin-top: $spacer;
   padding: $spacer;

@@ -21,7 +21,8 @@ body {
 
 hr {
   clear: both;
-  margin: 1rem auto;
+  display: block;
+  margin: $spacer*2 auto;
 }
 
 ::selection {
