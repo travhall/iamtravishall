@@ -9,24 +9,12 @@
       "header header"
       "main main"
       "footer footer";
-    grid-column-gap: $spacer/2;
+    grid-column-gap: $spacer;
     position: relative;
-
-    // @include break-md {
-    //   grid-template-columns: repeat(6, 1fr);
-    //   grid-template-areas:
-    //     "header header header header header header"
-    //     "main main main main main main"
-    //     "footer footer footer footer footer footer";
-    //   grid-column-gap: $spacer;
-    // }
   }
 }
 
 section {
-  padding: $spacer/2;
-
-  @include break-md {
-    padding: $spacer;
-  }
+  padding: $spacer;
+  z-index: map-get($z-index, main);
 }

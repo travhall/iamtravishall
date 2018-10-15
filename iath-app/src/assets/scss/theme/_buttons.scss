@@ -1,3 +1,93 @@
-.btn {}
+button,
+input[type=button],
+.btn {
+  @include button($primary);
 
-.tag {}
+  &.-dk {
+    @include button($primary-dk);
+  }
+
+  &.-lt {
+    @include button($primary-lt);
+  }
+
+  &.-gold {
+    @include button($gold);
+  }
+
+  &.-goldenrod {
+    @include button($goldenrod);
+  }
+
+  &.-cream {
+    @include button($cream);
+    color: $black;
+  }
+
+  &.-bronze {
+    @include button($bronze);
+  }
+
+  &.-success {
+    @include button($success);
+  }
+
+  &.-caution {
+    @include button($caution);
+    color: $black;
+  }
+
+  &.-danger {
+    @include button($danger);
+  }
+
+  &.-block {
+    width: 100%;
+
+    // @include breakpoint('medium') {
+    //   width: auto;
+    // }
+
+    &:hover {
+      transform: scaleY(1.05);
+    }
+
+    &:active,
+    &:focus {
+      transform: scaleY(0.95);
+    }
+  }
+
+  &.-sm {
+    font-size: .5rem;
+  }
+
+  &.-lg {
+    font-size: 1rem;
+  }
+
+  &.-ghost {
+    background: none;
+    border-color: $white;
+
+    &:hover {
+      background: $white;
+      color: $black;
+    }
+  }
+}
+
+.tag {
+  background: rgba($primary-dk, 1);
+  border-radius: 3px;
+  color: $white;
+  font-size: 80%;
+  font-weight: 100;
+  margin: 0 $spacer/4 $spacer/4 0;
+  padding: $spacer/4 $spacer/2;
+
+  &:hover {
+    color: $white;
+    cursor: none;
+  }
+}

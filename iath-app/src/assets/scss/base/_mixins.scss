@@ -1,45 +1,94 @@
-// BUTTONS
+// MEDIA QUERIES
+@mixin breakpoint($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
 
-// BREAKPOINTS
-// usage: @include break-sm {…}
-// Tiny devices
-@mixin break-xs {
-  @media (min-width: #{$screen-xs}) {
-    @content;
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+    +"Available breakpoints are: #{map-keys($breakpoints)}.";
   }
 }
 
-// Small devices
-@mixin break-sm {
-  @media (min-width: #{$screen-sm}) {
-    @content;
+/// TINT : Slightly lighten a color * color: tint(#BADA55, 42%);
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+/// SHADE : Slightly darken a color * shade: tint(#BADA55, 42%);
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+// BUTTON MIXIN
+$Placeholder-Selectors: ();
+
+@mixin button($color, $extend: true) {
+  @include button-static($extend);
+  background: $color;
+  border-color: $color;
+  color: $white;
+
+  &:hover {
+    background: shade($color, 35%);
+    border-color: shade($color, 20%);
+    color: shade($white, 15%);
+  }
+
+  &:active,
+  &:focus {
+    background: shade($color, 40%);
+    border-color: shade($color, 40%);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($color, 0.25),
+      0 0 0 1.5px rgba($color, 0.25);
   }
 }
 
-// Medium devices
-@mixin break-md {
-  @media (min-width: #{$screen-md}) {
-    @content;
-  }
-}
+@mixin button-static($extend: true) {
+  $button-selector: map-get($Placeholder-Selectors, 'button');
 
-// Large devices
-@mixin break-lg {
-  @media (min-width: #{$screen-lg}) {
-    @content;
-  }
-}
+  @if $extend==true {
+    @if $button-selector==null {
+      $button-selector: unique-id();
+      $Placeholder-Selectors: map-merge($Placeholder-Selectors, ('button': $button-selector)) !global;
 
-// Extra large devices
-@mixin break-xl {
-  @media (min-width: #{$screen-xl}) {
-    @content;
-  }
-}
+      @at-root %#{$button-selector} {
+        @include button-static(false);
+      }
+    }
 
-// Whoa dude devices
-@mixin break-whoa {
-  @media (min-width: #{$screen-whoa}) {
-    @content;
+    @extend %#{$button-selector};
+  }
+
+  @else {
+    appearance: none;
+    border: 2px solid transparent;
+    border-radius: 1px;
+    display: inline-block;
+    font-size: .8rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin: 0 $spacer/4 $spacer/4 0;
+    padding: $spacer/2 $spacer;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background 250ms ease-in-out, transform 150ms ease, color 100ms ease;
+    white-space: nowrap;
+
+    &:hover {
+      cursor: s-resize;
+      transform: scale(1.025);
+    }
+
+    &:active,
+    &:focus {
+      transform: scale(0.98);
+    }
   }
 }

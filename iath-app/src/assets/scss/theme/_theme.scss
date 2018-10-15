@@ -8,7 +8,7 @@
     left: calc(50% - 50px);
     top: $spacer/2;
 
-    @include break-md {
+    @include breakpoint('medium') {
       left: $spacer/2;
     }
   }
@@ -21,6 +21,8 @@
 }
 
 .hero {
+  background-image: linear-gradient(-5deg, rgba(black, 0.25), rgba(black, 0.75));
+  background-blend-mode: multiply;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: $spacer * 6 auto $spacer * 6;
@@ -30,23 +32,22 @@
     background-color: $black;
     content: '';
     display: block;
-    height: $spacer*8;
+    height: $spacer*5.5;
     position: absolute;
-    bottom: -$spacer*4;
+    bottom: -$spacer*2.75;
     left: 0;
     right: 0;
     transform: skewY(-4deg);
     transform-origin: center center;
-    z-index: -2;
   }
 
   &::after {
     background-attachment: fixed;
     background-color: $primary-dk;
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(../src/assets/img/bg-hero.jpg);
+    background-image: url(../src/assets/img/bg-hero-sm.jpg);
     // background-image: linear-gradient(rgba(1, 1, 1, 0), rgba(1, 1, 1, 0.8)),linear-gradient(#168683, #367067);
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: 100% auto;
     content: '';
     display: block;
     position: absolute;
@@ -56,10 +57,14 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -4;
+    z-index: -1;
 
-    @include break-lg {
-      background-size: 100% auto;
+    @include breakpoint('medium') {
+      background-image: url(../src/assets/img/bg-hero-md.jpg);
+    }
+
+    @include breakpoint('xlarge') {
+      background-image: url(../src/assets/img/bg-hero-lg.jpg);
     }
   }
 
@@ -70,12 +75,12 @@
     grid-row-end: 3;
     position: relative;
 
-    @include break-lg {
+    @include breakpoint('large') {
       grid-column-start: 3;
       grid-column-end: 9;
     }
 
-    @include break-whoa {
+    @include breakpoint('whoa') {
       grid-column-start: 4;
       grid-column-end: 8;
     }
@@ -91,4 +96,15 @@
   margin: -1px;
   padding: 0;
   border: 0;
+}
+
+
+// ICONS
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  // stroke-width: 0;
+  // stroke: currentColor;
+  // fill: currentColor;
 }

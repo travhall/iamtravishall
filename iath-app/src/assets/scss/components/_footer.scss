@@ -5,6 +5,7 @@
   text-align: right;
   margin-top: $spacer;
   padding: $spacer;
+  z-index: map-get($z-index, footer);
 
   a {
     font-size: .75rem;
