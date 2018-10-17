@@ -82,7 +82,7 @@ $Placeholder-Selectors: ();
     white-space: nowrap;
 
     &:hover {
-      cursor: s-resize;
+      cursor: pointer;
       transform: scale(1.025);
     }
 

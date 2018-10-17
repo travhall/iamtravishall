@@ -4,12 +4,12 @@
   position: relative;
   text-align: right;
   margin-top: $spacer;
-  padding: $spacer;
+  padding: $spacer $spacer $spacer 85px;
   z-index: map-get($z-index, footer);
 
-  a {
+  a,
+  small {
     font-size: .75rem;
-    padding-right: $spacer;
+    margin-left: $spacer;
   }
-
 }

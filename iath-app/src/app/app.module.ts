@@ -3,10 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { NavComponent } from './layout/nav/nav.component';
 import { MainComponent } from './layout/main/main.component';
+
+import { HomeComponent } from './views/home/home.component';
+import { NotFoundComponent } from './views/not-found/not-found.component';
+import { CsArrowComponent } from './case-studies/cs-arrow/cs-arrow.component';
+import { CsStuntpuppyComponent } from './case-studies/cs-stuntpuppy/cs-stuntpuppy.component';
 
 @NgModule({
   declarations: [
@@ -14,13 +20,14 @@ import { MainComponent } from './layout/main/main.component';
     HeaderComponent,
     FooterComponent,
     NavComponent,
-    MainComponent
+    MainComponent,
+    HomeComponent,
+    NotFoundComponent,
+    CsArrowComponent,
+    CsStuntpuppyComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

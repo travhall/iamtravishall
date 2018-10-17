@@ -3,4 +3,12 @@
   grid-area: header;
   position: relative;
   z-index: map-get($z-index, header);
+
+  a {
+    color: $white;
+
+    &:hover {
+      color: $gold;
+    }
+  }
 }

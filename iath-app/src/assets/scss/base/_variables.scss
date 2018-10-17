@@ -2,8 +2,8 @@
 $primary: #168683;
 $primary-lt: #56bfaf;
 $primary-dk: #367067;
-$cream: #fbfaf0;
 $bronze: #999779;
+$cream: #fbfaf0;
 $gold: #d4af37;
 $goldenrod: #ffdf00;
 
@@ -28,15 +28,17 @@ $breakpoints: ( // BREAKPOINTS : @include breakpoint("medium") {…}
 'whoa': (min-width: 100rem) // 1600px - Whoa dude that's a pretty big screen
 ) !default;
 
-$z-index: ( // Z-INDEX : z-index: map-get($z-index, modal);
-modal: 500,
-overlay: 450,
-logo: 400,
-nav: 350,
-header: 300,
-footer: 250,
-main: 200,
-background: 0) !default;
+$z-index: (
+  // Z-INDEX : z-index: map-get($z-index, modal);
+    modal: 500,
+  overlay: 450,
+  logo: 400,
+  nav: 350,
+  header: 300,
+  footer: 250,
+  main: 200,
+  background: 0
+) !default;
 
 // SPACER : 18px column gap and vertical spacing
 $spacer: 1.125rem;

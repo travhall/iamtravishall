@@ -16,5 +16,6 @@
 
 section {
   padding: $spacer;
+  position: relative;
   z-index: map-get($z-index, main);
 }

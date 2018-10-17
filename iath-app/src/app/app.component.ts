@@ -5,8 +5,10 @@ import { Component } from '@angular/core';
   template: `
     <div class="grid -primary">
       <app-header class="header"></app-header>
-      <app-main class="main"></app-main>
-      <!-- <router-outlet></router-outlet> REPLACE MAIN LATER -->
+      <!-- <app-main class="main"></app-main> REPLACE MAIN LATER -->
+      <div class="main">
+        <router-outlet></router-outlet>
+      </div>
       <app-footer class="footer"></app-footer>
     </div>
   `

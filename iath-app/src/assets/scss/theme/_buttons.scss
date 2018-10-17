@@ -3,6 +3,10 @@ input[type=button],
 .btn {
   @include button($primary);
 
+  // .icon {
+  //   vertical-align: middle;
+  // }
+
   &.-dk {
     @include button($primary-dk);
   }
@@ -70,7 +74,9 @@ input[type=button],
     background: none;
     border-color: $white;
 
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
       background: $white;
       color: $black;
     }
@@ -78,13 +84,16 @@ input[type=button],
 }
 
 .tag {
-  background: rgba($primary-dk, 1);
+  background: $gold;
   border-radius: 3px;
   color: $white;
-  font-size: 80%;
-  font-weight: 100;
+  display: inline-block;
+  font-size: .75rem;
+  font-weight: 400;
   margin: 0 $spacer/4 $spacer/4 0;
   padding: $spacer/4 $spacer/2;
+  text-transform: uppercase;
+  vertical-align: middle;
 
   &:hover {
     color: $white;
