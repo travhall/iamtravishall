@@ -3,14 +3,11 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <div class="grid -primary">
-      <app-header class="header"></app-header>
-      <!-- <app-main class="main"></app-main> REPLACE MAIN LATER -->
-      <div class="main">
-        <router-outlet></router-outlet>
-      </div>
-      <app-footer class="footer"></app-footer>
-    </div>
+    <app-header class="header"></app-header>
+    <main class="main">
+      <router-outlet></router-outlet>
+    </main>
+    <app-footer class="footer"></app-footer>
   `
 })
 export class AppComponent {

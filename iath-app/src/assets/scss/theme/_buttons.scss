@@ -3,9 +3,10 @@ input[type=button],
 .btn {
   @include button($primary);
 
-  // .icon {
-  //   vertical-align: middle;
-  // }
+  .icon {
+    margin: 0 ($spacer*.125) ($spacer*.125);
+    vertical-align: middle;
+  }
 
   &.-dk {
     @include button($primary-dk);
@@ -85,18 +86,60 @@ input[type=button],
 
 .tag {
   background: $gold;
-  border-radius: 3px;
+  border-radius: 2px;
   color: $white;
   display: inline-block;
-  font-size: .75rem;
+  font-size: .5625rem;
   font-weight: 400;
   margin: 0 $spacer/4 $spacer/4 0;
   padding: $spacer/4 $spacer/2;
   text-transform: uppercase;
-  vertical-align: middle;
+  vertical-align: bottom;
+  button &,
+  input[type=button] &,
+  .btn & {
+    margin: 0;
+  }
+
+  &.-dk {
+    background: $primary-dk;
+  }
+
+  &.-lt {
+    background: $primary-lt;
+  }
+
+  &.-gold {
+    background: $gold;
+  }
+
+  &.-goldenrod {
+    background: $goldenrod;
+  }
+
+  &.-cream {
+    background: $cream;
+    color: $black;
+  }
+
+  &.-bronze {
+    background: $bronze;
+  }
+
+  &.-success {
+    background: $success;
+  }
+
+  &.-caution {
+    background: $caution;
+    color: $black;
+  }
+
+  &.-danger {
+    background: $danger;
+  }
 
   &:hover {
-    color: $white;
-    cursor: none;
+    cursor: default;
   }
 }

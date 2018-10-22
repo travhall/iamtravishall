@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CsStuntpuppyComponent } from './cs-stuntpuppy.component';
+import { LacekComponent } from './lacek.component';
 
-describe('CsStuntpuppyComponent', () => {
-  let component: CsStuntpuppyComponent;
-  let fixture: ComponentFixture<CsStuntpuppyComponent>;
+describe('LacekComponent', () => {
+  let component: LacekComponent;
+  let fixture: ComponentFixture<LacekComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CsStuntpuppyComponent ]
+      declarations: [ LacekComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CsStuntpuppyComponent);
+    fixture = TestBed.createComponent(LacekComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

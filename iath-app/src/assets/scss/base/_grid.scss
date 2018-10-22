@@ -1,21 +1,39 @@
+.--root {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  position: relative;
+}
+
 .grid {
   display: grid;
   padding: 0;
   margin: 0;
+  max-height: 100%;
 
   &.-primary {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-      "header header"
-      "main main"
-      "footer footer";
     grid-column-gap: $spacer;
     position: relative;
+
+    @include breakpoint("small") {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include breakpoint("medium") {
+      grid-template-columns: repeat(8, 1fr);
+    }
+
+    @include breakpoint("large") {
+      grid-template-columns: repeat(12, 1fr);
+    }
   }
 }
 
 section {
-  padding: $spacer;
+  padding: 0 $spacer;
   position: relative;
   z-index: map-get($z-index, main);
 }

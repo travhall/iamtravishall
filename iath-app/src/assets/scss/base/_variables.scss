@@ -1,4 +1,4 @@
-// COLORS
+// COLOR PALETTE
 $primary: #168683;
 $primary-lt: #56bfaf;
 $primary-dk: #367067;
@@ -7,10 +7,12 @@ $cream: #fbfaf0;
 $gold: #d4af37;
 $goldenrod: #ffdf00;
 
+// UTILITY COLORS
 $success: #09d42e;
 $caution: #efe705;
 $danger: #c84242;
 
+// GREYSCALE
 $white: #fff;
 $white-shade: #fefefe;
 $black: #111;
@@ -28,17 +30,61 @@ $breakpoints: ( // BREAKPOINTS : @include breakpoint("medium") {…}
 'whoa': (min-width: 100rem) // 1600px - Whoa dude that's a pretty big screen
 ) !default;
 
-$z-index: (
-  // Z-INDEX : z-index: map-get($z-index, modal);
-    modal: 500,
-  overlay: 450,
-  logo: 400,
-  nav: 350,
-  header: 300,
-  footer: 250,
-  main: 200,
-  background: 0
-) !default;
+$z-index: ( // Z-INDEX : z-index: map-get($z-index, modal);
+modal: 500,
+overlay: 450,
+logo: 400,
+nav: 350,
+header: 300,
+footer: 250,
+main: 200,
+background: 0) !default;
 
 // SPACER : 18px column gap and vertical spacing
 $spacer: 1.125rem;
+
+// GENERIC COLORS
+$red: rgb(255, 0, 0);
+$green: rgb(0, 255, 0);
+$blue: rgb(0, 0, 255);
+
+$cyan: rgb(0, 255, 255);
+$magenta: rgb(255, 0, 255);
+$yellow: rgb(255, 255, 0);
+$true-black: rgb(0, 0, 0);
+
+// BRAND COLORS
+$brand-adobe: $red;
+$brand-adobe-ae: #d291ff;
+$brand-adobe-ai: #ff7c00;
+$brand-adobe-ar: #ee3f24;
+$brand-adobe-cc: #d41818;
+$brand-adobe-dw: #35fa00;
+$brand-adobe-id: #fd3f93;
+$brand-adobe-ps: #00c8ff;
+$brand-angluar: #dd0031;
+$brand-behance: #1769ff;
+$brand-bootstrap: #563d7c;
+$brand-CSS3: #1572b6;
+$brand-dribbble: #ea4c89;
+$brand-fitbit: #00b0b9;
+$brand-git: #f05032;
+$brand-gmail: #d14836;
+$brand-ga: #ffc107;
+$brand-googleplus: #dc4e41;
+$brand-html5: #e34f26;
+$brand-instagram: #e4405f;
+$brand-invision: #f36;
+$brand-js: #f7df1e;
+$brand-jquery: #0769ad;
+$brand-linkedin: #0077b5;
+$brand-npm: #cb3837;
+$brand-react: #61dafb;
+$brand-sass: #c69;
+$brand-shopify: #7ab55c;
+$brand-slack: #56b68b;
+$brand-soundcloud: #f30;
+$brand-spotify: #1ed760;
+$brand-stackoverflow: #fe7a16;
+$brand-twitter: #1da1f2;
+$brand-vs-code: #007acc;

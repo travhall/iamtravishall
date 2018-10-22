@@ -7,12 +7,12 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { NavComponent } from './layout/nav/nav.component';
-import { MainComponent } from './layout/main/main.component';
 
 import { HomeComponent } from './views/home/home.component';
 import { NotFoundComponent } from './views/not-found/not-found.component';
-import { CsArrowComponent } from './case-studies/cs-arrow/cs-arrow.component';
-import { CsStuntpuppyComponent } from './case-studies/cs-stuntpuppy/cs-stuntpuppy.component';
+import { ArrowComponent } from './case-studies/arrow/arrow.component';
+import { StuntpuppyComponent } from './case-studies/stuntpuppy/stuntpuppy.component';
+import { LacekComponent } from './case-studies/lacek/lacek.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +20,11 @@ import { CsStuntpuppyComponent } from './case-studies/cs-stuntpuppy/cs-stuntpupp
     HeaderComponent,
     FooterComponent,
     NavComponent,
-    MainComponent,
     HomeComponent,
     NotFoundComponent,
-    CsArrowComponent,
-    CsStuntpuppyComponent
+    ArrowComponent,
+    StuntpuppyComponent,
+    LacekComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

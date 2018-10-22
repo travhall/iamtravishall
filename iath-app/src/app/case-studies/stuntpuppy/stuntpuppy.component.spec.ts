@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CsArrowComponent } from './cs-arrow.component';
+import { StuntpuppyComponent } from './stuntpuppy.component';
 
-describe('CsArrowComponent', () => {
-  let component: CsArrowComponent;
-  let fixture: ComponentFixture<CsArrowComponent>;
+describe('StuntpuppyComponent', () => {
+  let component: StuntpuppyComponent;
+  let fixture: ComponentFixture<StuntpuppyComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CsArrowComponent ]
+      declarations: [ StuntpuppyComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CsArrowComponent);
+    fixture = TestBed.createComponent(StuntpuppyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

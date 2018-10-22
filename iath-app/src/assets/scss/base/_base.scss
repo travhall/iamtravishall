@@ -1,5 +1,7 @@
 html {
   box-sizing: border-box;
+  height: 100%;
+  max-height: 100%;
 }
 
 *,
@@ -14,6 +16,7 @@ body {
   font-family: -apple-system, Helvetica, Arial, sans-serif, BlinkMacSystemFont, "Segoe UI", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 300;
   height: 100%;
+  max-height: 100%;
   line-height: 1.333;
   margin: 0;
   padding: 0;

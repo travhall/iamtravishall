@@ -4,11 +4,25 @@
   position: relative;
   z-index: map-get($z-index, header);
 
-  a {
-    color: $white;
+  .logo {
+    position: absolute;
+    left: $spacer/2;
+    top: $spacer/2;
+    transition: all 0.3s ease-in-out 0s;
 
     &:hover {
-      color: $gold;
+      transform-style: preserve-3d;
+      transform: perspective(10em) rotateX(-8deg) translateZ(2em);
+    }
+  }
+
+  .links {
+    position: absolute;
+    top: $spacer;
+    right: $spacer;
+    a {
+      float: left;
+      margin-left: $spacer*.25;
     }
   }
 }

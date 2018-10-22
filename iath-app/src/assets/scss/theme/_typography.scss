@@ -77,7 +77,6 @@ h6,
   font-weight: 900;
 }
 
-
 p {
   font-size: 1em; // 16px
   font-weight: 100;
@@ -87,12 +86,12 @@ p {
 
 a {
   color: $gold;
-  font-weight: 600;
+  position: relative;
   text-decoration: none;
   transition: all .25s;
 
   &:hover {
-    cursor: alias;
+    cursor: pointer;
   }
 }
 
@@ -129,4 +128,16 @@ ul,
 ol {
   margin: 0;
   padding: $spacer/2 $spacer*1.5;
+}
+
+.-left {
+  text-align: left;
+}
+
+.-center {
+  text-align: center;
+}
+
+.-right {
+  text-align: right;
 }

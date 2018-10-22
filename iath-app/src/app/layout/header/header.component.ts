@@ -10,18 +10,21 @@ import { Component, OnInit } from '@angular/core';
           <use xlink:href="assets/symbol-defs.svg#icon-logo-iath"></use>
         </svg>
       </a>
-      <a href="mailto:hello@iamtravishall.com" class="link -email"target="_blank" title="Email me at hello@iamtravishall.com">
-        <svg class="icon">
-          <use xlink:href="assets/symbol-defs.svg#icon-envelope"></use>
-        </svg>
-      </a>
-      <a href="https://www.linkedin.com/in/travhall/" class="link -linkedin" target="_blank" title="Find me on Linkedin">
-        <svg class="icon">
-          <use xlink:href="assets/symbol-defs.svg#icon-linkedin"></use>
-        </svg>
-      </a>
+      <div class="links">
+        <a href="mailto:hello@iamtravishall.com" class="link-icon"target="_blank" title="Email me at hello@iamtravishall.com">
+          <svg class="icon">
+            <use xlink:href="assets/symbol-defs.svg#icon-envelope"></use>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/travhall/" class="link-icon" target="_blank" title="Find me on Linkedin">
+          <svg class="icon">
+            <use xlink:href="assets/symbol-defs.svg#icon-linkedin"></use>
+          </svg>
+        </a>
+      </div>
     </header>
-  `
+  `,
+  styles: []
 })
 export class HeaderComponent implements OnInit {
   constructor() {}

@@ -42,8 +42,7 @@ $Placeholder-Selectors: ();
     background: shade($color, 40%);
     border-color: shade($color, 40%);
     outline: none;
-    box-shadow: 0 0 0 3px rgba($color, 0.25),
-      0 0 0 1.5px rgba($color, 0.25);
+    box-shadow: 0 0 0 3px rgba($color, 0.25), 0 0 0 1.5px rgba($color, 0.25);
   }
 }
 
@@ -53,7 +52,8 @@ $Placeholder-Selectors: ();
   @if $extend==true {
     @if $button-selector==null {
       $button-selector: unique-id();
-      $Placeholder-Selectors: map-merge($Placeholder-Selectors, ('button': $button-selector)) !global;
+      $Placeholder-Selectors: map-merge($Placeholder-Selectors,
+        ('button': $button-selector)) !global;
 
       @at-root %#{$button-selector} {
         @include button-static(false);
@@ -65,20 +65,20 @@ $Placeholder-Selectors: ();
 
   @else {
     appearance: none;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     border-radius: 1px;
     display: inline-block;
-    font-size: .8rem;
+    font-size: 0.8rem;
     font-weight: 300;
     letter-spacing: 2px;
-    line-height: 1;
-    margin: 0 $spacer/4 $spacer/4 0;
-    padding: $spacer/2 $spacer;
-    position: relative;
+    line-height: 1.25;
+    margin: 0 ($spacer*.25) ($spacer*.25) 0;
+    padding: ($spacer*.5) $spacer;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
     transition: background 250ms ease-in-out, transform 150ms ease, color 100ms ease;
+    vertical-align: text-bottom;
     white-space: nowrap;
 
     &:hover {
@@ -91,4 +91,9 @@ $Placeholder-Selectors: ();
       transform: scale(0.98);
     }
   }
+}
+
+@mixin chevron($color: '#000000', $rotation: 0, $tickness: 10) {
+  background-image:
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path style="fill:'+$color+';" d="M0 50l50,50 50,-50 -'+$tickness+', -'+$tickness+' -'+(50-$tickness)+','+(50-$tickness)+' -'+(50-$tickness)+',-'+(50-$tickness)+'z" transform="rotate('+$rotation+' 50 50 )"/></svg>');
 }

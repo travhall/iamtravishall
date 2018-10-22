@@ -1,95 +1,40 @@
+// LOGO
 .logo {
   display: block;
   position: relative;
-  fill: $white;
+  fill: $cream;
+  transition: all 0.25s ease-in-out;
   z-index: map-get($z-index, logo);
-
-  .header & {
-    position: absolute;
-    left: calc(50% - 50px);
-    top: $spacer/2;
-
-    @include breakpoint('medium') {
-      left: $spacer/2;
-    }
-  }
-
-  .footer & {
-    bottom: 0;
-    left: 0;
-    position: absolute;
-  }
 }
 
-.hero {
-  background-image: linear-gradient(-5deg, rgba(black, 0.25), rgba(black, 0.75));
-  background-blend-mode: multiply;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: $spacer * 6 auto $spacer * 6;
-  position: relative;
-
-  &::before {
-    background-color: $black;
-    content: '';
-    display: block;
-    height: $spacer*6;
-    position: absolute;
-    bottom: -$spacer*3;
-    left: 0;
-    right: 0;
-    transform: skewY(-3deg);
-    transform-origin: center center;
-  }
+// LINK WITH UNDERLINE
+.link {
+  white-space: nowrap;
 
   &::after {
-    background-attachment: fixed;
-    background-color: $primary-dk;
-    // background-image: url(../src/assets/img/bg-hero-sm.jpg);
-    // background-image: radial-gradient(rgba($gold, 0.1), rgba($gold, 0.5)), linear-gradient($primary, $primary-dk);
-    background-image: linear-gradient($primary, $primary-dk);
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    content: '';
-    display: block;
+    content: "";
     position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    z-index: -1;
-
-    @include breakpoint('medium') {
-      background-image: url(../src/assets/img/bg-hero-alt.jpg);
-    }
-
-    // @include breakpoint('xlarge') {
-    //   background-image: url(../src/assets/img/bg-hero-lg.jpg);
-    // }
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: $gold;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
   }
 
-  .banner {
-    grid-column-start: 2;
-    grid-column-end: 12;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    position: relative;
-
-    @include breakpoint('large') {
-      grid-column-start: 3;
-      grid-column-end: 9;
-    }
-
-    @include breakpoint('whoa') {
-      grid-column-start: 4;
-      grid-column-end: 8;
+  &:hover {
+    &::after {
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
     }
   }
 }
 
-.link {
+// LINK WITH ICON
+.link-icon {
   background: linear-gradient(to bottom, $gold, $gold);
   background-position: 0 100%;
   background-repeat: repeat-x;
@@ -99,31 +44,14 @@
   line-height: 1;
   padding: 1px 2px;
   text-decoration: none;
-  transition: all .25s;
+  transition: all 0.4s ease-in-out 0s;
 
   &:hover {
     background-size: 1px 50px;
-    color: $black !important;
+    color: $black;
     fill: $black;
   }
-
-  &.-email {
-    .header & {
-      position: absolute;
-      top: $spacer/2;
-      right: $spacer*1.9;
-    }
-  }
-
-  &.-linkedin {
-    .header & {
-      position: absolute;
-      top: $spacer/2;
-      right: $spacer/2;
-    }
-  }
 }
-
 
 // ICONS
 .icon {
@@ -136,26 +64,80 @@
   vertical-align: middle;
 
   &.-xs {
-    height: $spacer*.5;
-    width: $spacer*.5;
+    height: $spacer * 0.5;
+    width: $spacer * 0.5;
   }
 
   &.-sm {
-    height: $spacer*.75;
-    width: $spacer*.75;
+    height: $spacer * 0.75;
+    width: $spacer * 0.75;
   }
 
   &.-lg {
-    height: $spacer*2;
-    width: $spacer*2;
+    height: $spacer * 2;
+    width: $spacer * 2;
   }
 
   &.-xl {
-    height: $spacer*3;
-    width: $spacer*3;
+    height: $spacer * 3;
+    width: $spacer * 3;
+  }
+
+  &.-xxl {
+    height: $spacer * 5;
+    width: $spacer * 5;
   }
 }
 
+.arrow {
+  display: inline-block;
+  width: $spacer;
+  height: $spacer;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &.-up {
+    @include chevron($white, 180, 10);
+  }
+
+  &.-right {
+    @include chevron($white, 270, 10);
+  }
+
+  &.-down {
+    @include chevron($white, 0, 10);
+  }
+
+  &.-left {
+    @include chevron($white, 90, 10);
+  }
+
+  &.-xs {
+    height: $spacer * 0.5;
+    width: $spacer * 0.5;
+  }
+
+  &.-sm {
+    height: $spacer * 0.75;
+    width: $spacer * 0.75;
+  }
+
+  &.-lg {
+    height: $spacer * 2;
+    width: $spacer * 2;
+  }
+
+  &.-xl {
+    height: $spacer * 3;
+    width: $spacer * 3;
+  }
+
+  &:hover {
+    fill: $black;
+  }
+}
+
+//UTILITIES
 .hide {
   position: absolute;
   overflow: hidden;

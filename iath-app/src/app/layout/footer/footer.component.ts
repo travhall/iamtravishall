@@ -4,19 +4,19 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-footer',
   template: `
     <footer>
-      <a routerLink="/">
-        <svg class="logo" width="84" height="73">
+      <a routerLink="/" class="logo">
+        <svg width="84" height="73">
           <use xlink:href="assets/symbol-defs.svg#icon-logo-iath-flag"></use>
         </svg>
       </a>
 
-      <a href="mailto:hello@iamtravishall.com" class="link" target="_blank" title="Email me at hello@iamtravishall.com">
+      <a href="mailto:hello@iamtravishall.com" class="link-icon" target="_blank" title="Email me at hello@iamtravishall.com">
         <svg class="icon -sm">
           <use xlink:href="assets/symbol-defs.svg#icon-envelope"></use>
         </svg>
         hello@iamtravishall.com
       </a>
-      <a href="Travis_Hall_CV.pdf" class="link" target="_blank" title="Download my resum&eacute;">
+      <a href="Travis_Hall_CV.pdf" class="link-icon" target="_blank" title="Download my resum&eacute;">
         <svg class="icon -sm">
           <use xlink:href="assets/symbol-defs.svg#icon-file-pdf"></use>
         </svg>
@@ -24,7 +24,8 @@ import { Component, OnInit } from '@angular/core';
       </a>
       <small class="copyright">&copy; {{year | date:'yyyy'}} Travis Hall</small>
     </footer>
-  `
+  `,
+  styles: ['']
 })
 export class FooterComponent implements OnInit {
   year = Date.now();
