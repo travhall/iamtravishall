@@ -22,7 +22,7 @@ import { Component, OnInit } from '@angular/core';
         </svg>
         resum&eacute;
       </a>
-      <small class="copyright">&copy; {{year | date:'yyyy'}} Travis Hall</small>
+      <small class="copyright">&copy;&nbsp;{{year | date:'yyyy'}} Travis Hall</small>
     </footer>
   `,
   styles: ['']

@@ -1,18 +1,50 @@
 .display {
   &-1 {
-    font-size: 5.875rem; // 94px
+    font-size: 2.5rem; // 40px
+
+    @include breakpoint("medium") {
+      font-size: 3.325rem; // 52px
+    }
+
+    @include breakpoint("large") {
+      font-size: 4.375rem; // 70px
+    }
+
+    @include breakpoint("xlarge") {
+      font-size: 5.875rem; // 94px
+    }
   }
 
   &-2 {
-    font-size: 4.375rem; // 70px
+    font-size: 1.875rem; // 30px
+
+    @include breakpoint("medium") {
+      font-size: 2.4375rem; // 39px
+    }
+
+    @include breakpoint("large") {
+      font-size: 3.25rem; // 52px
+    }
+
+    @include breakpoint("xlarge") {
+      font-size: 4.375rem; // 70px
+    }
   }
 
   &-3 {
-    font-size: 3.25rem; // 52px
-  }
+    font-size: 1.375rem; // 22px
 
-  &-4 {
-    font-size: 2.5rem; // 40px
+    @include breakpoint("medium") {
+      font-size: 1.875rem; // 30px
+    }
+
+    @include breakpoint("large") {
+      font-size: 2.5rem; // 40px
+    }
+
+    @include breakpoint("xlarge") {
+      font-size: 3.25rem; // 52px
+    }
   }
 }
 
@@ -44,32 +76,80 @@ h6,
 
 h1,
 .h1 {
-  font-size: 5.625em; // 90px
+  font-size: 3.125rem; // 50px
+
+  @include breakpoint("medium") {
+    font-size: 4.1875rem; // 67px
+  }
+
+  @include breakpoint("large") {
+    font-size: 5.625rem; // 90px
+  }
 }
 
 h2,
 .h2 {
-  font-size: 4.1875em; // 67px
+  font-size: 2.375rem; // 38px
+
+  @include breakpoint("medium") {
+    font-size: 3.125rem; // 50px
+  }
+
+  @include breakpoint("large") {
+    font-size: 4.1875rem; // 67px
+  }
 }
 
 h3,
 .h3 {
-  font-size: 3.125em; // 50px
+  font-size: 1.75rem; // 28px
+
+  @include breakpoint("medium") {
+    font-size: 2.375rem; // 38px
+  }
+
+  @include breakpoint("large") {
+    font-size: 3.125rem; // 50px
+  }
 }
 
 h4,
 .h4 {
-  font-size: 2.375em; // 38px
+  font-size: 2.375rem; // 22px
+
+  @include breakpoint("medium") {
+    font-size: 1.75rem; // 28px
+  }
+
+  @include breakpoint("large") {
+    font-size: 2.375rem; // 38px
+  }
 }
 
 h5,
 .h5 {
-  font-size: 1.8125em; // 29px
+  font-size: 1.0625rem; // 17px
+
+  @include breakpoint("medium") {
+    font-size: 1.375rem; // 22px
+  }
+
+  @include breakpoint("large") {
+    font-size: 1.75rem; // 28px
+  }
 }
 
 h6,
 .h6 {
-  font-size: 1.375em; // 22px
+  font-size: 0.8125rem; // 13px
+
+  @include breakpoint("medium") {
+    font-size: 1.0625rem; // 17px
+  }
+
+  @include breakpoint("large") {
+    font-size: 1.375rem; // 22px
+  }
 }
 
 .lead {
@@ -78,7 +158,7 @@ h6,
 }
 
 p {
-  font-size: 1em; // 16px
+  font-size: 1rem; // 16px
   font-weight: 100;
   line-height: 1.333;
   margin: $spacer/2 0 $spacer;
@@ -108,9 +188,9 @@ blockquote {
     color: $gold;
     font-size: 2rem;
     font-weight: bolder;
-    left: $spacer/3;
+    left: $spacer*.333;
     position: absolute;
-    bottom: -$spacer/3;
+    bottom: -$spacer*.333;
   }
 }
 
@@ -127,7 +207,7 @@ small {
 ul,
 ol {
   margin: 0;
-  padding: $spacer/2 $spacer*1.5;
+  padding: ($spacer*.5) ($spacer*1.5);
 }
 
 .-left {

@@ -1,14 +1,23 @@
+header {
+  position: relative;
+}
+
 .header {
-  display: grid;
   grid-area: header;
   position: relative;
   z-index: map-get($z-index, header);
 
   .logo {
+    height: 83px;
+    width: 100px;
     position: absolute;
-    left: $spacer/2;
-    top: $spacer/2;
+    left: calc(50% - 50px);
+    top: $spacer*.5;
     transition: all 0.3s ease-in-out 0s;
+
+    @include breakpoint("medium") {
+      left: $spacer*.5;
+    }
 
     &:hover {
       transform-style: preserve-3d;
@@ -20,6 +29,7 @@
     position: absolute;
     top: $spacer;
     right: $spacer;
+
     a {
       float: left;
       margin-left: $spacer*.25;

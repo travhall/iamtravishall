@@ -1,5 +1,4 @@
 .footer {
-  display: grid;
   grid-area: footer;
   position: relative;
   text-align: right;
@@ -28,8 +27,10 @@
 
   a,
   small {
+    display: inline-block;
     font-size: .75rem;
     margin-left: $spacer;
+    word-wrap: none;
 
     .icon {
       margin: -2px 2px 0 0;
