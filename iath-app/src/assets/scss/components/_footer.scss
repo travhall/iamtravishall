@@ -1,9 +1,11 @@
 .footer {
   grid-area: footer;
-  position: relative;
+  padding: 0;
+  // position: absolute;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
   text-align: right;
-  margin-top: $spacer;
-  padding: $spacer $spacer $spacer*.5 85px;
   z-index: map-get($z-index, footer);
 
   @include breakpoint("medium") {
@@ -29,7 +31,7 @@
   small {
     display: inline-block;
     font-size: .75rem;
-    margin-left: $spacer;
+    margin: 0 $spacer*.5;
     word-wrap: none;
 
     .icon {

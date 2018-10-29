@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="414px" height="269px" viewBox="0 0 414 269" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>graphic-table</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Sandbox" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-32.000000, -172.000000)" fill-rule="nonzero" stroke="#979797">
+            <g id="graphic-table" transform="translate(34.000000, 175.000000)">
+                <polyline id="leg-back-left" stroke-width="5" points="116 59 113.520408 191 102.408163 191 98 59"></polyline>
+                <polyline id="leg-back-right" stroke-width="5" points="313 59 308.591837 191 297.479592 191 295 59"></polyline>
+                <polyline id="leg-front-right" stroke-width="7" points="369 59 362.142857 262 344.857143 262 341 59"></polyline>
+                <path d="M329,59 L345,262" id="leg-frontline-right" stroke-width="5"></path>
+                <polyline id="leg-front-left" stroke-width="7" points="69 59 65.1428571 262 47.8571429 262 41 59"></polyline>
+                <path d="M81,59 L65,262 L81,59 Z" id="leg-frontline-left" stroke-width="5"></path>
+                <polyline id="top-front-bottom" stroke-width="6" stroke-linejoin="bevel" points="3 46 10.9032526 57 398.970888 57 407 46"></polyline>
+                <polyline id="top-front" stroke-width="6" stroke-linejoin="bevel" points="100.003388 0 0 45 410 45 309.996612 0"></polyline>
+                <path d="M239,0.5 L309,0.5" id="top-right-back" stroke-width="6" stroke-linecap="square"></path>
+                <path d="M102,0.5 L172,0.5" id="top-left-back" stroke-width="6" stroke-linecap="square"></path>
+            </g>
+        </g>
+    </g>
+</svg>

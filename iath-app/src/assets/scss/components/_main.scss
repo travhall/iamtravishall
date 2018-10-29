@@ -1,5 +1,6 @@
 .main {
   grid-area: main;
+  padding: 0;
   position: relative;
   z-index: map-get($z-index, main);
 }

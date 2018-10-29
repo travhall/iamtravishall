@@ -3,10 +3,10 @@ input[type=button],
 .btn {
   @include button($primary);
 
-  .icon {
-    margin: 0 ($spacer*.125) ($spacer*.125);
-    vertical-align: middle;
-  }
+  // .icon {
+  //   margin: 0 ($spacer*.125) ($spacer*.125);
+  //   vertical-align: middle;
+  // }
 
   &.-dk {
     @include button($primary-dk);
@@ -82,6 +82,10 @@ input[type=button],
       color: $black;
     }
   }
+
+  >.icon {
+    margin: 0 -5px 0 5px;
+  }
 }
 
 .tag {
@@ -95,6 +99,7 @@ input[type=button],
   padding: $spacer/4 $spacer/2;
   text-transform: uppercase;
   vertical-align: bottom;
+
   button &,
   input[type=button] &,
   .btn & {

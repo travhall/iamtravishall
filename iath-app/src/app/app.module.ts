@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +14,8 @@ import { ArrowComponent } from './case-studies/arrow/arrow.component';
 import { StuntpuppyComponent } from './case-studies/stuntpuppy/stuntpuppy.component';
 import { LacekComponent } from './case-studies/lacek/lacek.component';
 
+import { ScrollToModule } from 'ng2-scroll-to-el';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,7 @@ import { LacekComponent } from './case-studies/lacek/lacek.component';
     StuntpuppyComponent,
     LacekComponent
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, ScrollToModule.forRoot()],
   providers: [],
   bootstrap: [AppComponent]
 })

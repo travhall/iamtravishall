@@ -26,11 +26,11 @@
  */
 @import "assets/scss/theme/typography";
 @import "assets/scss/theme/buttons";
-@import "assets/scss/theme/views";
 @import "assets/scss/theme/theme";
 
 /**
  * Components - Views
  */
+@import "assets/scss/views/views";
 @import "assets/scss/views/home";
 @import "assets/scss/views/not-found";

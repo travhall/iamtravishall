@@ -4,14 +4,16 @@ header {
 
 .header {
   grid-area: header;
-  position: relative;
+  position: fixed;
+  width: 100%;
   z-index: map-get($z-index, header);
 
   .logo {
+    // opacity: .2;
     height: 83px;
     width: 100px;
     position: absolute;
-    left: calc(50% - 50px);
+    left: $spacer*.5;
     top: $spacer*.5;
     transition: all 0.3s ease-in-out 0s;
 
@@ -20,6 +22,7 @@ header {
     }
 
     &:hover {
+      opacity: 1;
       transform-style: preserve-3d;
       transform: perspective(10em) rotateX(-8deg) translateZ(2em);
     }

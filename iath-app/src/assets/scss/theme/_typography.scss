@@ -2,15 +2,15 @@
   &-1 {
     font-size: 2.5rem; // 40px
 
-    @include breakpoint("medium") {
+    @include breakpoint("small") {
       font-size: 3.325rem; // 52px
     }
 
-    @include breakpoint("large") {
+    @include breakpoint("medium") {
       font-size: 4.375rem; // 70px
     }
 
-    @include breakpoint("xlarge") {
+    @include breakpoint("large") {
       font-size: 5.875rem; // 94px
     }
   }
@@ -18,15 +18,15 @@
   &-2 {
     font-size: 1.875rem; // 30px
 
-    @include breakpoint("medium") {
+    @include breakpoint("small") {
       font-size: 2.4375rem; // 39px
     }
 
-    @include breakpoint("large") {
+    @include breakpoint("medium") {
       font-size: 3.25rem; // 52px
     }
 
-    @include breakpoint("xlarge") {
+    @include breakpoint("large") {
       font-size: 4.375rem; // 70px
     }
   }
@@ -34,15 +34,15 @@
   &-3 {
     font-size: 1.375rem; // 22px
 
-    @include breakpoint("medium") {
+    @include breakpoint("small") {
       font-size: 1.875rem; // 30px
     }
 
-    @include breakpoint("large") {
+    @include breakpoint("medium") {
       font-size: 2.5rem; // 40px
     }
 
-    @include breakpoint("xlarge") {
+    @include breakpoint("large") {
       font-size: 3.25rem; // 52px
     }
   }
@@ -54,6 +54,31 @@
   letter-spacing: 2px;
   line-height: 1;
   margin-bottom: $spacer;
+
+  &::after {
+    background-color: $gold;
+    content: '';
+    display: block;
+    height: 2px;
+    width: $spacer*3;
+    margin: $spacer*.333 0;
+
+    .-center & {
+      margin: $spacer*.333 auto;
+    }
+
+    .-right & {
+      margin-left: auto;
+    }
+  }
+
+  &.-center::after {
+    margin: $spacer*.333 auto;
+  }
+
+  &.-right::after {
+    margin-left: auto;
+  }
 }
 
 h1,
@@ -161,14 +186,24 @@ p {
   font-size: 1rem; // 16px
   font-weight: 100;
   line-height: 1.333;
-  margin: $spacer/2 0 $spacer;
+  margin: 0 0 $spacer*.5;
+
+  +p {
+    text-indent: 1rem;
+  }
+
+  +button,
+  +input[type=button],
+  +.btn {
+    margin-top: $spacer;
+  }
 }
 
 a {
   color: $gold;
   position: relative;
   text-decoration: none;
-  transition: all .25s;
+  transition: all .25s ease-in-out;
 
   &:hover {
     cursor: pointer;

@@ -1,1 +1,14 @@
-.nav {}
+.nav {
+  position: fixed;
+  top: $spacer;
+  right: $spacer*5;
+  z-index: map-get($z-index, nav);
+
+  &__item {
+    color: $white;
+
+    &:hover {
+      color: $gold;
+    }
+  }
+}

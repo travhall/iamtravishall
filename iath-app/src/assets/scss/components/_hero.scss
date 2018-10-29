@@ -1,17 +1,15 @@
 // HERO
 .hero {
   display: grid;
-  grid-template-columns: 1fr 96% 1fr;
+  grid-template-columns: 1fr 90% 1fr;
   grid-template-rows: ($spacer*6) auto ($spacer*6);
   grid-template-areas:
     ". . ."
     ". hero__content ."
     ". . .";
+  // margin: $spacer*.5;
+  padding: 0;
   position: relative;
-
-  @include breakpoint("small") {
-    grid-template-columns: 1fr 90% 1fr;
-  }
 
   @include breakpoint("medium") {
     grid-template-columns: 1fr 80% 2fr;
