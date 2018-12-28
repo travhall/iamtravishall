@@ -3,14 +3,13 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-home',
   template: `
-    <app-nav class="nav"></app-nav>
     <div class="home">
       <section class="hero home">
         <div class="hero__content">
           <h2>Hello, I'm Travis</h2>
           <h3 class="h4">&hellip; and I enjoy making things for the web.</h3>
-          <p>I currently oversee a team of very talented UX designers for <a href="https://www.arrow.com/" class="link" target="_blank" title="Arrow Electronics : Five Years Out">Arrow Electronics</a>. Previously, I wrote code for <a href="http://ideapark.com/" class="link" target="_blank" title="ideapark, doing good work since 1994">ideapark</a> and <a href="https://www.lacek.com/" class="link" target="_blank" title="The Lacek Group - A Specialist Brand of Company of the Ogilvy Group">The Lacek Group</a>. I’ve worked on projects for brands like, <em>Target</em>, <em>General Mills</em>, <em>Enterprise &amp; National Car Rental</em>. I’ve also worked with the fine people at <a href="http://www.playworkgroup.com/" class="link" target="_blank" title="play work group">playworkgroup</a>, <a href="https://www.adweek.com/agencyspy/denver-b2b-agency-faction-media-closes-after-12-years-in-business/135724" class="link" target="_blank" title="RIP Faction :("><del>Faction Media</del></a> and <a href="http://www.mccannmpls.com/" class="link" target="_blank" title="McCann Minneapolis">McCann</a>. Since you're here, see what I have to offer below or drop me a line at <a href="mailto:hello@iamtravishall.com" class="link"target="_blank" title="Email me at hello@iamtravishall.com">hello@iamtravishall.com</a>.</p>
-          <a [scrollTo]="'#skillz'" [scrollOffset]="-90" class="btn -ghost" title="Skillz n' stuff">
+          <p>I currently oversee a team of very talented UX designers for <a href="https://www.arrow.com/" class="link" target="_blank" title="Arrow Electronics : Five Years Out">Arrow Electronics</a>. Previously, I wrote code for <a href="http://ideapark.com/" class="link" target="_blank" title="ideapark, doing good work since 1994">ideapark</a> and <a href="https://www.lacek.com/" class="link" target="_blank" title="The Lacek Group - A Specialist Brand of Company of the Ogilvy Group">The Lacek Group</a>. I’ve worked on projects for brands like <em>Target</em>, <em>General Mills</em>, <em>Enterprise &amp; National Car Rental</em> and <em>US Bank</em>. I’ve also worked with the fine people at <a href="http://www.playworkgroup.com/" class="link" target="_blank" title="play work group">playworkgroup</a>, <a href="https://www.adweek.com/agencyspy/denver-b2b-agency-faction-media-closes-after-12-years-in-business/135724" class="link" target="_blank" title="RIP Faction :("><del>Faction Media</del></a> and <a href="http://www.mccannmpls.com/" class="link" target="_blank" title="McCann Minneapolis">McCann</a>. Since you're here, see what I have to offer below or drop me a line at <a href="mailto:hello@iamtravishall.com" class="link"target="_blank" title="Email me at hello@iamtravishall.com">hello@iamtravishall.com</a>.</p>
+          <a [scrollTo]="'#expertise'" [scrollDuration]="500" [scrollOffset]="-90" class="btn -ghost" title="Skillz n' stuff">
             See what I bring to the table<svg class="icon -sm">
               <use xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"></use>
             </svg>
@@ -18,7 +17,7 @@ import { Component, OnInit } from '@angular/core';
         </div>
       </section>
 
-      <section class="grid -primary" id="skillz">
+      <section class="grid -primary" id="expertise">
         <div class="card -ux">
           <h4 class="display-1">User Experience Design</h4>
           <p>I offer end-to-end user experience design. From user research to prototyping to user-centric design deliverables, I've got it covered.</p>

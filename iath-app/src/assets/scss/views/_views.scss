@@ -12,6 +12,13 @@
         background-image: url(../src/assets/img/bg-hero-lg.jpg);
       }
     }
+
+    &__content {
+      em {
+        color: $gold;
+        font-weight: bolder;
+      }
+    }
   }
 
   .card {
@@ -50,7 +57,7 @@
 
       @include breakpoint('medium') {
         grid-column-start: 5;
-        grid-column-end: 10;
+        grid-column-end: 11;
         // grid-template-areas:
         //   "title title"
         //   "list paragraph";
@@ -79,7 +86,7 @@
       }
 
       @include breakpoint('medium') {
-        grid-column-start: 5;
+        grid-column-start: 4;
         grid-column-end: 10;
         // grid-template-areas:
         //   "title title"

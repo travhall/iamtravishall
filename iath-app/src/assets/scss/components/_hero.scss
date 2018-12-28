@@ -1,7 +1,7 @@
 // HERO
 .hero {
   display: grid;
-  grid-template-columns: 1fr 90% 1fr;
+  grid-template-columns: 1fr 80% 1fr;
   grid-template-rows: ($spacer*6) auto ($spacer*6);
   grid-template-areas:
     ". . ."
@@ -11,16 +11,20 @@
   padding: 0;
   position: relative;
 
+  @include breakpoint("small") {
+    grid-template-columns: 1fr 74% 1fr;
+  }
+
   @include breakpoint("medium") {
-    grid-template-columns: 1fr 80% 2fr;
+    grid-template-columns: 1fr 68% 2fr;
   }
 
   @include breakpoint("large") {
-    grid-template-columns: 1fr 70% 2fr;
+    grid-template-columns: 2fr 62% 3fr;
   }
 
   @include breakpoint("xlarge") {
-    grid-template-columns: 1fr 60% 2fr;
+    grid-template-columns: 2fr 54% 3fr;
   }
 
   &__content {
