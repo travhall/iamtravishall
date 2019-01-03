@@ -13,8 +13,8 @@ header {
     height: 83px;
     width: 100px;
     position: absolute;
-    left: $spacer*.5;
-    top: $spacer*.5;
+    left: calc(50% - 50px);
+    top: $spacer;
     transition: all 0.3s ease-in-out 0s;
 
     @include breakpoint("medium") {

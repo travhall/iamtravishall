@@ -7,7 +7,7 @@
     ". . ."
     ". hero__content ."
     ". . .";
-  // margin: $spacer*.5;
+  margin: $spacer*.5;
   padding: 0;
   position: relative;
 
@@ -16,7 +16,7 @@
   }
 
   @include breakpoint("medium") {
-    grid-template-columns: 1fr 68% 2fr;
+    grid-template-columns: 120px 68% 2fr;
   }
 
   @include breakpoint("large") {
@@ -48,7 +48,7 @@
 
   &::after {
     background-attachment: fixed;
-    background-image: linear-gradient(125deg, shade($primary-dk, 70), $primary-dk);
+    background-image: linear-gradient(125deg, shade($primary-lt, 60), $primary);
     background-repeat: no-repeat;
     background-size: 100% auto;
     content: '';

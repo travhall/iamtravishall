@@ -8,8 +8,12 @@
         background-image: url(../src/assets/img/bg-hero-md.jpg);
       }
 
-      @include breakpoint('xlarge') {
+      @include breakpoint('large') {
         background-image: url(../src/assets/img/bg-hero-lg.jpg);
+      }
+
+      @include breakpoint('xlarge') {
+        background-image: url(../src/assets/img/bg-hero-xl.jpg);
       }
     }
 
@@ -119,18 +123,57 @@
     }
 
     &.-arrow {
-      background: url(../src/assets/img/bg-arrow-xl.jpg) no-repeat center fixed;
-      background-size: 100% auto;
+      background: url(../src/assets/img/bg-arrow-sm.jpg) no-repeat center fixed;
+      background-size: auto 100%;
+
+      @include breakpoint('medium') {
+        background-image: url(../src/assets/img/bg-arrow-md.jpg);
+      }
+
+      @include breakpoint('large') {
+        background-image: url(../src/assets/img/bg-arrow-lg.jpg);
+        background-size: 100% auto;
+      }
+
+      @include breakpoint('xlarge') {
+        background-image: url(../src/assets/img/bg-arrow-xl.jpg);
+      }
     }
 
     &.-stuntpuppy {
-      background: url(../src/assets/img/bg-stuntpuppy-xl.jpg) no-repeat center fixed;
-      background-size: 100% auto;
+      background: url(../src/assets/img/bg-stuntpuppy-sm.jpg) no-repeat center fixed;
+      background-size: auto 100%;
+
+      @include breakpoint('medium') {
+        background-image: url(../src/assets/img/bg-stuntpuppy-md.jpg);
+      }
+
+      @include breakpoint('large') {
+        background-image: url(../src/assets/img/bg-stuntpuppy-lg.jpg);
+        background-size: 100% auto;
+      }
+
+      @include breakpoint('xlarge') {
+        background-image: url(../src/assets/img/bg-stuntpuppy-xl.jpg);
+      }
     }
 
     &.-lacek {
-      background: url(../src/assets/img/bg-lacek-xl.jpg) no-repeat center fixed;
-      background-size: 100% auto;
+      background: url(../src/assets/img/bg-lacek-sm.jpg) no-repeat center fixed;
+      background-size: auto 100%;
+
+      @include breakpoint('medium') {
+        background-image: url(../src/assets/img/bg-lacek-md.jpg);
+      }
+
+      @include breakpoint('large') {
+        background-image: url(../src/assets/img/bg-lacek-lg.jpg);
+        background-size: 100% auto;
+      }
+
+      @include breakpoint('xlarge') {
+        background-image: url(../src/assets/img/bg-lacek-xl.jpg);
+      }
     }
   }
 }

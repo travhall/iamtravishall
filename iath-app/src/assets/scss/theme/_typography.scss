@@ -1,10 +1,6 @@
 .display {
   &-1 {
-    font-size: 2.5rem; // 40px
-
-    @include breakpoint("small") {
-      font-size: 3.325rem; // 52px
-    }
+    font-size: 3.325rem; // 52px
 
     @include breakpoint("medium") {
       font-size: 4.375rem; // 70px
@@ -16,11 +12,7 @@
   }
 
   &-2 {
-    font-size: 1.875rem; // 30px
-
-    @include breakpoint("small") {
-      font-size: 2.4375rem; // 39px
-    }
+    font-size: 2.4375rem; // 39px
 
     @include breakpoint("medium") {
       font-size: 3.25rem; // 52px
@@ -32,11 +24,7 @@
   }
 
   &-3 {
-    font-size: 1.375rem; // 22px
-
-    @include breakpoint("small") {
-      font-size: 1.875rem; // 30px
-    }
+    font-size: 1.875rem; // 30px
 
     @include breakpoint("medium") {
       font-size: 2.5rem; // 40px
@@ -60,8 +48,8 @@
     content: '';
     display: block;
     height: 2px;
-    width: $spacer*3;
-    margin: $spacer*.333 0;
+    width: $spacer;
+    margin: $spacer 0 $spacer*.333;
 
     .-center & {
       margin: $spacer*.333 auto;
@@ -101,7 +89,7 @@ h6,
 
 h1,
 .h1 {
-  font-size: 3.125rem; // 50px
+  font-size: 3.875rem; // 62px
 
   @include breakpoint("medium") {
     font-size: 4.1875rem; // 67px
@@ -114,7 +102,7 @@ h1,
 
 h2,
 .h2 {
-  font-size: 2.375rem; // 38px
+  font-size: 2.875rem; // 46px
 
   @include breakpoint("medium") {
     font-size: 3.125rem; // 50px
@@ -127,7 +115,7 @@ h2,
 
 h3,
 .h3 {
-  font-size: 1.75rem; // 28px
+  font-size: 2rem; // 32px
 
   @include breakpoint("medium") {
     font-size: 2.375rem; // 38px
@@ -140,10 +128,10 @@ h3,
 
 h4,
 .h4 {
-  font-size: 2.375rem; // 22px
+  font-size: 1.5rem; // 24px
 
   @include breakpoint("medium") {
-    font-size: 1.75rem; // 28px
+    font-size: 1.875rem; // 28px
   }
 
   @include breakpoint("large") {
@@ -153,7 +141,7 @@ h4,
 
 h5,
 .h5 {
-  font-size: 1.0625rem; // 17px
+  font-size: 1.125rem; // 16px
 
   @include breakpoint("medium") {
     font-size: 1.375rem; // 22px
@@ -185,7 +173,7 @@ h6,
 p {
   font-size: 1rem; // 16px
   font-weight: 100;
-  line-height: 1.666;
+  line-height: 1.5;
   margin: 0 0 $spacer*.5;
 
   +p {
