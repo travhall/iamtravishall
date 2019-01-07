@@ -7,24 +7,27 @@
     ". . ."
     ". hero__content ."
     ". . .";
-  margin: $spacer*.5;
+  margin: $spacer*.625;
   padding: 0;
   position: relative;
 
   @include breakpoint("small") {
-    grid-template-columns: 1fr 74% 1fr;
+    grid-template-columns: 1fr 75% 1fr;
   }
 
   @include breakpoint("medium") {
-    grid-template-columns: 120px 68% 2fr;
+    grid-template-columns: 120px 70% 2fr;
+    margin: $spacer*.75;
   }
 
   @include breakpoint("large") {
-    grid-template-columns: 2fr 62% 3fr;
+    grid-template-columns: 2fr 65% 3fr;
+    grid-template-rows: ($spacer*7) auto ($spacer*8);
   }
 
   @include breakpoint("xlarge") {
-    grid-template-columns: 2fr 54% 3fr;
+    grid-template-columns: 2fr 55% 3fr;
+    grid-template-rows: ($spacer*8) auto ($spacer*10);
   }
 
   &__content {

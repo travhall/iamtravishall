@@ -41,13 +41,13 @@ import { Component, OnInit } from '@angular/core';
             class="btn -ghost"
             title="A very particular set of skills"
           >
-            Expertise<svg class="icon -sm">
+            Read On<svg class="icon -sm">
               <use
                 xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"
               ></use>
             </svg>
           </a>
-          <a
+          <!-- <a
             [scrollTo]="'#projects'"
             [scrollDuration]="500"
             [scrollOffset]="-90"
@@ -59,62 +59,106 @@ import { Component, OnInit } from '@angular/core';
                 xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"
               ></use>
             </svg>
-          </a>
+          </a> -->
         </div>
       </section>
 
-      <section class="grid -primary" id="expertise">
-        <div class="card -ux">
-          <h4 class="display-1">User Experience Design</h4>
-          <p>
-            I offer end-to-end user experience design. From user research to
-            prototyping to user-centric design deliverables, I've got it
-            covered.
-          </p>
-          <ul>
-            <li>Dolor pulvinar etiam.</li>
-            <li>Sagittis adipiscing.</li>
-            <li>Felis enim feugiat.</li>
-            <li>Etiam vel felis lorem.</li>
-          </ul>
-        </div>
-        <div class="card -ui">
-          <h4 class="display-1">Front End &amp; UI Developement</h4>
-          <p>
-            Pixel perfect may be a myth but I'm a unicorn. I can provide the
-            next best thing, consistent, scalable, modular, responsive front end
-            work.
-          </p>
-          <ul>
-            <li>Dolor pulvinar etiam.</li>
-            <li>Sagittis adipiscing.</li>
-            <li>Felis enim feugiat.</li>
-            <li>Etiam vel felis lorem.</li>
-          </ul>
-        </div>
-        <div class="card -vis">
-          <h4 class="display-1">Visual &amp; Graphic Design</h4>
-          <p>
-            Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada
-            magna mollis euismod. Cras justo odio, dapibus ac facilisis in,
-            egestas eget quam.
-          </p>
-          <ul>
-            <li>Dolor pulvinar etiam.</li>
-            <li>Sagittis adipiscing.</li>
-            <li>Felis enim feugiat.</li>
-            <li>Etiam vel felis lorem.</li>
-          </ul>
+      <section id="expertise">
+        <div class="grid -primary">
+          <div class="card -ux" id="uxexpertise">
+            <svg class="icon -graphic">
+              <use xlink:href="assets/symbol-defs.svg#icon-ux-design"></use>
+            </svg>
+            <h4 class="display-1">User Experience Design</h4>
+            <div class="paragraph">
+              <p>
+                Praesent commodo cursus magna, vel scelerisque nisl consectetur
+                et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
+                dolor auctor. Nullam quis risus eget urna mollis ornare vel eu
+                leo. Vestibulum id ligula porta felis euismod semper. Curabitur
+                blandit tempus porttitor.
+              </p>
+              <!-- <a
+                [scrollTo]="'#uxwork'"
+                [scrollDuration]="500"
+                [scrollOffset]="20"
+                class="btn -ghost"
+                title="UX Lead | Arrow Electronics"
+              >
+                View Case Study<svg class="icon -sm">
+                  <use
+                    xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"
+                  ></use>
+                </svg>
+              </a> -->
+            </div>
+          </div>
+          <div class="card -ui" id="uiexpertise">
+            <svg class="icon -graphic">
+              <use xlink:href="assets/symbol-defs.svg#icon-ui-dev"></use>
+            </svg>
+            <h4 class="display-1">Front End &amp; UI Dev</h4>
+            <div class="paragraph">
+              <p>
+                Vestibulum id ligula porta felis euismod semper. Maecenas
+                faucibus mollis interdum. Nullam id dolor id nibh ultricies
+                vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem
+                lacinia quam venenatis vestibulum. Nulla vitae elit libero, a
+                pharetra augue.
+              </p>
+              <!-- <a
+                [scrollTo]="'#fework'"
+                [scrollDuration]="500"
+                [scrollOffset]="20"
+                class="btn -ghost"
+                title="Front End &amp; UI Development Showcase"
+              >
+                View Case Study<svg class="icon -sm">
+                  <use
+                    xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"
+                  ></use>
+                </svg>
+              </a> -->
+            </div>
+          </div>
+          <div class="card -vis" id="visexpertise">
+            <svg class="icon -graphic">
+              <use xlink:href="assets/symbol-defs.svg#icon-vis-design"></use>
+            </svg>
+            <h4 class="display-1">Visual &amp; Graphic Design</h4>
+            <div class="paragraph">
+              <p>
+                Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+                auctor. Cras mattis consectetur purus sit amet fermentum. Cum
+                sociis natoque penatibus et magnis dis parturient montes,
+                nascetur ridiculus mus. Integer posuere erat a ante venenatis
+                dapibus posuere velit aliquet. Donec sed odio dui.
+              </p>
+              <!-- <a
+                [scrollTo]="'#viswork'"
+                [scrollDuration]="500"
+                [scrollOffset]="20"
+                class="btn -ghost"
+                title="Visual &amp; Graphic Design"
+              >
+                View Case Study<svg class="icon -sm">
+                  <use
+                    xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"
+                  ></use>
+                </svg>
+              </a> -->
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="panel__container" id="projects">
-        <div class="panel -arrow">
-          <div class="panel__content -center">
+        <div class="panel -arrow" id="uxwork">
+          <div class="panel__content">
+            <h4 class="h6">User Experience Design</h4>
             <h4 class="display-1">Arrow Electronics</h4>
-            <h4>Enterprise Ecommerce Platform</h4>
             <h4>UX Design Lead</h4>
-            <h5>2016 - present</h5>
+            <h6>2016 - present</h6>
             <button
               routerLink="/arrow"
               routerLinkActive="active"
@@ -125,12 +169,12 @@ import { Component, OnInit } from '@angular/core';
           </div>
         </div>
 
-        <div class="panel -stuntpuppy">
-          <div class="panel__content -center">
+        <div class="panel -stuntpuppy" id="fework">
+          <div class="panel__content">
+            <h4 class="h6">Front End Developer</h4>
             <h4 class="display-1">Stunt Puppy</h4>
             <h4>Shopify Theme / Microsite</h4>
-            <h4>Front End Development</h4>
-            <h5>2014 - 2018</h5>
+            <h6>2014 - 2018</h6>
             <button
               routerLink="/stuntpuppy"
               routerLinkActive="active"
@@ -142,12 +186,12 @@ import { Component, OnInit } from '@angular/core';
           </div>
         </div>
 
-        <div class="panel -lacek">
-          <div class="panel__content -center">
+        <div class="panel -lacek" id="viswork">
+          <div class="panel__content">
+            <h4 class="h6">Front End Developer</h4>
             <h4 class="display-1">The Lacek Group</h4>
             <h4>Agency Microsite</h4>
-            <h4>Front End Development</h4>
-            <h5>2012 - 2014</h5>
+            <h6>2012 - 2014</h6>
             <button
               routerLink="/lacek"
               routerLinkActive="active"
@@ -160,13 +204,7 @@ import { Component, OnInit } from '@angular/core';
         </div>
       </section>
 
-      <!-- <section>
-        <h3>Testimonials/Hire me Section</h3>
-      </section>
-
-      <section>
-        <h3>About Section</h3>
-      </section> -->
+      <section><h3>About Section</h3></section>
     </div>
   `,
   styles: []

@@ -13,7 +13,7 @@ import { Component, OnInit } from '@angular/core';
           <use xlink:href="assets/symbol-defs.svg#icon-logo-iath"></use>
         </svg>
       </a>
-      <!-- <div class="links">
+      <div class="links">
         <a
           href="mailto:hello@iamtravishall.com"
           class="link-icon"
@@ -34,7 +34,7 @@ import { Component, OnInit } from '@angular/core';
             <use xlink:href="assets/symbol-defs.svg#icon-linkedin"></use>
           </svg>
         </a>
-      </div> -->
+      </div>
     </header>
   `,
   styles: []

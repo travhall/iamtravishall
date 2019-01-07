@@ -1,6 +1,6 @@
 .display {
   &-1 {
-    font-size: 3.325rem; // 52px
+    font-size: 3rem; // 48px
 
     @include breakpoint("medium") {
       font-size: 4.375rem; // 70px
@@ -40,7 +40,7 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 900;
   letter-spacing: 2px;
-  line-height: 1;
+  line-height: .9;
   margin-bottom: $spacer;
 
   &::after {
@@ -67,6 +67,7 @@
   &.-right::after {
     margin-left: auto;
   }
+
 }
 
 h1,
@@ -85,6 +86,10 @@ h6,
   font-weight: 300;
   line-height: 1;
   margin: 0 0 $spacer;
+
+  +[class^="display-"] {
+    margin-top: -$spacer*.8;
+  }
 }
 
 h1,

@@ -9,7 +9,7 @@ header {
   z-index: map-get($z-index, header);
 
   .logo {
-    // opacity: .2;
+    opacity: .8;
     height: 83px;
     width: 100px;
     position: absolute;
@@ -18,7 +18,12 @@ header {
     transition: all 0.3s ease-in-out 0s;
 
     @include breakpoint("medium") {
-      left: $spacer*.5;
+      left: $spacer;
+    }
+
+    @include breakpoint("large") {
+      left: $spacer*1.75;
+      top: $spacer*1.75;
     }
 
     &:hover {
@@ -31,11 +36,21 @@ header {
   .links {
     position: absolute;
     top: $spacer;
-    right: $spacer;
+    left: $spacer;
+
+    @include breakpoint('medium') {
+      top: $spacer*2;
+      left: auto;
+      right: $spacer;
+    }
 
     a {
       float: left;
-      margin-left: $spacer*.25;
+      margin-right: $spacer*.25;
+
+      @include breakpoint('medium') {
+        margin-left: $spacer*.25;
+      }
     }
   }
 }

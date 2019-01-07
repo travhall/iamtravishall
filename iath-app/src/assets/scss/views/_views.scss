@@ -2,7 +2,11 @@
 .home {
   .hero {
     &::after {
-      background-image: url(../src/assets/img/bg-hero-sm.jpg);
+      background-image: url(../src/assets/img/bg-hero-xs.jpg);
+
+      @include breakpoint('small') {
+        background-image: url(../src/assets/img/bg-hero-sm.jpg);
+      }
 
       @include breakpoint('medium') {
         background-image: url(../src/assets/img/bg-hero-md.jpg);
@@ -30,71 +34,88 @@
     grid-column-start: 1;
     grid-column-end: 4;
     grid-template-areas:
+      'icon'
       'title'
-      'paragraph'
-      'list';
-    padding: 0 $spacer $spacer * 4;
+      'paragraph';
+    padding: 0 $spacer $spacer*4;
+
+    @include breakpoint('small') {
+      grid-column-start: 2;
+      grid-column-end: 6;
+    }
 
     @include breakpoint('medium') {
+      grid-column-start: 2;
+      grid-column-end: 12;
       grid-template-areas:
-        'title title'
-        'paragraph list';
+        'icon title'
+        'icon paragraph';
+    }
+
+    .-graphic {
+      align-self: center;
+      grid-area: icon;
+      margin: 0 auto $spacer*2;
+      height: 64px;
+      width: 122px;
+
+      @include breakpoint('medium') {
+        margin: 0 $spacer 0 0;
+      }
+
+      @include breakpoint('large') {
+        margin: 0 $spacer*2 0 0;
+      }
     }
 
     .display-1 {
       grid-area: title;
     }
 
-    p {
+    .paragraph {
       grid-area: paragraph;
     }
 
-    ul {
-      grid-area: list;
-    }
-
     &.-ux {
-      @include breakpoint('small') {
-        grid-column-start: 1;
-        grid-column-end: 6;
-      }
 
-      @include breakpoint('medium') {
-        grid-column-start: 5;
-        grid-column-end: 11;
-        // grid-template-areas:
-        //   "title title"
-        //   "list paragraph";
+      @include breakpoint('large') {
+        grid-column-start: 3;
+        grid-column-end: 10;
       }
     }
 
     &.-ui {
-      @include breakpoint('small') {
-        grid-column-start: 2;
-        grid-column-end: 7;
-      }
 
       @include breakpoint('medium') {
-        grid-column-start: 2;
-        grid-column-end: 8;
         grid-template-areas:
-          'title title'
-          'list paragraph';
+          'title icon'
+          'paragraph icon';
+        text-align: right;
+
+        .display-1::after {
+          margin-left: auto;
+        }
+
+        .-graphic {
+          margin: 0 0 0 $spacer;
+
+          @include breakpoint('large') {
+            margin: 0 0 0 $spacer*2;
+          }
+        }
+      }
+
+      @include breakpoint('large') {
+        grid-column-start: 3;
+        grid-column-end: 10;
       }
     }
 
     &.-vis {
-      @include breakpoint('small') {
-        grid-column-start: 1;
-        grid-column-end: 6;
-      }
 
-      @include breakpoint('medium') {
-        grid-column-start: 4;
+      @include breakpoint('large') {
+        grid-column-start: 3;
         grid-column-end: 10;
-        // grid-template-areas:
-        //   "title title"
-        //   "list paragraph";
       }
     }
   }
@@ -102,7 +123,7 @@
   .panel {
     display: grid;
     min-height: 100vh;
-    padding: $spacer;
+    padding: $spacer*2;
     position: relative;
     align-content: center;
     justify-content: center;
@@ -120,6 +141,10 @@
 
     &__content {
       transform: skewY(3.5deg);
+
+      .btn {
+        margin-top: $spacer;
+      }
     }
 
     &.-arrow {
@@ -176,6 +201,14 @@
       }
     }
   }
+}
+
+#expertise {
+  margin: $spacer*5 0;
+}
+
+#projects {
+  // margin-top: -$spacer*5;
 }
 
 // CASE STUDY

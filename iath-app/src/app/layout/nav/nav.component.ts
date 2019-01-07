@@ -4,7 +4,9 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-nav',
   template: `
     <nav>
-      <a [scrollTo]="'#projects'" class="nav__item" title="Case Studies">Case Studies</a>
+      <a [scrollTo]="'#projects'" class="nav__item" title="Case Studies"
+        >Case Studies</a
+      >
     </nav>
   `,
   styleUrls: ['./nav.component.scss']

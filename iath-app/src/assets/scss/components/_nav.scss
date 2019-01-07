@@ -1,4 +1,5 @@
 .nav {
+  grid-area: nav;
   position: absolute;
   top: 0;
   height: 100%;
@@ -8,8 +9,8 @@
 
   @include breakpoint('medium') {
     position: fixed;
-    top: $spacer;
-    right: $spacer * 4.5;
+    top: $spacer*2;
+    right: $spacer*5;
     width: auto;
   }
 
@@ -23,10 +24,25 @@
 }
 
 .toggle {
+  background: transparent;
+  font-size: 1.25rem;
   position: absolute;
-  top: $spacer*3;
-  right: 0;
+  padding: 0;
+  top: $spacer*.75;
+  right: $spacer*.75;
   z-index: 500;
+
+  &:hover,
+  &:focus {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+  }
+
+  @include breakpoint('medium') {
+    display: none;
+  }
 }
 
 #site-wrapper {
