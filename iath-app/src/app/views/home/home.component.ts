@@ -35,13 +35,13 @@ import { Component, OnInit } from '@angular/core';
             >, to name a few.
           </p>
           <a
-            [scrollTo]="'#expertise'"
+            [scrollTo]="'#uxexpertise'"
             [scrollDuration]="500"
-            [scrollOffset]="-90"
+            [scrollOffset]="-20"
             class="btn -ghost"
             title="A very particular set of skills"
           >
-            Read On<svg class="icon -sm">
+            Read More<svg class="icon -sm">
               <use
                 xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"
               ></use>
@@ -78,6 +78,17 @@ import { Component, OnInit } from '@angular/core';
                 leo. Vestibulum id ligula porta felis euismod semper. Curabitur
                 blandit tempus porttitor.
               </p>
+              <a
+                [scrollTo]="'#uiexpertise'"
+                [scrollDuration]="500"
+                [scrollOffset]="-20"
+                title="Front End &amp; UI Development"
+                >Read More
+                <svg class="icon -sm">
+                  <use
+                    xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"
+                  ></use></svg
+              ></a>
               <!-- <a
                 [scrollTo]="'#uxwork'"
                 [scrollDuration]="500"
@@ -106,6 +117,17 @@ import { Component, OnInit } from '@angular/core';
                 lacinia quam venenatis vestibulum. Nulla vitae elit libero, a
                 pharetra augue.
               </p>
+              <a
+                [scrollTo]="'#visexpertise'"
+                [scrollDuration]="500"
+                [scrollOffset]="-20"
+                title="Visual &amp; Graphic Design"
+                >Read More
+                <svg class="icon -sm">
+                  <use
+                    xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"
+                  ></use></svg
+              ></a>
               <!-- <a
                 [scrollTo]="'#fework'"
                 [scrollDuration]="500"
@@ -134,6 +156,17 @@ import { Component, OnInit } from '@angular/core';
                 nascetur ridiculus mus. Integer posuere erat a ante venenatis
                 dapibus posuere velit aliquet. Donec sed odio dui.
               </p>
+              <a
+                [scrollTo]="'#projects'"
+                [scrollDuration]="500"
+                [scrollOffset]="20"
+                title="View Case Studies"
+                >Case Studies
+                <svg class="icon -sm">
+                  <use
+                    xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"
+                  ></use></svg
+              ></a>
               <!-- <a
                 [scrollTo]="'#viswork'"
                 [scrollDuration]="500"
