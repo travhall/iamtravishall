@@ -16,6 +16,16 @@ input[type=button],
     @include button($primary-lt);
   }
 
+  &.-white {
+    @include button($white);
+    color: $black;
+
+    &:hover {
+      background: transparent;
+      color: $white;
+    }
+  }
+
   &.-gold {
     @include button($gold);
   }
@@ -27,6 +37,10 @@ input[type=button],
   &.-cream {
     @include button($cream);
     color: $black;
+
+    &:hover {
+      color: $black;
+    }
   }
 
   &.-bronze {
@@ -40,6 +54,10 @@ input[type=button],
   &.-caution {
     @include button($caution);
     color: $black;
+
+    &:hover {
+      color: $black;
+    }
   }
 
   &.-danger {
@@ -112,6 +130,10 @@ input[type=button],
 
   &.-lt {
     background: $primary-lt;
+  }
+
+  &.-white {
+    background: $white;
   }
 
   &.-gold {

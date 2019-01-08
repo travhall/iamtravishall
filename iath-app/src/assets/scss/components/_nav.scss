@@ -77,3 +77,24 @@
     }
   }
 }
+
+.backToTop {
+  color: $white;
+  opacity: 0;
+  position: fixed;
+  right: -$spacer*1.75;
+  bottom: $spacer*3.5;
+  transition: all .65s ease-out;
+
+  &.active {
+    @include breakpoint('medium') {
+      opacity: .6;
+      right: $spacer*1.75;
+    }
+  }
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}

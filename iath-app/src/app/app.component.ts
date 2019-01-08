@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,19 @@ import { Component } from '@angular/core';
         <app-footer class="footer"></app-footer>
       </div>
       <!-- <button (click)="toggle()" class="toggle">&#9776;</button> -->
+      <a
+        class="backToTop"
+        id="backToTop"
+        [scrollTo]="'#site-wrapper'"
+        [scrollDuration]="500"
+        title="Back to the start"
+      >
+        <svg class="icon -lg">
+          <use
+            xlink:href="assets/symbol-defs.svg#icon-chevron-outline-up"
+          ></use>
+        </svg>
+      </a>
     </div>
   `
 })
@@ -22,5 +36,17 @@ export class AppComponent {
   toggle() {
     this.menuVisible = !this.menuVisible;
     this.displayMenu = this.menuVisible ? 'show' : 'hide';
+  }
+
+  @HostListener('document:scroll', [])
+  onWindowScroll() {
+    const offSet = window.pageYOffset;
+    const heroHeight = document.getElementById('hero').offsetHeight;
+    const backBtn = document.getElementById('backToTop');
+    if (offSet > heroHeight) {
+      backBtn.classList.add('active');
+    } else if (offSet < heroHeight) {
+      backBtn.classList.remove('active');
+    }
   }
 }

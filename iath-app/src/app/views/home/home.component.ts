@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-home',
   template: `
     <div class="home">
-      <section class="hero home">
+      <section class="hero home" id="hero">
         <div class="hero__content">
           <h2>Hello, I'm Travis</h2>
           <h3 class="h4">&hellip; and I enjoy making things for the web.</h3>
@@ -89,19 +89,6 @@ import { Component, OnInit } from '@angular/core';
                     xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"
                   ></use></svg
               ></a>
-              <!-- <a
-                [scrollTo]="'#uxwork'"
-                [scrollDuration]="500"
-                [scrollOffset]="20"
-                class="btn -ghost"
-                title="UX Lead | Arrow Electronics"
-              >
-                View Case Study<svg class="icon -sm">
-                  <use
-                    xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"
-                  ></use>
-                </svg>
-              </a> -->
             </div>
           </div>
           <div class="card -ui" id="uiexpertise">
@@ -128,19 +115,6 @@ import { Component, OnInit } from '@angular/core';
                     xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"
                   ></use></svg
               ></a>
-              <!-- <a
-                [scrollTo]="'#fework'"
-                [scrollDuration]="500"
-                [scrollOffset]="20"
-                class="btn -ghost"
-                title="Front End &amp; UI Development Showcase"
-              >
-                View Case Study<svg class="icon -sm">
-                  <use
-                    xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"
-                  ></use>
-                </svg>
-              </a> -->
             </div>
           </div>
           <div class="card -vis" id="visexpertise">
@@ -159,27 +133,14 @@ import { Component, OnInit } from '@angular/core';
               <a
                 [scrollTo]="'#projects'"
                 [scrollDuration]="500"
-                [scrollOffset]="20"
                 title="View Case Studies"
                 >Case Studies
                 <svg class="icon -sm">
                   <use
                     xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"
-                  ></use></svg
-              ></a>
-              <!-- <a
-                [scrollTo]="'#viswork'"
-                [scrollDuration]="500"
-                [scrollOffset]="20"
-                class="btn -ghost"
-                title="Visual &amp; Graphic Design"
-              >
-                View Case Study<svg class="icon -sm">
-                  <use
-                    xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"
                   ></use>
                 </svg>
-              </a> -->
+              </a>
             </div>
           </div>
         </div>
@@ -195,9 +156,23 @@ import { Component, OnInit } from '@angular/core';
             <button
               routerLink="/arrow"
               routerLinkActive="active"
-              class="btn -ghost"
+              class="btn -white"
             >
               Read More
+            </button>
+            <button
+              class="btn -ghost"
+              [scrollTo]="'#fework'"
+              [scrollDuration]="500"
+              [scrollOffset]="45"
+              title="Stunt Puppy"
+            >
+              Next Case Study
+              <svg class="icon -sm">
+                <use
+                  xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"
+                ></use>
+              </svg>
             </button>
           </div>
         </div>
@@ -211,10 +186,24 @@ import { Component, OnInit } from '@angular/core';
             <button
               routerLink="/stuntpuppy"
               routerLinkActive="active"
-              class="btn -ghost"
+              class="btn -white"
               disabled
             >
               Coming Soon
+            </button>
+            <button
+              class="btn -ghost"
+              [scrollTo]="'#viswork'"
+              [scrollDuration]="500"
+              [scrollOffset]="45"
+              title="The Lacek Group"
+            >
+              Next Case Study
+              <svg class="icon -sm">
+                <use
+                  xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"
+                ></use>
+              </svg>
             </button>
           </div>
         </div>
@@ -228,16 +217,41 @@ import { Component, OnInit } from '@angular/core';
             <button
               routerLink="/lacek"
               routerLinkActive="active"
-              class="btn -ghost"
+              class="btn -white"
               disabled
             >
               Coming Soon
+            </button>
+            <button
+              class="btn -ghost"
+              [scrollTo]="'#about'"
+              [scrollDuration]="500"
+              [scrollOffset]="45"
+              title="Say hi!"
+            >
+              Get to know me
+              <svg class="icon -sm">
+                <use
+                  xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"
+                ></use>
+              </svg>
             </button>
           </div>
         </div>
       </section>
 
-      <section><h3>About Section</h3></section>
+      <section class="about" id="about">
+        <h3>&hellip; like I said, I'm Travis.</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+          lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo
+          luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+          Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula
+          porta felis euismod semper. Etiam porta sem malesuada magna mollis
+          euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+          condimentum nibh, ut fermentum massa justo sit amet risus.
+        </p>
+      </section>
     </div>
   `,
   styles: []

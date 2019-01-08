@@ -1,5 +1,7 @@
 // HOME
 .home {
+  position: relative;
+
   .hero {
     &::after {
       background-image: url(../src/assets/img/bg-hero-xs.jpg);
@@ -128,15 +130,10 @@
     align-content: center;
     justify-content: center;
     transform: skewY(-3.5deg);
-    // scroll-snap-align: start;
 
     &__container {
-      // height: 100vh;
       padding: 0;
       position: relative;
-      // scroll-snap-type: y proximity;
-      // overflow-y: scroll;
-      // scroll-snap-align: start;
     }
 
     &__content {
@@ -204,7 +201,7 @@
 }
 
 #expertise {
-  margin: $spacer*5 0;
+  // margin: $spacer*5 0;
 }
 
 #projects {

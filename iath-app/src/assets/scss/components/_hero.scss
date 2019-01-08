@@ -21,13 +21,12 @@
   }
 
   @include breakpoint("large") {
-    grid-template-columns: 2fr 65% 3fr;
-    grid-template-rows: ($spacer*7) auto ($spacer*8);
+    grid-template-columns: 2fr 60% 3fr;
+    grid-template-rows: ($spacer*6) auto ($spacer*8);
   }
 
   @include breakpoint("xlarge") {
-    grid-template-columns: 2fr 55% 3fr;
-    grid-template-rows: ($spacer*8) auto ($spacer*10);
+    grid-template-columns: 2fr 45% 3fr;
   }
 
   &__content {
