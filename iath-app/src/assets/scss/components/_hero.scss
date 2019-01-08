@@ -21,18 +21,26 @@
   }
 
   @include breakpoint("large") {
-    grid-template-columns: 2fr 60% 3fr;
+    grid-template-columns: 2fr 65% 3fr;
     grid-template-rows: ($spacer*6) auto ($spacer*8);
   }
 
   @include breakpoint("xlarge") {
-    grid-template-columns: 2fr 45% 3fr;
+    grid-template-columns: 2fr 60% 3fr;
+  }
+
+  @include breakpoint("whoa") {
+    grid-template-columns: 2fr 50% 3fr;
   }
 
   &__content {
     grid-area: hero__content;
     position: relative;
     z-index: map-get($z-index, main);
+
+    p {
+      max-width: 48rem;
+    }
   }
 
   &::before {
