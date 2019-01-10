@@ -21,6 +21,11 @@ $grey: #9b9b9b;
 $grey-lt: #eee;
 $grey-dk: #7b7b7b;
 
+//GRADIENTS
+$linear-grad: linear-gradient($primary, $gold);
+$linear-grad-trans: linear-gradient(rgba($primary, 0.9), rgba($gold, 0.9));
+$linear-grad-trans-lt: linear-gradient(rgba($primary, 0.75), rgba($gold, 0.75));
+
 $breakpoints: ( // BREAKPOINTS : @include breakpoint("medium") {…}
 'xsmall': (min-width: 25rem), // 400px - Tiny phones
 'small': (min-width: 35rem), // 576px - Small tablets and large smartphones

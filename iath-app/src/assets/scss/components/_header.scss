@@ -15,7 +15,7 @@ header {
     position: absolute;
     left: calc(50% - 50px);
     top: $spacer;
-    transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out;
 
     @include breakpoint("medium") {
       left: $spacer;
@@ -48,6 +48,13 @@ header {
       top: $spacer*2;
       left: auto;
       right: $spacer*2;
+
+      .email::before {
+        content: 'hello@iamtravishall.com';
+        font-size: .825rem;
+        font-weight: bolder;
+        padding: 0 .45rem 0 .25rem;
+      }
     }
 
     a {

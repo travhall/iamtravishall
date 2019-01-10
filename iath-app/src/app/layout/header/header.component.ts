@@ -16,7 +16,7 @@ import { Component, OnInit } from '@angular/core';
       <div class="links">
         <a
           href="mailto:hello@iamtravishall.com"
-          class="link-icon"
+          class="link-icon email"
           target="_blank"
           title="Email me at hello@iamtravishall.com"
         >

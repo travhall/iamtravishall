@@ -82,9 +82,9 @@
   color: $white;
   opacity: 0;
   position: fixed;
-  right: -$spacer*1.75;
+  right: -$spacer*3;
   bottom: $spacer*3.5;
-  transition: all .65s ease-out;
+  transition: all .5s ease-in-out;
 
   &.active {
     @include breakpoint('medium') {

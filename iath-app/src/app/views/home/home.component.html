@@ -4,8 +4,7 @@
       <h2>Hello, I'm Travis</h2>
       <h3 class="h4">&hellip; and I enjoy making things for the web.</h3>
       <p>
-        I'm a Denver based designer/developer, currently leading a team of
-        very talented UX designers for
+        I'm a Denver based designer/developer, currently leading a team of very talented UX designers for
         <a href="https://www.arrow.com/" class="link" target="_blank" title="Arrow Electronics : Five Years Out">Arrow
           Electronics</a>. Previously, I wrote code for
         <a href="http://ideapark.com/" class="link" target="_blank" title="ideapark, doing good work since 1994">ideapark</a>
@@ -13,8 +12,15 @@
         <a href="https://www.lacek.com/" class="link" target="_blank" title="The Lacek Group - A Specialist Brand of Company of the Ogilvy Group">The
           Lacek Group</a>, to name a few.
       </p>
-      <a [scrollTo]="'#uxexpertise'" [scrollDuration]="500" [scrollOffset]="-20" class="btn -ghost" title="A very particular set of skills">
-        Read More<svg class="icon -sm">
+      <a [scrollTo]="'#uxexpertise'" [scrollDuration]="500" [scrollOffset]="-80" class="btn -ghost" title="A very particular set of skills">
+        Read More
+        <svg class="icon -sm">
+          <use xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"></use>
+        </svg>
+      </a>
+      <a [scrollTo]="'#projects'" [scrollDuration]="500" class="btn -ghost" title="View Case Studies">
+        Projects
+        <svg class="icon -sm">
           <use xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"></use>
         </svg>
       </a>
@@ -90,7 +96,7 @@
 
   <section class="panel__container" id="projects">
 
-    <div class="panel -arrow" id="uxwork">
+    <div class="panel -arrow" id="cs-arrow">
       <div class="panel__content">
         <h4 class="h6">User Experience Design</h4>
         <h4 class="display-1">Arrow Electronics</h4>
@@ -99,8 +105,8 @@
         <button routerLink="/arrow" routerLinkActive="active" class="btn -white">
           Read More
         </button>
-        <button class="btn -ghost" [scrollTo]="'#fework'" [scrollDuration]="500" [scrollOffset]="45" title="Stunt Puppy">
-          Next Case Study
+        <button class="btn -ghost" [scrollTo]="'#cs-stuntpuppy'" [scrollDuration]="500" [scrollOffset]="45" title="Case Study : Stunt Puppy">
+          Next Project
           <svg class="icon -sm">
             <use xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"></use>
           </svg>
@@ -108,7 +114,7 @@
       </div>
     </div>
 
-    <div class="panel -stuntpuppy" id="fework">
+    <div class="panel -stuntpuppy" id="cs-stuntpuppy">
       <div class="panel__content">
         <h4 class="h6">Front End Developer</h4>
         <h4 class="display-1">Stunt Puppy</h4>
@@ -117,8 +123,8 @@
         <button routerLink="/stuntpuppy" routerLinkActive="active" class="btn -white" disabled>
           Coming Soon
         </button>
-        <button class="btn -ghost" [scrollTo]="'#viswork'" [scrollDuration]="500" [scrollOffset]="45" title="The Lacek Group">
-          Next Case Study
+        <button class="btn -ghost" [scrollTo]="'#cs-lacek'" [scrollDuration]="500" [scrollOffset]="45" title="Case Study : The Lacek Group">
+          Next Project
           <svg class="icon -sm">
             <use xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"></use>
           </svg>
@@ -126,7 +132,7 @@
       </div>
     </div>
 
-    <div class="panel -lacek" id="viswork">
+    <div class="panel -lacek" id="cs-lacek">
       <div class="panel__content">
         <h4 class="h6">Front End Developer</h4>
         <h4 class="display-1">The Lacek Group</h4>
@@ -136,8 +142,7 @@
           Coming Soon
         </button>
         <button class="btn -ghost" [scrollTo]="'#about'" [scrollDuration]="500" [scrollOffset]="45" title="Say hi!">
-          Get to know me
-          <svg class="icon -sm">
+          Profile<svg class="icon -sm">
             <use xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"></use>
           </svg>
         </button>

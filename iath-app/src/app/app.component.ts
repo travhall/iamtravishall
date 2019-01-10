@@ -42,11 +42,18 @@ export class AppComponent {
   onWindowScroll() {
     const offSet = window.pageYOffset;
     const heroHeight = document.getElementById('hero').offsetHeight;
+    const expertiseHeight = document.getElementById('uxexpertise').offsetHeight;
+    const uxexpertise = document.getElementById('uxexpertise');
     const backBtn = document.getElementById('backToTop');
     if (offSet > heroHeight) {
       backBtn.classList.add('active');
     } else if (offSet < heroHeight) {
       backBtn.classList.remove('active');
+    }
+    if (offSet > expertiseHeight) {
+      uxexpertise.classList.add('active');
+    } else if (offSet < expertiseHeight) {
+      uxexpertise.classList.remove('active');
     }
   }
 }

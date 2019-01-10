@@ -4,22 +4,29 @@
 
   .hero {
     &::after {
-      background-image: url(../src/assets/img/bg-hero-xs.jpg);
+      background-image:
+        $linear-grad,
+        url(../src/assets/img/bg-hero-xs.jpg);
+      background-blend-mode: multiply;
 
       @include breakpoint('small') {
-        background-image: url(../src/assets/img/bg-hero-sm.jpg);
+        background-image: $linear-grad,
+          url(../src/assets/img/bg-hero-sm.jpg);
       }
 
       @include breakpoint('medium') {
-        background-image: url(../src/assets/img/bg-hero-md.jpg);
+        background-image: $linear-grad,
+          url(../src/assets/img/bg-hero-md.jpg);
       }
 
       @include breakpoint('large') {
-        background-image: url(../src/assets/img/bg-hero-lg.jpg);
+        background-image: $linear-grad,
+          url(../src/assets/img/bg-hero-lg.jpg);
       }
 
       @include breakpoint('xlarge') {
-        background-image: url(../src/assets/img/bg-hero-xl.jpg);
+        background-image: $linear-grad,
+          url(../src/assets/img/bg-hero-xl.jpg);
       }
     }
 
@@ -39,11 +46,20 @@
       'icon'
       'title'
       'paragraph';
-    padding: 0 $spacer $spacer*4;
+    padding: $spacer*2;
+    // margin-top: 0;
+    // opacity: 0;
+    transition: all .65s ease-in-out;
+
+    // &.active {
+    // margin-top: -$spacer*2;
+    // opacity: 1;
+    // }
 
     @include breakpoint('small') {
       grid-column-start: 2;
       grid-column-end: 6;
+      padding: $spacer $spacer*2 $spacer*4;
     }
 
     @include breakpoint('medium') {
@@ -52,6 +68,10 @@
       grid-template-areas:
         'icon title'
         'icon paragraph';
+    }
+
+    @include breakpoint('large') {
+      padding: $spacer*2 $spacer*4;
     }
 
     .-graphic {
@@ -123,6 +143,7 @@
   }
 
   .panel {
+    background-blend-mode: multiply;
     display: grid;
     min-height: 100vh;
     padding: $spacer*2;
@@ -145,68 +166,86 @@
     }
 
     &.-arrow {
-      background: url(../src/assets/img/bg-arrow-sm.jpg) no-repeat center fixed;
+      background: $linear-grad-trans-lt,
+        url(../src/assets/img/bg-arrow-sm.jpg) no-repeat center fixed;
       background-size: auto 100%;
 
       @include breakpoint('medium') {
-        background-image: url(../src/assets/img/bg-arrow-md.jpg);
-      }
-
-      @include breakpoint('large') {
-        background-image: url(../src/assets/img/bg-arrow-lg.jpg);
+        background-image: $linear-grad-trans-lt,
+          url(../src/assets/img/bg-arrow-md.jpg);
         background-size: 100% auto;
       }
 
+      @include breakpoint('large') {
+        background-image: $linear-grad-trans-lt,
+          url(../src/assets/img/bg-arrow-lg.jpg);
+      }
+
       @include breakpoint('xlarge') {
-        background-image: url(../src/assets/img/bg-arrow-xl.jpg);
+        background-image: $linear-grad-trans-lt,
+          url(../src/assets/img/bg-arrow-xl.jpg);
       }
     }
 
     &.-stuntpuppy {
-      background: url(../src/assets/img/bg-stuntpuppy-sm.jpg) no-repeat center fixed;
+      background: $linear-grad-trans-lt,
+        url(../src/assets/img/bg-stuntpuppy-sm.jpg) no-repeat center fixed;
       background-size: auto 100%;
 
       @include breakpoint('medium') {
-        background-image: url(../src/assets/img/bg-stuntpuppy-md.jpg);
-      }
-
-      @include breakpoint('large') {
-        background-image: url(../src/assets/img/bg-stuntpuppy-lg.jpg);
+        background-image: $linear-grad-trans-lt,
+          url(../src/assets/img/bg-stuntpuppy-md.jpg);
         background-size: 100% auto;
       }
 
+      @include breakpoint('large') {
+        background-image: $linear-grad-trans-lt,
+          url(../src/assets/img/bg-stuntpuppy-lg.jpg);
+      }
+
       @include breakpoint('xlarge') {
-        background-image: url(../src/assets/img/bg-stuntpuppy-xl.jpg);
+        background-image: $linear-grad-trans-lt,
+          url(../src/assets/img/bg-stuntpuppy-xl.jpg);
       }
     }
 
     &.-lacek {
-      background: url(../src/assets/img/bg-lacek-sm.jpg) no-repeat center fixed;
+      background: $linear-grad-trans-lt,
+        url(../src/assets/img/bg-lacek-sm.jpg) no-repeat center fixed;
       background-size: auto 100%;
 
       @include breakpoint('medium') {
-        background-image: url(../src/assets/img/bg-lacek-md.jpg);
-      }
-
-      @include breakpoint('large') {
-        background-image: url(../src/assets/img/bg-lacek-lg.jpg);
+        background-image: $linear-grad-trans-lt,
+          url(../src/assets/img/bg-lacek-md.jpg);
         background-size: 100% auto;
       }
 
+      @include breakpoint('large') {
+        background-image: $linear-grad-trans-lt,
+          url(../src/assets/img/bg-lacek-lg.jpg);
+      }
+
       @include breakpoint('xlarge') {
-        background-image: url(../src/assets/img/bg-lacek-xl.jpg);
+        background-image: $linear-grad-trans-lt,
+          url(../src/assets/img/bg-lacek-xl.jpg);
       }
     }
   }
 }
 
 #expertise {
-  // margin: $spacer*5 0;
+  margin: $spacer 0;
+
+  @include breakpoint('medium') {
+    margin: $spacer*2.5 0;
+  }
+
+  @include breakpoint('large') {
+    margin: $spacer*5 0;
+  }
 }
 
-#projects {
-  // margin-top: -$spacer*5;
-}
+#projects {}
 
 // CASE STUDY
 .case-study {}
