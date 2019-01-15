@@ -93,7 +93,31 @@ $Placeholder-Selectors: ();
   }
 }
 
-@mixin chevron($color: '#000000', $rotation: 0, $tickness: 10) {
+@mixin chevron($color: '#000000', $rotation: 0, $thickness: 10) {
   background-image:
-    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path style="fill:'+$color+';" d="M0 50l50,50 50,-50 -'+$tickness+', -'+$tickness+' -'+(50-$tickness)+','+(50-$tickness)+' -'+(50-$tickness)+',-'+(50-$tickness)+'z" transform="rotate('+$rotation+' 50 50 )"/></svg>');
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path style="fill:'+$color+';" d="M0 50l50,50 50,-50 -'+$thickness+', -'+$thickness+' -'+(50-$thickness)+','+(50-$thickness)+' -'+(50-$thickness)+',-'+(50-$thickness)+'z" transform="rotate('+$rotation+' 50 50 )"/></svg>');
+}
+
+// SCROLLBAR
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, $black, 5%)) {
+
+  // Chrome
+  ::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  // IE
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
 }

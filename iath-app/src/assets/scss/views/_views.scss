@@ -143,6 +143,9 @@
   }
 
   .panel {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-blend-mode: multiply;
     display: grid;
     min-height: 100vh;
@@ -166,67 +169,67 @@
     }
 
     &.-arrow {
-      background: $linear-grad-trans-lt,
+      background: $linear-grad-trans,
         url(../src/assets/img/bg-arrow-sm.jpg) no-repeat center fixed;
-      background-size: auto 100%;
+      // background-size: auto 100%;
 
       @include breakpoint('medium') {
-        background-image: $linear-grad-trans-lt,
+        background-image: $linear-grad-trans,
           url(../src/assets/img/bg-arrow-md.jpg);
-        background-size: 100% auto;
+        // background-size: 100% auto;
       }
 
       @include breakpoint('large') {
-        background-image: $linear-grad-trans-lt,
+        background-image: $linear-grad-trans,
           url(../src/assets/img/bg-arrow-lg.jpg);
       }
 
       @include breakpoint('xlarge') {
-        background-image: $linear-grad-trans-lt,
+        background-image: $linear-grad-trans,
           url(../src/assets/img/bg-arrow-xl.jpg);
       }
     }
 
     &.-stuntpuppy {
-      background: $linear-grad-trans-lt,
+      background: $linear-grad-trans,
         url(../src/assets/img/bg-stuntpuppy-sm.jpg) no-repeat center fixed;
-      background-size: auto 100%;
+      // background-size: auto 100%;
 
       @include breakpoint('medium') {
-        background-image: $linear-grad-trans-lt,
+        background-image: $linear-grad-trans,
           url(../src/assets/img/bg-stuntpuppy-md.jpg);
-        background-size: 100% auto;
+        // background-size: 100% auto;
       }
 
       @include breakpoint('large') {
-        background-image: $linear-grad-trans-lt,
+        background-image: $linear-grad-trans,
           url(../src/assets/img/bg-stuntpuppy-lg.jpg);
       }
 
       @include breakpoint('xlarge') {
-        background-image: $linear-grad-trans-lt,
+        background-image: $linear-grad-trans,
           url(../src/assets/img/bg-stuntpuppy-xl.jpg);
       }
     }
 
     &.-lacek {
-      background: $linear-grad-trans-lt,
+      background: $linear-grad-trans,
         url(../src/assets/img/bg-lacek-sm.jpg) no-repeat center fixed;
-      background-size: auto 100%;
+      // background-size: auto 100%;
 
       @include breakpoint('medium') {
-        background-image: $linear-grad-trans-lt,
+        background-image: $linear-grad-trans,
           url(../src/assets/img/bg-lacek-md.jpg);
-        background-size: 100% auto;
+        // background-size: 100% auto;
       }
 
       @include breakpoint('large') {
-        background-image: $linear-grad-trans-lt,
+        background-image: $linear-grad-trans,
           url(../src/assets/img/bg-lacek-lg.jpg);
       }
 
       @include breakpoint('xlarge') {
-        background-image: $linear-grad-trans-lt,
+        background-image: $linear-grad-trans,
           url(../src/assets/img/bg-lacek-xl.jpg);
       }
     }

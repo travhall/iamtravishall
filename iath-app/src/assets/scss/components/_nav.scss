@@ -98,3 +98,10 @@
     transform: scale(1.15);
   }
 }
+
+.pageNav {
+  padding: $spacer 0;
+  a {
+    margin: 0 $spacer $spacer 0;
+  }
+}

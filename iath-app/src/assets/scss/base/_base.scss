@@ -99,3 +99,7 @@ button,
 [type="submit"] {
   -webkit-appearance: button;
 }
+
+@include breakpoint('medium') {
+  @include scrollbars($spacer*.5, $gold);
+}

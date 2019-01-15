@@ -22,9 +22,9 @@ $grey-lt: #eee;
 $grey-dk: #7b7b7b;
 
 //GRADIENTS
-$linear-grad: linear-gradient($primary, $gold);
-$linear-grad-trans: linear-gradient(rgba($primary, 0.9), rgba($gold, 0.9));
-$linear-grad-trans-lt: linear-gradient(rgba($primary, 0.75), rgba($gold, 0.75));
+$linear-grad: linear-gradient(to bottom left, $primary, $gold);
+$linear-grad-trans: linear-gradient(to bottom right, rgba($primary, 0.9), rgba($gold, 0.9));
+$linear-grad-trans-lt: linear-gradient(to bottom right, rgba($primary, 0.75), rgba($gold, 0.75));
 
 $breakpoints: ( // BREAKPOINTS : @include breakpoint("medium") {…}
 'xsmall': (min-width: 25rem), // 400px - Tiny phones
