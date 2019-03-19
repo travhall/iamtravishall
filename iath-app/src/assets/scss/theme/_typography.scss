@@ -1,46 +1,35 @@
 .display {
   &-1 {
-    font-size: 3rem; // 48px
+    font-size: 2.4375rem; // 39px
 
-    @include breakpoint("medium") {
-      font-size: 4.375rem; // 70px
+    @include breakpoint('medium') {
+      font-size: 3.25rem; // 52px
     }
 
-    @include breakpoint("large") {
-      font-size: 5.875rem; // 94px
+    @include breakpoint('large') {
+      font-size: 4.375rem; // 70px
     }
   }
 
   &-2 {
-    font-size: 2.4375rem; // 39px
-
-    @include breakpoint("medium") {
-      font-size: 3.25rem; // 52px
-    }
-
-    @include breakpoint("large") {
-      font-size: 4.375rem; // 70px
-    }
-  }
-
-  &-3 {
     font-size: 1.875rem; // 30px
 
-    @include breakpoint("medium") {
+    @include breakpoint('medium') {
       font-size: 2.5rem; // 40px
     }
 
-    @include breakpoint("large") {
+    @include breakpoint('large') {
       font-size: 3.25rem; // 52px
     }
   }
 }
 
-[class^="display-"] {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+[class^='display-'] {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 900;
   letter-spacing: 2px;
-  line-height: .9;
+  line-height: 0.9;
   margin-bottom: $spacer;
 
   &::after {
@@ -49,10 +38,10 @@
     display: block;
     height: 2px;
     width: $spacer;
-    margin: $spacer 0 $spacer*.333;
+    margin: $spacer 0 $spacer * 0.333;
 
     .-center & {
-      margin: $spacer*.333 auto;
+      margin: $spacer * 0.333 auto;
     }
 
     .-right & {
@@ -61,13 +50,12 @@
   }
 
   &.-center::after {
-    margin: $spacer*.333 auto;
+    margin: $spacer * 0.333 auto;
   }
 
   &.-right::after {
     margin-left: auto;
   }
-
 }
 
 h1,
@@ -87,8 +75,8 @@ h6,
   line-height: 1;
   margin: 0 0 $spacer;
 
-  +[class^="display-"] {
-    margin-top: -$spacer*.8;
+  + [class^='display-'] {
+    margin-top: -$spacer * 0.8;
   }
 }
 
@@ -96,11 +84,11 @@ h1,
 .h1 {
   font-size: 3.875rem; // 62px
 
-  @include breakpoint("medium") {
+  @include breakpoint('medium') {
     font-size: 4.1875rem; // 67px
   }
 
-  @include breakpoint("large") {
+  @include breakpoint('large') {
     font-size: 5.625rem; // 90px
   }
 }
@@ -109,11 +97,11 @@ h2,
 .h2 {
   font-size: 2.875rem; // 46px
 
-  @include breakpoint("medium") {
+  @include breakpoint('medium') {
     font-size: 3.125rem; // 50px
   }
 
-  @include breakpoint("large") {
+  @include breakpoint('large') {
     font-size: 4.1875rem; // 67px
   }
 }
@@ -122,11 +110,11 @@ h3,
 .h3 {
   font-size: 2rem; // 32px
 
-  @include breakpoint("medium") {
+  @include breakpoint('medium') {
     font-size: 2.375rem; // 38px
   }
 
-  @include breakpoint("large") {
+  @include breakpoint('large') {
     font-size: 3.125rem; // 50px
   }
 }
@@ -135,11 +123,11 @@ h4,
 .h4 {
   font-size: 1.5rem; // 24px
 
-  @include breakpoint("medium") {
+  @include breakpoint('medium') {
     font-size: 1.875rem; // 28px
   }
 
-  @include breakpoint("large") {
+  @include breakpoint('large') {
     font-size: 2.375rem; // 38px
   }
 }
@@ -148,11 +136,11 @@ h5,
 .h5 {
   font-size: 1.125rem; // 16px
 
-  @include breakpoint("medium") {
+  @include breakpoint('medium') {
     font-size: 1.375rem; // 22px
   }
 
-  @include breakpoint("large") {
+  @include breakpoint('large') {
     font-size: 1.75rem; // 28px
   }
 }
@@ -161,11 +149,11 @@ h6,
 .h6 {
   font-size: 0.8125rem; // 13px
 
-  @include breakpoint("medium") {
+  @include breakpoint('medium') {
     font-size: 1.0625rem; // 17px
   }
 
-  @include breakpoint("large") {
+  @include breakpoint('large') {
     font-size: 1.375rem; // 22px
   }
 }
@@ -179,24 +167,25 @@ p {
   font-size: 1rem; // 16px
   font-weight: 100;
   line-height: 1.5;
-  margin: 0 0 $spacer*.5;
+  margin: 0 0 $spacer * 0.5;
 
-  +p {
+  + p {
     text-indent: 1rem;
   }
 
-  +button,
-  +input[type=button],
-  +.btn {
+  + button,
+  + input[type='button'],
+  + .btn {
     margin-top: $spacer;
   }
 }
 
 a {
   color: $gold;
+  font-weight: bold;
   position: relative;
   text-decoration: none;
-  transition: all .25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 
   &:hover {
     cursor: pointer;
@@ -208,7 +197,7 @@ blockquote {
   font-size: 1.125rem;
   font-style: italic;
   margin: 0 $spacer;
-  padding: $spacer*2 0 0 $spacer*2;
+  padding: $spacer * 2 0 0 $spacer * 2;
   position: relative;
 
   &::before {
@@ -216,9 +205,9 @@ blockquote {
     color: $gold;
     font-size: 2rem;
     font-weight: bolder;
-    left: $spacer*.333;
+    left: $spacer * 0.333;
     position: absolute;
-    bottom: -$spacer*.333;
+    bottom: -$spacer * 0.333;
   }
 }
 
@@ -228,14 +217,18 @@ b,
   font-weight: 700;
 }
 
+em {
+  color: $gold;
+}
+
 small {
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 ul,
 ol {
   margin: 0;
-  padding: ($spacer*.5) ($spacer*1.5);
+  padding: ($spacer * 0.5) ($spacer * 1.5);
 }
 
 .-left {
