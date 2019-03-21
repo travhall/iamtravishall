@@ -75,7 +75,7 @@ h6,
   line-height: 1;
   margin: 0 0 $spacer;
 
-  + [class^='display-'] {
+  +[class^='display-'] {
     margin-top: -$spacer * 0.8;
   }
 }
@@ -169,14 +169,14 @@ p {
   line-height: 1.5;
   margin: 0 0 $spacer * 0.5;
 
-  + p {
+  +p {
     text-indent: 1rem;
   }
 
-  + button,
-  + input[type='button'],
-  + .btn {
-    margin-top: $spacer;
+  +button,
+  +input[type='button'],
+  +.btn {
+    margin-top: $spacer !important;
   }
 }
 
@@ -218,7 +218,8 @@ b,
 }
 
 em {
-  color: $gold;
+  color: $goldenrod;
+  font-weight: bolder;
 }
 
 small {

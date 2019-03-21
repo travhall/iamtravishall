@@ -67,9 +67,9 @@ input[type=button],
   &.-block {
     width: 100%;
 
-    // @include breakpoint('medium') {
-    //   width: auto;
-    // }
+    @include breakpoint('medium') {
+      width: auto;
+    }
 
     &:hover {
       transform: scaleY(1.05);

@@ -40,6 +40,8 @@
       'title'
       'paragraph';
     padding: $spacer*2;
+    margin-bottom: $spacer*6;
+    margin-top: $spacer*6;
     // margin-top: 0;
     // opacity: 0;
     transition: all .65s ease-in-out;
@@ -97,6 +99,11 @@
         grid-column-start: 3;
         grid-column-end: 10;
       }
+
+      @include breakpoint('xlarge') {
+        grid-column-start: 4;
+        grid-column-end: 9;
+      }
     }
 
     &.-ui {
@@ -124,6 +131,11 @@
         grid-column-start: 3;
         grid-column-end: 10;
       }
+
+      @include breakpoint('xlarge') {
+        grid-column-start: 4;
+        grid-column-end: 9;
+      }
     }
 
     &.-vis {
@@ -131,6 +143,11 @@
       @include breakpoint('large') {
         grid-column-start: 3;
         grid-column-end: 10;
+      }
+
+      @include breakpoint('xlarge') {
+        grid-column-start: 4;
+        grid-column-end: 9;
       }
     }
   }
