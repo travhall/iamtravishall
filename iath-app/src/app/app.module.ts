@@ -15,6 +15,7 @@ import { StuntpuppyComponent } from './case-studies/stuntpuppy/stuntpuppy.compon
 import { LacekComponent } from './case-studies/lacek/lacek.component';
 
 import { ScrollToModule } from 'ng2-scroll-to-el';
+import { AboutComponent } from './views/about/about.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ScrollToModule } from 'ng2-scroll-to-el';
     NotFoundComponent,
     ArrowComponent,
     StuntpuppyComponent,
-    LacekComponent
+    LacekComponent,
+    AboutComponent
   ],
   imports: [BrowserModule, AppRoutingModule, ScrollToModule.forRoot()],
   providers: [],

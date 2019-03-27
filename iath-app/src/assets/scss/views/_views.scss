@@ -3,32 +3,32 @@
   position: relative;
 
   .hero {
-    &::after {
-      background-image:
-        $linear-grad,
-        url(../src/assets/img/bg-hero-xs.jpg);
-      background-blend-mode: multiply;
+    // &::after {
+    //   background-image:
+    //     $linear-grad,
+    //     url(../src/assets/img/bg-hero-xs.jpg);
+    //   background-blend-mode: multiply;
 
-      @include breakpoint('small') {
-        background-image: $linear-grad,
-          url(../src/assets/img/bg-hero-sm.jpg);
-      }
+    //   @include breakpoint('small') {
+    //     background-image: $linear-grad,
+    //       url(../src/assets/img/bg-hero-sm.jpg);
+    //   }
 
-      @include breakpoint('medium') {
-        background-image: $linear-grad,
-          url(../src/assets/img/bg-hero-md.jpg);
-      }
+    //   @include breakpoint('medium') {
+    //     background-image: $linear-grad,
+    //       url(../src/assets/img/bg-hero-md.jpg);
+    //   }
 
-      @include breakpoint('large') {
-        background-image: $linear-grad,
-          url(../src/assets/img/bg-hero-lg.jpg);
-      }
+    //   @include breakpoint('large') {
+    //     background-image: $linear-grad,
+    //       url(../src/assets/img/bg-hero-lg.jpg);
+    //   }
 
-      @include breakpoint('xlarge') {
-        background-image: $linear-grad,
-          url(../src/assets/img/bg-hero-xl.jpg);
-      }
-    }
+    //   @include breakpoint('xlarge') {
+    //     background-image: $linear-grad,
+    //       url(../src/assets/img/bg-hero-xl.jpg);
+    //   }
+    // }
   }
 
   .card {
@@ -39,22 +39,14 @@
       'icon'
       'title'
       'paragraph';
-    padding: $spacer*2;
-    margin-bottom: $spacer*6;
-    margin-top: $spacer*6;
-    // margin-top: 0;
-    // opacity: 0;
-    transition: all .65s ease-in-out;
-
-    // &.active {
-    // margin-top: -$spacer*2;
-    // opacity: 1;
-    // }
+    padding: $spacer * 2;
+    margin-bottom: $spacer * 6;
+    margin-top: $spacer * 6;
+    transition: all 0.65s ease-in-out;
 
     @include breakpoint('small') {
       grid-column-start: 2;
       grid-column-end: 6;
-      padding: $spacer $spacer*2 $spacer*4;
     }
 
     @include breakpoint('medium') {
@@ -66,13 +58,19 @@
     }
 
     @include breakpoint('large') {
-      padding: $spacer*2 $spacer*4;
+      grid-column-start: 3;
+      grid-column-end: 11;
+    }
+
+    @include breakpoint('xlarge') {
+      grid-column-start: 4;
+      grid-column-end: 10;
     }
 
     .-graphic {
       align-self: center;
       grid-area: icon;
-      margin: 0 auto $spacer*2;
+      margin: 0 auto $spacer * 2;
       height: 64px;
       width: 122px;
 
@@ -81,7 +79,7 @@
       }
 
       @include breakpoint('large') {
-        margin: 0 $spacer*2 0 0;
+        margin: 0 $spacer * 2 0 0;
       }
     }
 
@@ -93,21 +91,7 @@
       grid-area: paragraph;
     }
 
-    &.-ux {
-
-      @include breakpoint('large') {
-        grid-column-start: 3;
-        grid-column-end: 10;
-      }
-
-      @include breakpoint('xlarge') {
-        grid-column-start: 4;
-        grid-column-end: 9;
-      }
-    }
-
-    &.-ui {
-
+    &:nth-child(2) {
       @include breakpoint('medium') {
         grid-template-areas:
           'title icon'
@@ -122,34 +106,18 @@
           margin: 0 0 0 $spacer;
 
           @include breakpoint('large') {
-            margin: 0 0 0 $spacer*2;
+            margin: 0 0 0 $spacer * 2;
           }
         }
       }
-
-      @include breakpoint('large') {
-        grid-column-start: 3;
-        grid-column-end: 10;
-      }
-
-      @include breakpoint('xlarge') {
-        grid-column-start: 4;
-        grid-column-end: 9;
-      }
     }
+  }
 
-    &.-vis {
-
-      @include breakpoint('large') {
-        grid-column-start: 3;
-        grid-column-end: 10;
-      }
-
-      @include breakpoint('xlarge') {
-        grid-column-start: 4;
-        grid-column-end: 9;
-      }
-    }
+  .intro,
+  .outro {
+    padding: $spacer * 10 $spacer * 2 0;
+    text-align: center;
+    height: 100vh;
   }
 
   .panel {
@@ -159,7 +127,7 @@
     background-blend-mode: multiply;
     display: grid;
     min-height: 100vh;
-    padding: $spacer*2;
+    padding: $spacer * 2;
     position: relative;
     align-content: center;
     justify-content: center;
@@ -245,23 +213,6 @@
     }
   }
 }
-
-#expertise {
-  margin: $spacer 0;
-
-  @include breakpoint('medium') {
-    margin: $spacer*2.5 0;
-  }
-
-  @include breakpoint('large') {
-    margin: $spacer*5 0;
-  }
-}
-
-#projects {}
-
-// CASE STUDY
-.case-study {}
 
 // 404
 .four-o-four {

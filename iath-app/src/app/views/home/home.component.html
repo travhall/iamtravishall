@@ -5,31 +5,81 @@
       <h3 class="h4">&hellip; and I enjoy making things for the web.</h3>
       <p>
         In other words,
-        <em>
-          specialize in crafting digital experiences that transform user challenges
-          into opportunities</em>
-        &hellip; but I'm guessing you didn't come here to read a bunch of industry jargon. Instead feel free to check
-        out some of
-        my <a href="">work</a>, say <a href="" mailto="">hello</a> or get to know <a href="">me</a> better.
+        <em
+          >I specialize in crafting digital experiences that transform user
+          challenges into opportunities</em
+        >
+        &hellip; but you didn't come here to read a bunch of industry jargon,
+        did you?
       </p>
-      <a [scrollTo]="'#projects'" [scrollDuration]="500" class="btn -white" title="View Case Studies">
-        Case Studies
-        <svg class="icon -sm">
-          <use xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"></use>
+      <!-- <a class="btn -white" title="View Case Studies">
+        Case Studies<svg class="icon -sm">
+          <use
+            xlink:href="assets/symbol-defs.svg#icon-chevron-outline-right"
+          ></use>
+        </svg>
+      </a> -->
+      <a
+        routerLink="/about"
+        class="btn -white"
+        title="I'm not as pretentious as I sound, promise!"
+      >
+        Get to know me<svg class="icon -sm">
+          <use
+            xlink:href="assets/symbol-defs.svg#icon-chevron-outline-right"
+          ></use>
         </svg>
       </a>
-      <a [scrollTo]="'#uxexpertise'" [scrollDuration]="500" [scrollOffset]="-80" class="btn -ghost"
-        title="A very particular set of skills">
-        Read More
-        <svg class="icon -sm">
-          <use xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"></use>
+      <a
+        [scrollTo]="'#intro'"
+        [scrollDuration]="500"
+        [scrollOffset]="-80"
+        class="btn -ghost"
+        title="A very particular set of skills."
+      >
+        Read More<svg class="icon -sm">
+          <use
+            xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"
+          ></use>
         </svg>
       </a>
     </div>
   </section>
 
+  <section class="intro" id="intro">
+    <h3>Oh hi there!</h3>
+    <p>
+      My bad! You did want to
+      <a
+        class="link-icon"
+        [scrollTo]="'#uxexpertise'"
+        [scrollDuration]="500"
+        [scrollOffset]="-100"
+        title="Keep on keepin' on!"
+      >
+        keep reading</a
+      >. In case you had a change of heart, you always have options &hellip;
+    </p>
+    <a
+      routerLink="/about"
+      class="btn -ghost"
+      title="I'm actually a pretty nice guy."
+    >
+      About me<svg class="icon -sm">
+        <use
+          xlink:href="assets/symbol-defs.svg#icon-chevron-outline-right"
+        ></use>
+      </svg>
+    </a>
+    <a class="btn -ghost" title="I'm always happy to talk shop!">
+      Say Hello!<svg class="icon -sm">
+        <use xlink:href="assets/symbol-defs.svg#icon-envelope"></use>
+      </svg>
+    </a>
+  </section>
+
   <section id="expertise" class="grid -primary">
-    <div class="card -ux" id="uxexpertise">
+    <div class="card" id="uxexpertise">
       <svg class="icon -graphic">
         <use xlink:href="assets/symbol-defs.svg#icon-ux-design"></use>
       </svg>
@@ -39,16 +89,29 @@
           I utilize user research, usability principles and user-centric
           interaction design to craft meaningful digital experiences.
         </p>
-        <a class="btn -ghost" [scrollTo]="'#uiexpertise'" [scrollDuration]="500" [scrollOffset]="-20"
-          title="Front End &amp; UI Development">Read More
-          <svg class="icon -sm">
-            <use xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"></use>
+        <a class="btn" title="User Experience Design Showcase"
+          >Showcase<svg class="icon -sm">
+            <use
+              xlink:href="assets/symbol-defs.svg#icon-chevron-outline-right"
+            ></use>
+          </svg>
+        </a>
+        <a
+          class="btn -ghost"
+          [scrollTo]="'#uiexpertise'"
+          [scrollDuration]="500"
+          [scrollOffset]="-100"
+          title="Front End &amp; UI Development"
+          >Continue<svg class="icon -sm">
+            <use
+              xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"
+            ></use>
           </svg>
         </a>
       </div>
     </div>
 
-    <div class="card -ui" id="uiexpertise">
+    <div class="card" id="uiexpertise">
       <svg class="icon -graphic">
         <use xlink:href="assets/symbol-defs.svg#icon-ui-dev"></use>
       </svg>
@@ -58,30 +121,51 @@
           I specialize in building scalable, modular user interfaces that
           display consistently and function seamlessly for all devices.
         </p>
-        <a class="btn -ghost" [scrollTo]="'#visexpertise'" [scrollDuration]="500" [scrollOffset]="-20"
-          title="Visual &amp; Graphic Design">Read More
+        <a class="btn" title="Front End &amp; UI Development Showcase"
+          >Showcase<svg class="icon -sm">
+            <use
+              xlink:href="assets/symbol-defs.svg#icon-chevron-outline-right"
+            ></use>
+          </svg>
+        </a>
+        <a
+          class="btn -ghost"
+          [scrollTo]="'#visexpertise'"
+          [scrollDuration]="500"
+          [scrollOffset]="-100"
+          title="Visual &amp; Interaction Design"
+          >Continue
           <svg class="icon -sm">
-            <use xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"></use>
+            <use
+              xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"
+            ></use>
           </svg>
         </a>
       </div>
     </div>
 
-    <div class="card -vis" id="visexpertise">
+    <div class="card" id="visexpertise">
       <svg class="icon -graphic">
         <use xlink:href="assets/symbol-defs.svg#icon-vis-design"></use>
       </svg>
-      <h4 class="display-1">Visual &amp; Graphic Design</h4>
+      <h4 class="display-1">Visual &amp; Interaction Design</h4>
       <div class="paragraph">
         <p>
-          My work is built on a solid foundation of visual design and fine arts,
-          ensuring it makes a lasting impression.
+          My work is built on a solid foundation of visual and interaction
+          design, ensuring it makes a lasting impression.
         </p>
-        <!-- <a [scrollTo]="'#projects'" [scrollDuration]="500" title="View Case Studies">Case Studies
+        <a
+          class="btn -ghost"
+          [scrollTo]="'#projects'"
+          [scrollDuration]="500"
+          title="View Case Studies"
+          >Case Studies
           <svg class="icon -sm">
-            <use xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"></use>
+            <use
+              xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"
+            ></use>
           </svg>
-        </a> -->
+        </a>
       </div>
     </div>
   </section>
@@ -93,36 +177,18 @@
         <h4 class="display-1">Arrow Electronics</h4>
         <h4>UX Design Lead</h4>
         <h6>2016 - present</h6>
-        <button
-          routerLink="/arrow"
-          routerLinkActive="active"
-          class="btn -white"
-        >
+        <button routerLink="/arrow" routerLinkActive="active" class="btn -white">
           Read More
         </button>
         <div class="pageNav">
-          <a
-            class="link-icon"
-            [scrollTo]="'#expertise'"
-            [scrollDuration]="500"
-            title="Back to Expertise"
-            >Previous
+          <a class="link-icon" [scrollTo]="'#expertise'" [scrollDuration]="500" title="Back to Expertise">Previous
             <svg class="icon -sm">
-              <use
-                xlink:href="assets/symbol-defs.svg#icon-chevron-outline-up"
-              ></use>
+              <use xlink:href="assets/symbol-defs.svg#icon-chevron-outline-up"></use>
             </svg>
           </a>
-          <a
-            class="link-icon"
-            [scrollTo]="'#cs-stuntpuppy'"
-            [scrollDuration]="500"
-            title="Next Case Study"
-            >Next
+          <a class="link-icon" [scrollTo]="'#cs-stuntpuppy'" [scrollDuration]="500" title="Next Case Study">Next
             <svg class="icon -sm">
-              <use
-                xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"
-              ></use>
+              <use xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"></use>
             </svg>
           </a>
         </div>
@@ -135,37 +201,18 @@
         <h4 class="display-1">Stunt Puppy</h4>
         <h4>Shopify Theme / Microsite</h4>
         <h6>2014 - 2018</h6>
-        <button
-          routerLink="/stuntpuppy"
-          routerLinkActive="active"
-          class="btn -white"
-          disabled
-        >
+        <button routerLink="/stuntpuppy" routerLinkActive="active" class="btn -white" disabled>
           Coming Soon
         </button>
         <div class="pageNav">
-          <a
-            class="link-icon"
-            [scrollTo]="'#cs-arrow'"
-            [scrollDuration]="500"
-            title="Previous Case Study"
-            >Previous
+          <a class="link-icon" [scrollTo]="'#cs-arrow'" [scrollDuration]="500" title="Previous Case Study">Previous
             <svg class="icon -sm">
-              <use
-                xlink:href="assets/symbol-defs.svg#icon-chevron-outline-up"
-              ></use>
+              <use xlink:href="assets/symbol-defs.svg#icon-chevron-outline-up"></use>
             </svg>
           </a>
-          <a
-            class="link-icon"
-            [scrollTo]="'#cs-lacek'"
-            [scrollDuration]="500"
-            title="Next Case Study"
-            >Next
+          <a class="link-icon" [scrollTo]="'#cs-lacek'" [scrollDuration]="500" title="Next Case Study">Next
             <svg class="icon -sm">
-              <use
-                xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"
-              ></use>
+              <use xlink:href="assets/symbol-defs.svg#icon-chevron-outline-down"></use>
             </svg>
           </a>
         </div>
@@ -178,38 +225,26 @@
         <h4 class="display-1">The Lacek Group</h4>
         <h4>Agency Microsite</h4>
         <h6>2012 - 2014</h6>
-        <button
-          routerLink="/lacek"
-          routerLinkActive="active"
-          class="btn -white"
-          disabled
-        >
+        <button routerLink="/lacek" routerLinkActive="active" class="btn -white" disabled>
           Coming Soon
         </button>
         <div class="pageNav">
-          <a
-            class="link"
-            [scrollTo]="'#cs-stuntpuppy'"
-            [scrollDuration]="500"
-            title="Previous Case Study"
-            >Previous
+          <a class="link" [scrollTo]="'#cs-stuntpuppy'" [scrollDuration]="500" title="Previous Case Study">Previous
           </a>
-          <a
-            class="link"
-            [scrollTo]="'#about'"
-            [scrollDuration]="500"
-            title="Say hi!"
-            >Get to know me
+          <a class="link" [scrollTo]="'#about'" [scrollDuration]="500" title="Say hi!">Get to know me
           </a>
         </div>
       </div>
     </div>
   </section> -->
 
-  <section style="text-align:center; height: 80vh; padding: 10rem;">
+  <section class="outro">
     <h3>Hello again!</h3>
-    <p>It appears you've reached the end of the line, but fear not, you can still …</p>
-    <a href="#" class="btn">Get to know me better</a>
-    <a href="#" class="btn">Check out some work</a>
+    <p>
+      It appears you've reached the end of the line, but fear not, you can still
+      &hellip;
+    </p>
+    <a href="#" class="btn -block">Get to know me better</a>
+    <a href="#" class="btn -block">Check out some work</a>
   </section>
 </div>

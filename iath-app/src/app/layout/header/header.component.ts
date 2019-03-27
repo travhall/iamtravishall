@@ -24,7 +24,7 @@ import { Component, OnInit } from '@angular/core';
             <use xlink:href="assets/symbol-defs.svg#icon-envelope"></use>
           </svg>
         </a>
-        <a
+        <!--<a
           href="https://www.linkedin.com/in/travhall/"
           class="link-icon"
           target="_blank"
@@ -33,7 +33,7 @@ import { Component, OnInit } from '@angular/core';
           <svg class="icon">
             <use xlink:href="assets/symbol-defs.svg#icon-linkedin"></use>
           </svg>
-        </a>
+        </a>-->
       </div>
     </header>
   `,

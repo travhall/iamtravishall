@@ -26,11 +26,11 @@
   }
 
   @include breakpoint("xlarge") {
-    grid-template-columns: 2fr 60% 3fr;
+    grid-template-columns: 1fr 60% 1fr;
   }
 
   @include breakpoint("whoa") {
-    grid-template-columns: 2fr 50% 3fr;
+    grid-template-columns: 1fr 50% 1fr;
   }
 
   &__content {
