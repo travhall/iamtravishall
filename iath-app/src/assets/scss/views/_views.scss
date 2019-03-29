@@ -2,34 +2,34 @@
 .home {
   position: relative;
 
-  .hero {
-    // &::after {
-    //   background-image:
-    //     $linear-grad,
-    //     url(../src/assets/img/bg-hero-xs.jpg);
-    //   background-blend-mode: multiply;
+  // .hero {
+  //   &::after {
+  //     background-image:
+  //       $linear-grad,
+  //       url(../src/assets/img/bg-hero-xs.jpg);
+  //     background-blend-mode: multiply;
 
-    //   @include breakpoint('small') {
-    //     background-image: $linear-grad,
-    //       url(../src/assets/img/bg-hero-sm.jpg);
-    //   }
+  //     @include breakpoint('small') {
+  //       background-image: $linear-grad,
+  //         url(../src/assets/img/bg-hero-sm.jpg);
+  //     }
 
-    //   @include breakpoint('medium') {
-    //     background-image: $linear-grad,
-    //       url(../src/assets/img/bg-hero-md.jpg);
-    //   }
+  //     @include breakpoint('medium') {
+  //       background-image: $linear-grad,
+  //         url(../src/assets/img/bg-hero-md.jpg);
+  //     }
 
-    //   @include breakpoint('large') {
-    //     background-image: $linear-grad,
-    //       url(../src/assets/img/bg-hero-lg.jpg);
-    //   }
+  //     @include breakpoint('large') {
+  //       background-image: $linear-grad,
+  //         url(../src/assets/img/bg-hero-lg.jpg);
+  //     }
 
-    //   @include breakpoint('xlarge') {
-    //     background-image: $linear-grad,
-    //       url(../src/assets/img/bg-hero-xl.jpg);
-    //   }
-    // }
-  }
+  //     @include breakpoint('xlarge') {
+  //       background-image: $linear-grad,
+  //         url(../src/assets/img/bg-hero-xl.jpg);
+  //     }
+  //   }
+  // }
 
   .card {
     display: grid;
@@ -39,9 +39,7 @@
       'icon'
       'title'
       'paragraph';
-    padding: $spacer * 2;
-    margin-bottom: $spacer * 6;
-    margin-top: $spacer * 6;
+    padding: ($spacer*10) ($spacer*2);
     transition: all 0.65s ease-in-out;
 
     @include breakpoint('small') {
@@ -115,9 +113,9 @@
 
   .intro,
   .outro {
-    padding: $spacer * 10 $spacer * 2 0;
+    padding: ($spacer*10) ($spacer*2);
     text-align: center;
-    height: 100vh;
+    height: 90vh;
   }
 
   .panel {

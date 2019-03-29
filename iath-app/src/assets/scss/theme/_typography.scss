@@ -22,6 +22,18 @@
       font-size: 3.25rem; // 52px
     }
   }
+
+  &-3 {
+    font-size: 1.375rem; // 22px
+
+    @include breakpoint('medium') {
+      font-size: 1.875rem; // 30px
+    }
+
+    @include breakpoint('large') {
+      font-size: 2.5rem; // 40px
+    }
+  }
 }
 
 [class^='display-'] {

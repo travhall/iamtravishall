@@ -95,12 +95,14 @@
 
   &:hover {
     opacity: 1;
-    transform: scale(1.15);
+    // transform: scale(1.15);
+    transform: perspective(10em) rotateX(-8deg) translateZ(2em);
   }
 }
 
 .pageNav {
   padding: $spacer 0;
+
   a {
     margin: 0 $spacer $spacer 0;
   }

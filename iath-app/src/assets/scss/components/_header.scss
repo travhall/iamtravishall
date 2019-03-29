@@ -4,7 +4,6 @@ header {
 
 .header {
   grid-area: header;
-  position: fixed;
   width: 100%;
   z-index: map-get($z-index, header);
 

@@ -108,6 +108,10 @@ input[type=button],
   >.icon {
     margin: 0 -5px 0 5px;
   }
+
+  &.-borderless {
+    border: transparent;
+  }
 }
 
 .tag {

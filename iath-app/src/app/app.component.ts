@@ -17,12 +17,10 @@ import { HostListener } from '@angular/core';
         id="backToTop"
         [scrollTo]="'#site-wrapper'"
         [scrollDuration]="500"
-        title="Back to the start"
+        title="Up, up and away!"
       >
         <svg class="icon -lg">
-          <use
-            xlink:href="assets/symbol-defs.svg#icon-chevron-outline-up"
-          ></use>
+          <use xlink:href="assets/symbol-defs.svg#icon-arrow-up"></use>
         </svg>
       </a>
     </div>
