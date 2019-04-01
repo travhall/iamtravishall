@@ -95,7 +95,6 @@
 
   &:hover {
     opacity: 1;
-    // transform: scale(1.15);
     transform: perspective(10em) rotateX(-8deg) translateZ(2em);
   }
 }

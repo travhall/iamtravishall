@@ -66,8 +66,8 @@ $Placeholder-Selectors: ();
   @else {
     appearance: none;
     border: 1px solid transparent;
-    // border-radius: 1px;
-    border-radius: $spacer*2.5;
+    border-radius: 1px;
+    // border-radius: $spacer*2.5;
     display: inline-block;
     font-size: 0.8rem;
     font-weight: 500;
@@ -77,7 +77,6 @@ $Placeholder-Selectors: ();
     padding: ($spacer*.625) $spacer;
     text-align: center;
     text-decoration: none;
-    // text-transform: uppercase;
     transition: background 250ms ease-in-out, transform 150ms ease, color 500ms ease;
     vertical-align: text-bottom;
     white-space: nowrap;

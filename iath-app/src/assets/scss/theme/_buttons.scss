@@ -110,7 +110,12 @@ input[type=button],
   }
 
   &.-borderless {
-    border: transparent;
+    border: 1px solid transparent;
+  }
+
+  &.-disabled {
+    opacity: .6;
+    cursor: not-allowed;
   }
 }
 

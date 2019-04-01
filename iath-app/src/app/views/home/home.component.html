@@ -4,18 +4,14 @@
       <h2>Hello, I'm Travis</h2>
       <h3 class="h4">&hellip; and I enjoy making things for the web.</h3>
       <p>
-        In other words,
-        <em>I specialize in crafting digital experiences that transform user
-          challenges into opportunities</em>
-        &hellip; but you didn't come here to read a bunch of industry jargon,
-        did you?
-      </p>
-      <a routerLink="/about" class="btn -white" title="I'm not as pretentious as I sound, promise!">
+        In other words, <em>I specialize in crafting digital experiences that transform user challenges into
+          opportunities</em> &hellip; but you didn't come here to read a bunch of industry jargon, did you?</p>
+      <a routerLink="/about" class="btn -ghost" title="I'm not as pretentious as I sound, promise!">
         Get to know me<svg class="icon -sm">
           <use xlink:href="assets/symbol-defs.svg#icon-chevron-outline-right"></use>
         </svg>
       </a>
-      <a [scrollTo]="'#intro'" [scrollDuration]="500" class="btn -ghost -borderless"
+      <a [scrollTo]="'#uxexpertise'" [scrollDuration]="500" class="btn -ghost -borderless"
         title="A very particular set of skills.">
         Read More<svg class="icon -sm">
           <use xlink:href="assets/symbol-defs.svg#icon-arrow-down"></use>
@@ -24,29 +20,8 @@
     </div>
   </section>
 
-  <section class="intro" id="intro">
-    <h3>My bad!</h3>
-    <p>
-      You did want to
-      <a class="link-icon" [scrollTo]="'#uxexpertise'" [scrollDuration]="500" title="Keep on keepin' on!">
-        keep reading <svg class="icon -sm">
-          <use xlink:href="assets/symbol-defs.svg#icon-arrow-down"></use>
-        </svg></a></p>
-    <p>In case you had a change of heart, you always have options &hellip;
-    </p>
-    <a routerLink="/about" class="btn -ghost" title="I'm actually a pretty nice guy.">
-      About me<svg class="icon -sm">
-        <use xlink:href="assets/symbol-defs.svg#icon-chevron-outline-right"></use>
-      </svg>
-    </a>
-    <a class="btn -ghost" title="I'm always happy to talk shop!">
-      Say Hello!<svg class="icon -sm">
-        <use xlink:href="assets/symbol-defs.svg#icon-envelope"></use>
-      </svg>
-    </a>
-  </section>
+  <section class="grid -primary">
 
-  <section id="expertise" class="grid -primary">
     <div class="card" id="uxexpertise">
       <svg class="icon -graphic">
         <use xlink:href="assets/symbol-defs.svg#icon-ux-design"></use>
@@ -57,11 +32,10 @@
           I utilize user research, usability principles and user-centric
           interaction design to craft meaningful digital experiences.
         </p>
-        <a class="btn" title="User Experience Design Showcase">Showcase<svg class="icon -sm">
+        <a class="btn -ghost -disabled" title="Coming soon!">Case Studies<svg class="icon -sm">
             <use xlink:href="assets/symbol-defs.svg#icon-chevron-outline-right"></use>
-          </svg>
-        </a>
-        <a class="btn -ghost" [scrollTo]="'#uiexpertise'" [scrollDuration]="500"
+          </svg></a>
+        <a class="btn -ghost -borderless" [scrollTo]="'#uiexpertise'" [scrollDuration]="500"
           title="Front End &amp; UI Development">Continue<svg class="icon -sm">
             <use xlink:href="assets/symbol-defs.svg#icon-arrow-down"></use>
           </svg>
@@ -79,13 +53,11 @@
           I specialize in building scalable, modular user interfaces that
           display consistently and function seamlessly for all devices.
         </p>
-        <a class="btn" title="Front End &amp; UI Development Showcase">Showcase<svg class="icon -sm">
+        <a class="btn -ghost -disabled" title="Coming soon!">Case Studies<svg class="icon -sm">
             <use xlink:href="assets/symbol-defs.svg#icon-chevron-outline-right"></use>
-          </svg>
-        </a>
-        <a class="btn -ghost" [scrollTo]="'#visexpertise'" [scrollDuration]="500"
-          title="Visual &amp; Interaction Design">Continue
-          <svg class="icon -sm">
+          </svg></a>
+        <a class="btn -ghost -borderless" [scrollTo]="'#visexpertise'" [scrollDuration]="500"
+          title="Visual &amp; Interaction Design">Continue<svg class="icon -sm">
             <use xlink:href="assets/symbol-defs.svg#icon-arrow-down"></use>
           </svg>
         </a>
@@ -102,14 +74,17 @@
           My work is built on a solid foundation of visual and interaction
           design, ensuring it makes a lasting impression.
         </p>
-        <a class="btn -ghost" [scrollTo]="'#outro'" [scrollDuration]="500"
-          title="You've come this far, why not?">Continue
-          <svg class="icon -sm">
+        <a class="btn -ghost -disabled" title="Coming soon!">Case Studies<svg class="icon -sm">
+            <use xlink:href="assets/symbol-defs.svg#icon-chevron-outline-right"></use>
+          </svg></a>
+        <a class="btn -ghost -borderless" [scrollTo]="'#outro'" [scrollDuration]="500"
+          title="You've come this far, why not?">Continue<svg class="icon -sm">
             <use xlink:href="assets/symbol-defs.svg#icon-arrow-down"></use>
           </svg>
         </a>
       </div>
     </div>
+
   </section>
 
   <!-- <section class="panel__container" id="projects">
@@ -180,13 +155,16 @@
     </div>
   </section> -->
 
-  <section class="outro panel -arrow" id="outro">
-    <h3>Hello again!</h3>
-    <p>
-      It appears you've reached the end of the line, but fear not, you can still
-      &hellip;
-    </p>
-    <a href="#" class="btn -block">Get to know me better</a>
-    <a href="#" class="btn -block">Check out some work</a>
+  <section class="outro" id="outro">
+    <div class="outro__content">
+      <h2>Hello again!</h2>
+      <p>My bad, you did come here some light reading. Now that we got that out of the way, let's connect and build
+        something together &hellip;</p>
+
+      <a href="mailto:hello@iamtravishall.com?subject=Mail from Our Site" class="display-3"
+        title="I'm always happy to talk shop!">
+        hello@iamtravishall.com
+      </a>
+    </div>
   </section>
 </div>
