@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HostListener } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -53,5 +54,12 @@ export class AppComponent {
     } else if (offSet < expertiseHeight) {
       uxexpertise.classList.remove('active');
     }
+  }
+
+  ngOnInit() {
+    AOS.init({
+      duration: 600,
+      easing: 'ease-in-sine'
+    });
   }
 }
