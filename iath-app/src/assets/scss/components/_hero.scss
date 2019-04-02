@@ -18,7 +18,7 @@
   @include breakpoint("medium") {
     grid-template-columns: 150px 70% 1fr;
     margin: $spacer*.75 0 $spacer*.75 $spacer*.75;
-    grid-template-rows: ($spacer*8) auto ($spacer*6);
+    grid-template-rows: ($spacer*8) auto ($spacer*7);
   }
 
   @include breakpoint("large") {
