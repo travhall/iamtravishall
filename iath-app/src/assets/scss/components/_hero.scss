@@ -16,13 +16,14 @@
   }
 
   @include breakpoint("medium") {
-    grid-template-columns: 120px 70% 2fr;
+    grid-template-columns: 150px 70% 1fr;
     margin: $spacer*.75 0 $spacer*.75 $spacer*.75;
+    grid-template-rows: ($spacer*8) auto ($spacer*6);
   }
 
   @include breakpoint("large") {
     grid-template-columns: 2fr 65% 3fr;
-    grid-template-rows: ($spacer*6) auto ($spacer*8);
+    grid-template-rows: ($spacer*9) auto ($spacer*9);
   }
 
   @include breakpoint("xlarge") {

@@ -4,29 +4,23 @@
 
   .hero {
     &::after {
-      background-image:
-        $linear-grad,
-        url(../src/assets/img/bg-hero-xs.jpg);
+      background-image: $linear-grad, url(../src/assets/img/bg-hero-xs.jpg);
       background-blend-mode: multiply;
 
       @include breakpoint('small') {
-        background-image: $linear-grad,
-          url(../src/assets/img/bg-hero-sm.jpg);
+        background-image: $linear-grad, url(../src/assets/img/bg-hero-sm.jpg);
       }
 
       @include breakpoint('medium') {
-        background-image: $linear-grad,
-          url(../src/assets/img/bg-hero-md.jpg);
+        background-image: $linear-grad, url(../src/assets/img/bg-hero-md.jpg);
       }
 
       @include breakpoint('large') {
-        background-image: $linear-grad,
-          url(../src/assets/img/bg-hero-lg.jpg);
+        background-image: $linear-grad, url(../src/assets/img/bg-hero-lg.jpg);
       }
 
       @include breakpoint('xlarge') {
-        background-image: $linear-grad,
-          url(../src/assets/img/bg-hero-xl.jpg);
+        background-image: $linear-grad, url(../src/assets/img/bg-hero-xl.jpg);
       }
     }
   }
@@ -113,7 +107,7 @@
   }
 
   .outro {
-    background-image: $linear-grad-trans, url(../src/assets/img/bg-hero-xl.jpg);
+    background-image: $linear-grad, url(../src/assets/img/bg-hero-xs.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -122,24 +116,40 @@
     margin: 0 auto;
     height: 90vh;
 
+    @include breakpoint('small') {
+      background-image: $linear-grad, url(../src/assets/img/bg-hero-sm.jpg);
+    }
+
+    @include breakpoint('medium') {
+      background-image: $linear-grad, url(../src/assets/img/bg-hero-md.jpg);
+    }
+
+    @include breakpoint('large') {
+      background-image: $linear-grad, url(../src/assets/img/bg-hero-lg.jpg);
+    }
+
+    @include breakpoint('xlarge') {
+      background-image: $linear-grad, url(../src/assets/img/bg-hero-xl.jpg);
+    }
+
     &__content {
       display: block;
       margin: 0 auto;
       max-width: 35rem;
     }
 
-    // &::after {
-    //   background-color: $black;
-    //   content: '';
-    //   display: block;
-    //   height: $spacer * 8;
-    //   position: absolute;
-    //   bottom: -$spacer*5;
-    //   left: 0;
-    //   right: 0;
-    //   transform: skewY(-3.5deg);
-    //   transform-origin: center center;
-    // }
+    &::after {
+      background-color: $black;
+      content: '';
+      display: block;
+      height: $spacer * 8;
+      position: absolute;
+      bottom: -$spacer*6;
+      left: 0;
+      right: 0;
+      transform: skewY(-3.5deg);
+      transform-origin: center center;
+    }
 
     &::before {
       background-color: $black;
