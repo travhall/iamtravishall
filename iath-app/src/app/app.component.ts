@@ -58,8 +58,8 @@ export class AppComponent {
 
   ngOnInit() {
     AOS.init({
-      duration: 600,
-      easing: 'ease-in-sine'
+      duration: 700,
+      easing: 'ease-out-back'
     });
   }
 }

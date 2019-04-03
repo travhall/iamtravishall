@@ -1,6 +1,5 @@
 .footer {
   grid-area: footer;
-  padding: $spacer;
   text-align: right;
   z-index: map-get($z-index, footer);
 
@@ -28,7 +27,7 @@
   small {
     display: inline-block;
     font-size: 0.75rem;
-    margin: $spacer * 0.5;
+    margin: $spacer ($spacer*.5);
 
     .icon {
       margin: -2px 2px 0 0;

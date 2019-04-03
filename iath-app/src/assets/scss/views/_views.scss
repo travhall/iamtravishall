@@ -4,24 +4,25 @@
 
   .hero {
     &::after {
-      background-image: $linear-grad, url(../src/assets/img/bg-hero-xs.jpg);
+      // background-image: $linear-grad, url(../src/assets/img/bg-hero-xs.jpg);
+      background-image: $linear-grad;
       background-blend-mode: multiply;
 
-      @include breakpoint('small') {
-        background-image: $linear-grad, url(../src/assets/img/bg-hero-sm.jpg);
-      }
+      // @include breakpoint('small') {
+      //   background-image: $linear-grad, url(../src/assets/img/bg-hero-sm.jpg);
+      // }
 
-      @include breakpoint('medium') {
-        background-image: $linear-grad, url(../src/assets/img/bg-hero-md.jpg);
-      }
+      // @include breakpoint('medium') {
+      //   background-image: $linear-grad, url(../src/assets/img/bg-hero-md.jpg);
+      // }
 
-      @include breakpoint('large') {
-        background-image: $linear-grad, url(../src/assets/img/bg-hero-lg.jpg);
-      }
+      // @include breakpoint('large') {
+      //   background-image: $linear-grad, url(../src/assets/img/bg-hero-lg.jpg);
+      // }
 
-      @include breakpoint('xlarge') {
-        background-image: $linear-grad, url(../src/assets/img/bg-hero-xl.jpg);
-      }
+      // @include breakpoint('xlarge') {
+      //   background-image: $linear-grad, url(../src/assets/img/bg-hero-xl.jpg);
+      // }
     }
   }
 
@@ -33,8 +34,8 @@
       'icon'
       'title'
       'paragraph';
-    margin: 50vh 0 50vh;
-    padding: 25vh $spacer*2 $spacer*2;
+    margin: 40vh 0 30vh;
+    padding: 18vh $spacer*2 $spacer*2;
     transition: all 0.65s ease-in-out;
 
     @include breakpoint('small') {
@@ -57,7 +58,7 @@
 
     @include breakpoint('xlarge') {
       grid-column-start: 4;
-      grid-column-end: 9;
+      grid-column-end: 10;
     }
 
     .-graphic {
@@ -84,7 +85,7 @@
       grid-area: paragraph;
     }
 
-    &:nth-child(2) {
+    &:nth-child(even) {
       @include breakpoint('medium') {
         grid-template-areas:
           'title icon'
@@ -113,7 +114,6 @@
     background-size: cover;
     background-blend-mode: multiply;
     padding: 25vh $spacer*2 $spacer*2;
-    margin: 0 auto;
     height: 90vh;
 
     @include breakpoint('small') {

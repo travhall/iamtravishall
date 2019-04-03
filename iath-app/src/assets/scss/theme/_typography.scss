@@ -73,6 +73,11 @@
     color: $white;
     display: inline-block;
 
+    &:hover {
+      color: $gold;
+      transform: scale(1.125);
+    }
+
     &:after {
       background-color: transparent;
     }
