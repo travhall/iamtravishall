@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
         iamtravishall.com | portfolio of UX Designer and UI Developer Travis
         Hall
       </h1>
-      <a routerLink="/" class="logo">
+      <a routerLink="/" class="logo" title="iamtravishall">
         <svg width="100" height="83">
           <use xlink:href="assets/symbol-defs.svg#icon-logo-iath"></use>
         </svg>

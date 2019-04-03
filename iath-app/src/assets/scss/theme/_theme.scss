@@ -31,27 +31,33 @@
       transform: scaleX(1);
     }
   }
+
+  &-icon {
+    background: linear-gradient(to bottom, $gold, $gold);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 0 0;
+    border-radius: 2px;
+    color: $white;
+    line-height: 1;
+    padding: 1px 2px;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out 0s;
+
+    &:hover {
+      background-size: 1px 50px;
+      color: $black;
+      fill: $black;
+    }
+
+    >.icon {
+      margin: 2px;
+    }
+  }
 }
 
 // LINK WITH ICON
-.link-icon {
-  background: linear-gradient(to bottom, $gold, $gold);
-  background-position: 0 100%;
-  background-repeat: repeat-x;
-  background-size: 0 0;
-  border-radius: 2px;
-  color: $white;
-  line-height: 1;
-  padding: 1px 2px;
-  text-decoration: none;
-  transition: all 0.4s ease-in-out 0s;
 
-  &:hover {
-    background-size: 1px 50px;
-    color: $black;
-    fill: $black;
-  }
-}
 
 // ICONS
 .icon {

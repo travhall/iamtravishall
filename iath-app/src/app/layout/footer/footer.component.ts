@@ -4,12 +4,12 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-footer',
   template: `
     <footer
-      data-aos="fade-in"
+      data-aos="fade-up"
       data-aos-delay="100"
       data-aos-duration="800"
       data-aos-anchor-placement="top-bottom"
     >
-      <a routerLink="/" class="logo">
+      <a routerLink="/" class="logo" title="iamtravishall">
         <svg width="84" height="73">
           <use xlink:href="assets/symbol-defs.svg#icon-logo-iath-flag"></use>
         </svg>
