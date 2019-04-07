@@ -22,14 +22,14 @@ $grey-lt: #eee;
 $grey-dk: #7b7b7b;
 
 //GRADIENTS
-$linear-grad: linear-gradient(to bottom left, $primary, $black);
+$linear-grad: linear-gradient(to bottom left, $primary, $gold);
 $linear-grad-trans: linear-gradient(to bottom right, rgba($primary, 0.9), rgba($gold, 0.9));
 $linear-grad-trans-lt: linear-gradient(to bottom right, rgba($primary, 0.75), rgba($gold, 0.75));
 
 $breakpoints: ( // BREAKPOINTS : @include breakpoint("medium") {…}
 'xsmall': (min-width: 25rem), // 400px - Tiny phones
 'small': (min-width: 35rem), // 576px - Small tablets and large smartphones
-'medium': (min-width: 48rem), // 768px - Small tablets
+'medium': (min-width: 47rem), // 752px - Small tablets
 'large': (min-width: 62rem), // 992px - Tablets and small desktops
 'xlarge': (min-width: 75rem), // 1200px - Large tablets and desktops
 'whoa': (min-width: 100rem), // 1600px - Whoa dude that's a pretty big screen
@@ -38,13 +38,14 @@ $breakpoints: ( // BREAKPOINTS : @include breakpoint("medium") {…}
 ) !default;
 
 $z-index: ( // Z-INDEX : z-index: map-get($z-index, modal);
-modal: 500,
+modal: 550,
+mobilenav: 500,
 overlay: 450,
 logo: 400,
 nav: 350,
 header: 300,
 footer: 250,
-main: 200,
+main: 100,
 background: 0) !default;
 
 // SPACER : 18px column gap and vertical spacing

@@ -1,11 +1,8 @@
-header {
-  position: relative;
-}
-
 .header {
-  grid-area: header;
-  width: 100%;
-  z-index: map-get($z-index, header);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
 
   .logo {
     height: 83px;
@@ -28,38 +25,5 @@ header {
       transform-style: preserve-3d;
       transform: perspective(10em) rotateX(-8deg) translateZ(2em);
     }
-  }
-
-  .links {
-    position: absolute;
-    top: $spacer;
-    left: $spacer;
-
-    @include breakpoint('medium') {
-      top: $spacer*1.25;
-      left: auto;
-      right: $spacer*.5;
-    }
-
-    @include breakpoint('large') {
-      top: $spacer*1.75;
-      right: $spacer;
-
-      .email::before {
-        content: 'hello@iamtravishall.com';
-        font-size: .825rem;
-        font-weight: bolder;
-        padding: 0 .45rem 0 .25rem;
-      }
-    }
-
-    // a {
-    //   float: left;
-    //   margin-right: $spacer*.25;
-
-    //   @include breakpoint('medium') {
-    //     margin-left: $spacer*.25;
-    //   }
-    // }
   }
 }

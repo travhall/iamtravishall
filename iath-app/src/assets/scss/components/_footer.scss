@@ -1,5 +1,7 @@
 .footer {
-  grid-area: footer;
+  margin: 0;
+  position: relative;
+  width: 100%;
   text-align: right;
   z-index: map-get($z-index, footer);
 
@@ -18,7 +20,7 @@
       transform: perspective(10em) rotateX(8deg) translateZ(2em);
     }
 
-    @include breakpoint('small') {
+    @include breakpoint('medium') {
       display: block;
     }
   }
@@ -27,10 +29,22 @@
   small {
     display: inline-block;
     font-size: 0.75rem;
-    margin: $spacer ($spacer*.5);
+    margin: $spacer*.5;
 
     .icon {
       margin: -2px 2px 0 0;
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    @include breakpoint('medium') {
+      padding: 0 $spacer;
+
+      li {
+        display: inline;
+      }
     }
   }
 }

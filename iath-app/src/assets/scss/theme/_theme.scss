@@ -7,7 +7,6 @@
   z-index: map-get($z-index, logo);
 }
 
-// LINK WITH UNDERLINE
 .link {
   white-space: nowrap;
 
@@ -34,10 +33,9 @@
 
   &-icon {
     background: linear-gradient(to bottom, $gold, $gold);
-    background-position: 0 100%;
+    background-position: 100%;
     background-repeat: repeat-x;
     background-size: 0 0;
-    border-radius: 2px;
     color: $white;
     line-height: 1;
     padding: 1px 2px;
@@ -49,15 +47,8 @@
       color: $black;
       fill: $black;
     }
-
-    >.icon {
-      margin: 2px;
-    }
   }
 }
-
-// LINK WITH ICON
-
 
 // ICONS
 .icon {

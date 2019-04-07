@@ -1,65 +1,47 @@
 import { Component } from '@angular/core';
-import { HostListener } from '@angular/core';
-import * as AOS from 'aos';
-
+// import { HostListener } from '@angular/core';
+import { RouterTransition } from './router.animations';
 @Component({
   selector: 'app-root',
+  animations: [RouterTransition],
   template: `
-    <div id="site-wrapper">
-      <div [ngClass]="displayMenu" id="site-canvas" class="--root">
-        <app-header class="header"></app-header>
-        <app-nav class="nav"></app-nav>
-        <main class="main"><router-outlet></router-outlet></main>
-        <app-footer class="footer"></app-footer>
-      </div>
-      <!-- <button (click)="toggle()" class="toggle">&#9776;</button> -->
-      <a
-        class="backToTop"
-        id="backToTop"
-        [scrollTo]="'#site-wrapper'"
-        [scrollDuration]="500"
-        title="Up, up and away!"
-      >
-        <svg class="icon -lg">
-          <use xlink:href="assets/symbol-defs.svg#icon-arrow-up"></use>
-        </svg>
-      </a>
-    </div>
+    <app-header></app-header>
+    <app-nav></app-nav>
+    <main class="main" [@routerTransition]="getState(o)">
+      <router-outlet #o="outlet"></router-outlet>
+    </main>
+    <app-footer></app-footer>
+    <a
+      class="backToTop"
+      id="backToTop"
+      [scrollTo]="'#top'"
+      [scrollDuration]="500"
+      title="Back to the top ^"
+    >
+      <svg class="icon -lg">
+        <use xlink:href="assets/symbol-defs.svg#icon-arrow-up"></use>
+      </svg>
+    </a>
   `
 })
 export class AppComponent {
   title = 'iamtravishall.com';
-  displayMenu = 'hide';
-  menuVisible = false;
 
-  toggle() {
-    this.menuVisible = !this.menuVisible;
-    this.displayMenu = this.menuVisible ? 'show' : 'hide';
+  // @HostListener('document:scroll', [])
+  // onWindowScroll() {
+  //   const offSet = window.pageYOffset;
+  //   const heroHeight = document.getElementById('hero').offsetHeight;
+  //   const backBtn = document.getElementById('backToTop');
+  //   if (offSet > heroHeight) {
+  //     backBtn.classList.add('active');
+  //   } else if (offSet < heroHeight) {
+  //     backBtn.classList.remove('active');
+  //   }
+  // }
+
+  getState(outlet) {
+    return outlet.activatedRouteData.state;
   }
 
-  @HostListener('document:scroll', [])
-  onWindowScroll() {
-    const offSet = window.pageYOffset;
-    const heroHeight = document.getElementById('hero').offsetHeight;
-    const expertiseHeight = document.getElementById('uxexpertise').offsetHeight;
-    const uxexpertise = document.getElementById('uxexpertise');
-    const backBtn = document.getElementById('backToTop');
-    if (offSet > heroHeight) {
-      backBtn.classList.add('active');
-    } else if (offSet < heroHeight) {
-      backBtn.classList.remove('active');
-    }
-    if (offSet > expertiseHeight) {
-      uxexpertise.classList.add('active');
-    } else if (offSet < expertiseHeight) {
-      uxexpertise.classList.remove('active');
-    }
-  }
-
-  ngOnInit() {
-    AOS.init({
-      duration: 700,
-      easing: 'ease-out-back'
-    });
-  }
+  ngOnInit() {}
 }

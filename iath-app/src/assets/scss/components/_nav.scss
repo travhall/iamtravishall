@@ -1,79 +1,157 @@
 .nav {
-  display: none;
-  grid-area: nav;
-  position: absolute;
+  position: fixed;
   top: 0;
-  height: 100%;
-  right: -300px;
-  width: 300px;
-  z-index: map-get($z-index, nav);
+  right: 0;
+  left: 0;
+  z-index: map-get($z-index, mobilenav);
 
   @include breakpoint('medium') {
-    position: fixed;
-    top: $spacer*2;
-    right: $spacer*5;
-    width: auto;
+    position: absolute;
+  }
+
+  &__menu {
+    background: $black;
+    padding: $spacer;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: -100vh;
+    right: 0;
+    left: 0;
+    transition: all .5s ease-in-out;
+
+    @include breakpoint('medium') {
+      background: none;
+      position: absolute;
+      top: $spacer*2;
+      right: $spacer*2;
+      bottom: auto;
+      left: auto;
+      height: auto;
+      width: auto;
+    }
+
+    &.open {
+      position: fixed;
+      top: 0;
+
+      @include breakpoint('medium') {
+        position: absolute;
+        top: $spacer*2;
+      }
+    }
   }
 
   &__item {
     color: $white;
-
-    &:hover {
-      color: $gold;
-    }
-  }
-}
-
-.toggle {
-  background: transparent;
-  font-size: 1.25rem;
-  position: absolute;
-  padding: 0;
-  top: $spacer*.75;
-  right: $spacer*.75;
-  z-index: 500;
-
-  &:hover,
-  &:focus {
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    outline: none;
-  }
-
-  @include breakpoint('medium') {
-    display: none;
-  }
-}
-
-#site-wrapper {
-  background-color: $black;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-
-#site-canvas {
-  backface-visibility: hidden;
-  width: 100%;
-  height: 100%;
-  max-height: 100%;
-  padding: 0;
-  position: relative;
-  transform: translateZ(0) translateX(0);
-  transition: 0.3s ease-in all;
-}
-
-#site-canvas {
-  &.hide {
-    transform: translateZ(0) translateX(0);
-  }
-
-  &.show {
-    transform: translateZ(0) translateX(-300px);
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    transition: all .5s ease-in-out;
+    margin: $spacer $spacer 0;
 
     @include breakpoint('medium') {
-      transform: translateZ(0) translateX(0);
+      display: inline;
+      font-size: .8rem;
+      margin: 0 $spacer;
+    }
+  }
+
+  &__toggle {
+    background: transparent;
+    cursor: pointer;
+    width: $spacer;
+    height: $spacer;
+    position: absolute;
+    top: $spacer*1.5;
+    right: $spacer*1.5;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    z-index: 5000000;
+
+    &:focus,
+    &:hover {
+      box-shadow: $primary;
+      outline: $primary;
+    }
+
+    @include breakpoint('medium') {
+      display: none;
+    }
+
+    span {
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 50%;
+      background: $white;
+      opacity: 1;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+
+      &:nth-child(even) {
+        left: 50%;
+      }
+
+      &:nth-child(odd) {
+        left: 0;
+      }
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        top: 0;
+      }
+
+      &:nth-child(3),
+      &:nth-child(4) {
+        top: 7px;
+      }
+
+      &:nth-child(5),
+      &:nth-child(6) {
+        top: 14px;
+      }
+    }
+
+    &.open {
+      span {
+        &:nth-child(1) {
+          transform: rotate(45deg);
+          top: $spacer*.25;
+          left: 0;
+        }
+
+        &:nth-child(2) {
+          transform: rotate(-45deg);
+          left: calc(50% - 2px);
+          top: $spacer*.25;
+        }
+
+        &:nth-child(3) {
+          left: 50%;
+          width: 0;
+          opacity: 0;
+        }
+
+        &:nth-child(4) {
+          right: 50%;
+          width: 0;
+          opacity: 0;
+        }
+
+        &:nth-child(5) {
+          transform: rotate(-45deg);
+          top: $spacer*.625;
+          left: 0;
+        }
+
+        &:nth-child(6) {
+          transform: rotate(45deg);
+          left: calc(50% - 2px);
+          top: $spacer*.625;
+        }
+      }
     }
   }
 }
@@ -83,26 +161,19 @@
   opacity: 0;
   position: fixed;
   right: -$spacer*3;
-  bottom: $spacer*3.5;
+  bottom: $spacer*3;
   transition: all .5s ease-in-out;
+  z-index: 500;
 
   &.active {
     @include breakpoint('medium') {
       opacity: .6;
-      right: $spacer*1.75;
+      // right: $spacer*1.25;
     }
   }
 
   &:hover {
     opacity: 1;
     transform: perspective(10em) rotateX(-8deg) translateZ(2em);
-  }
-}
-
-.pageNav {
-  padding: $spacer 0;
-
-  a {
-    margin: 0 $spacer $spacer 0;
   }
 }

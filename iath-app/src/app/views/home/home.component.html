@@ -1,20 +1,17 @@
 <div class="home">
-  <section class="hero" id="hero">
-    <div class="hero__content">
+
+  <section class="hero" id="hero" data-aos="fade-up" data-aos-duration="450" data-aos-anchor-placement="top-center"
+    data-aos-once="true">
+    <div class="hero__content" data-aos="fade-in" data-aos-delay="50" data-aos-anchor-placement="top-center"
+      data-aos-once="true">
       <h2>Hello, I'm Travis</h2>
       <h3 class="h4">&hellip; and I enjoy making things for the web.</h3>
       <p>
         In other words, <em>I specialize in crafting digital experiences that transform challenges into
           opportunities</em>. However, I'm guessing you didn't come here to read a bunch of industry jargon, now did
         you?</p>
-      <a routerLink="/about" class="btn -ghost" title="I'm not as pretentious as I sound, promise!">
-        Get to know me<svg class="icon -sm">
-          <use xlink:href="assets/symbol-defs.svg#icon-chevron-outline-right"></use>
-        </svg>
-      </a>
-      <a [scrollTo]="'#uxexpertise'" [scrollDuration]="500" class="btn -ghost -borderless"
-        title="A very particular set of skills.">
-        Read More<svg class="icon -sm">
+      <a [scrollTo]="'#uxexpertise'" [scrollDuration]="500" class="btn -ghost" title="A very particular set of skills.">
+        Keep Reading<svg class="icon -sm">
           <use xlink:href="assets/symbol-defs.svg#icon-arrow-down"></use>
         </svg>
       </a>
@@ -23,7 +20,7 @@
 
   <section class="grid -primary">
 
-    <div class="card" id="uxexpertise" data-aos="flip-left" data-aos-anchor-placement="top-center">
+    <div class="card" id="uxexpertise" data-aos="flip-left" data-aos-anchor-placement="top-center" data-aos-once="true">
       <svg class="icon -graphic">
         <use xlink:href="assets/symbol-defs.svg#icon-ux-design"></use>
       </svg>
@@ -44,7 +41,8 @@
       </div>
     </div>
 
-    <div class="card" id="uiexpertise" data-aos="flip-right" data-aos-anchor-placement="top-center">
+    <div class="card" id="uiexpertise" data-aos="flip-right" data-aos-anchor-placement="top-center"
+      data-aos-once="true">
       <svg class="icon -graphic">
         <use xlink:href="assets/symbol-defs.svg#icon-ui-dev"></use>
       </svg>
@@ -65,7 +63,8 @@
       </div>
     </div>
 
-    <div class="card" id="visexpertise" data-aos="flip-left" data-aos-anchor-placement="top-center">
+    <div class="card" id="visexpertise" data-aos="flip-left" data-aos-anchor-placement="top-center"
+      data-aos-once="true">
       <svg class="icon -graphic">
         <use xlink:href="assets/symbol-defs.svg#icon-vis-design"></use>
       </svg>
@@ -156,17 +155,27 @@
     </div>
   </section> -->
 
-  <section class="outro" id="outro" data-aos="flip-up" data-aos-anchor-placement="top-center">
-    <div class="outro__content" data-aos="zoom-in" data-aos-anchor-placement="center-center">
-      <h2>Hello again!</h2>
-      <p>My bad, you did come here some light reading. Now that we got that out of the way, let's connect and build
+  <!-- <section class="outro" id="outro" data-aos="flip-up" data-aos-anchor-placement="top-center" data-aos-once="true">
+    <div class="outro__content" data-aos="zoom-in" data-aos-anchor-placement="center-center" data-aos-once="true">
+      <h2>Oops, my bad!</h2>
+      <p><em>You did come here some light reading.</em> No judgement, reading is cool. Now that we got that out of the
+        way, let's connect and build
         something together &hellip;</p>
 
       <a href="mailto:hello@iamtravishall.com?subject=Hello Travis!" class="display-3"
         title="I'm always happy to talk shop!">
         hello@iamtravishall.com
       </a>
-      <p>&hellip; you've always got options </p>
+      <br>
+      <a routerLink="/about" class="btn -ghost" title="I'm actually a pretty nice guy.">
+        Get to know me<svg class="icon -sm">
+          <use xlink:href="assets/symbol-defs.svg#icon-chevron-outline-right"></use>
+        </svg>
+      </a>
+      <a class="btn -ghost -disabled" title="Coming soon!">Case Studies<svg class="icon -sm">
+          <use xlink:href="assets/symbol-defs.svg#icon-chevron-outline-right"></use>
+        </svg></a>
     </div>
-  </section>
+  </section> -->
+
 </div>

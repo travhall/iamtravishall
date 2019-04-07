@@ -1,0 +1,40 @@
+.resume {
+  .hero {
+    min-height: auto;
+
+    &::before,
+    &::after {
+      background: none;
+    }
+
+    .btn {
+      margin-top: $spacer*2;
+
+      @include breakpoint('medium') {
+        float: right;
+        margin-top: -$spacer*2;
+      }
+    }
+  }
+
+  .card {
+    background: $black;
+  }
+
+  .panel {
+
+    &:nth-child(odd) {
+      background: rgba($white, .025);
+    }
+
+    &__content {
+      margin: $spacer auto;
+      padding: $spacer*4 $spacer;
+      max-width: 80%;
+
+      @include breakpoint('medium') {
+        padding: $spacer*6;
+      }
+    }
+  }
+}

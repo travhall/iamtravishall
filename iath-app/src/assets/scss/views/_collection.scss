@@ -1,0 +1,11 @@
+.collection {
+
+  .hero {
+    min-height: auto;
+
+    &::before,
+    &::after {
+      background: none;
+    }
+  }
+}
