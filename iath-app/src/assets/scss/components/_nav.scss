@@ -1,13 +1,9 @@
 .nav {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   left: 0;
   z-index: map-get($z-index, mobilenav);
-
-  @include breakpoint('medium') {
-    position: absolute;
-  }
 
   &__menu {
     background: $black;
@@ -18,17 +14,22 @@
     top: -100vh;
     right: 0;
     left: 0;
-    transition: all .5s ease-in-out;
+    transition: all .35s ease-in-out;
 
     @include breakpoint('medium') {
       background: none;
       position: absolute;
-      top: $spacer*2;
-      right: $spacer*2;
+      top: $spacer;
+      right: 0;
       bottom: auto;
       left: auto;
       height: auto;
       width: auto;
+    }
+
+    @include breakpoint('large') {
+      top: $spacer*2;
+      right: $spacer;
     }
 
     &.open {
@@ -47,14 +48,39 @@
     display: block;
     font-size: 1.25rem;
     font-weight: 200;
+    margin: 0 $spacer;
+    padding: $spacer 0;
+    text-align: center;
     text-transform: uppercase;
-    transition: all .5s ease-in-out;
-    margin: $spacer $spacer 0;
+    transition: all .4s ease-in-out;
+
+    &:after {
+      background: $white;
+      bottom: 0;
+      content: '';
+      color: transparent;
+      margin: auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 0;
+      height: 1px;
+      transition: all .2s ease-in-out;
+    }
+
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+    }
 
     @include breakpoint('medium') {
       display: inline;
       font-size: .8rem;
-      margin: 0 $spacer;
+    }
+
+    @include breakpoint('large') {
+      font-size: 1rem;
     }
   }
 
@@ -163,12 +189,12 @@
   right: -$spacer*3;
   bottom: $spacer*3;
   transition: all .5s ease-in-out;
-  z-index: 500;
+  z-index: map-get($z-index, mobilenav);
 
   &.active {
     @include breakpoint('medium') {
       opacity: .6;
-      // right: $spacer*1.25;
+      right: $spacer*1.25;
     }
   }
 

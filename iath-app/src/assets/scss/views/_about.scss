@@ -1,0 +1,23 @@
+.about {
+  .panel {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    display: grid;
+    min-height: 100vh;
+    padding: $spacer * 2;
+    position: relative;
+    align-content: center;
+    justify-content: center;
+    transform: skewY(-3.5deg);
+
+    &__content {
+      transform: skewY(3.5deg);
+
+      .btn {
+        margin-top: $spacer;
+      }
+    }
+  }
+}

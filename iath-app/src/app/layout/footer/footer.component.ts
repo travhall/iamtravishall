@@ -15,19 +15,19 @@ import * as AOS from 'aos';
       </a>
 
       <ul>
-        <li>
-          <a
-            href="mailto:hello@iamtravishall.com"
-            class="link-icon"
-            target="_blank"
-            title="Email me at hello@iamtravishall.com"
-          >
-            <svg class="icon -sm">
-              <use xlink:href="assets/symbol-defs.svg#icon-envelope"></use>
-            </svg>
-            hello@iamtravishall.com
-          </a>
-        </li>
+
+      <li>
+        <a
+          href="https://www.linkedin.com/in/travhall/"
+          class="link-icon"
+          target="_blank"
+          title="Find me on Linkedin"
+        >
+          <svg class="icon">
+            <use xlink:href="assets/symbol-defs.svg#icon-linkedin"></use>
+          </svg>
+        </a>
+      </li>
 
         <li>
           <a
@@ -45,21 +45,24 @@ import * as AOS from 'aos';
 
         <li>
           <a
-            href="https://www.linkedin.com/in/travhall/"
+            href="mailto:hello@iamtravishall.com"
             class="link-icon"
             target="_blank"
-            title="Find me on Linkedin"
+            title="Email me at hello@iamtravishall.com"
           >
-            <svg class="icon">
-              <use xlink:href="assets/symbol-defs.svg#icon-linkedin"></use>
+            <svg class="icon -sm">
+              <use xlink:href="assets/symbol-defs.svg#icon-envelope"></use>
             </svg>
+            hello@iamtravishall.com
           </a>
         </li>
+
         <li>
           <small class="copyright">
             &copy;&nbsp;{{ year | date: 'yyyy' }} Travis Hall
           </small>
         </li>
+
       </ul>
     </footer>
   `,

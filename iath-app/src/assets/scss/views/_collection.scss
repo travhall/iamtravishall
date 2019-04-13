@@ -1,11 +1,33 @@
 .collection {
-
   .hero {
+    grid-template-columns: minmax($spacer, 1fr) minmax(50%, 75rem) minmax($spacer, 1fr);
+    grid-template-rows: $spacer*7.5 auto auto;
     min-height: auto;
-
+    @include breakpoint('medium') {
+      grid-template-columns: minmax($spacer*2, 1fr) minmax(50%, 75rem) minmax($spacer*2, 1fr);
+    }
     &::before,
     &::after {
       background: none;
+    }
+  }
+  .card {
+    @include breakpoint('large') {  
+      &.span-2 {
+        grid-column-end: span 2;
+        .card__content {
+          max-width: 50%;
+        }
+      }
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+    &__container {
+      margin-bottom: $spacer*5;
+    }
+    &__content {
+      align-self: end;
     }
   }
 }

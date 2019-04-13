@@ -28,9 +28,3 @@
     }
   }
 }
-
-section {
-  padding: 0 $spacer;
-  position: relative;
-  z-index: map-get($z-index, main);
-}

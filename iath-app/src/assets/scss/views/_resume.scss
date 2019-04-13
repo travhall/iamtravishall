@@ -1,39 +1,77 @@
 .resume {
   .hero {
+    grid-template-columns: minmax($spacer, 1fr) minmax(50%, 75rem) minmax($spacer, 1fr);
+    grid-template-rows: $spacer * 7.5 auto auto;
     min-height: auto;
-
+    @include breakpoint('medium') {
+      grid-template-columns: minmax($spacer*2, 1fr) minmax(50%, 75rem) minmax($spacer*2, 1fr);
+    }
     &::before,
     &::after {
       background: none;
     }
 
     .btn {
-      margin-top: $spacer*2;
+      margin: $spacer * 2 auto 0;
 
-      @include breakpoint('medium') {
+      @include breakpoint("medium") {
         float: right;
-        margin-top: -$spacer*2;
+        margin: -($spacer * 2) ($spacer * 0.5) 0 0;
       }
     }
   }
 
   .card {
-    background: $black;
+    .title {
+      color: $grey;
+      @include breakpoint('medium') {
+        font-size: 1.625rem;
+      }
+    }
+    &__container {
+      @include breakpoint("medium") {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
   }
 
   .panel {
+    display: grid;
+    grid-template-columns: 1fr minmax(80%, 75rem) 1fr;
+    grid-template-areas:
+    ". panel__content .";
 
     &:nth-child(odd) {
-      background: rgba($white, .025);
+      background: rgba($white, 0.025);
     }
 
     &__content {
-      margin: $spacer auto;
-      padding: $spacer*4 $spacer;
-      max-width: 80%;
+      grid-area: panel__content;
+      padding: ($spacer*4) $spacer;
 
-      @include breakpoint('medium') {
-        padding: $spacer*6;
+      ul {
+        list-style: none;
+        padding: 0;
+        li {
+          padding: $spacer * 1.5 0 $spacer * 3;
+        }
+      }
+      small {
+        color: $bronze;
+        display: block;
+        font-style: italic;
+      }
+    }
+    h4 span {
+      color: $bronze;
+      display: inline-block;
+      font-size: 75%;
+      font-style: italic;
+      font-weight: 100;
+
+      @include breakpoint("medium") {
+        display: inline-block;
+        padding-left: $spacer * 2;
       }
     }
   }

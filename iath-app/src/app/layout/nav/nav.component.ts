@@ -43,8 +43,7 @@ import * as AOS from 'aos';
         >
       </div>
     </nav>
-  `,
-  styleUrls: ['./nav.component.scss']
+  `
 })
 export class NavComponent implements OnInit {
   constructor() {}
@@ -54,7 +53,7 @@ export class NavComponent implements OnInit {
   ngOnInit() {
     AOS.init({
       startEvent: 'load',
-      easing: 'ease-in-sine',
+      easing: 'ease-out-sine',
       delay: 200,
       once: true
     });

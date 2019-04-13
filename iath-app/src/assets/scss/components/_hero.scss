@@ -1,7 +1,7 @@
 // HERO
 .hero {
   display: grid;
-  grid-template-columns: 1fr 80% 1fr;
+  grid-template-columns: 1fr minmax(50%, 80%) 1fr;
   grid-template-rows: $spacer*7.5 auto $spacer*7.5;
   grid-template-areas:
     ". . ."
@@ -12,24 +12,8 @@
   padding: 0;
   position: relative;
 
-  @include breakpoint("small") {
-    grid-template-columns: 1fr 75% 1fr;
-  }
-
-  @include breakpoint("medium") {
-    grid-template-columns: 180px 70% 1fr;
-  }
-
-  @include breakpoint("large") {
-    grid-template-columns: 1fr 65% 1fr;
-  }
-
-  @include breakpoint("xlarge") {
-    grid-template-columns: 1fr 60% 1fr;
-  }
-
-  @include breakpoint("whoa") {
-    grid-template-columns: 1fr 50% 1fr;
+  @include breakpoint('large') {
+    grid-template-columns: minmax(180px, 1fr) minmax(40%, 48rem) 1fr;
   }
 
   &__content {
@@ -37,10 +21,6 @@
     grid-area: hero__content;
     position: relative;
     z-index: map-get($z-index, main);
-
-    p {
-      max-width: 48rem;
-    }
   }
 
   &::before {

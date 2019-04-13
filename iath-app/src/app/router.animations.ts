@@ -23,9 +23,9 @@ export const RouterTransition = trigger('routerTransition', [
       query(
         ':enter',
         [
-          style({ transform: 'translateY(200%)', opacity: '0' }),
+          style({ transform: 'translateY(100%)', opacity: '0' }),
           animate(
-            '0.6s ease-out',
+            '0.6s 0.2s ease-out',
             style({ transform: 'translateY(0%)', opacity: '1' })
           )
         ],
@@ -36,7 +36,7 @@ export const RouterTransition = trigger('routerTransition', [
         [
           style({ transform: 'translateY(0%)', opacity: '1' }),
           animate(
-            '0.3s ease-out',
+            '0.5s ease-in-out',
             style({ transform: 'translateY(0%)', opacity: '0' })
           )
         ],
