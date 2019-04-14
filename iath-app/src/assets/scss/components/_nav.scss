@@ -5,8 +5,53 @@
   left: 0;
   z-index: map-get($z-index, mobilenav);
 
+  &__item {
+    color: $white;
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 200;
+    margin: 0 $spacer;
+    padding: $spacer 0;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .4s ease-in-out;
+
+    &:after {
+      @include breakpoint('medium') {
+        background: $white;
+        bottom: 0;
+        content: '';
+        color: transparent;
+        margin: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 0;
+        height: 1px;
+        transition: all .2s ease-in-out;
+      }
+    }
+
+    &:hover {
+      @include breakpoint('medium') {
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+
+    @include breakpoint('medium') {
+      display: inline;
+      font-size: .8rem;
+    }
+
+    @include breakpoint('large') {
+      font-size: 1rem;
+    }
+  }
+
   &__menu {
-    background: $black;
+    background: rgba($black, 0.9);
     padding: $spacer;
     position: absolute;
     height: 100vh;
@@ -40,47 +85,6 @@
         position: absolute;
         top: $spacer*2;
       }
-    }
-  }
-
-  &__item {
-    color: $white;
-    display: block;
-    font-size: 1.25rem;
-    font-weight: 200;
-    margin: 0 $spacer;
-    padding: $spacer 0;
-    text-align: center;
-    text-transform: uppercase;
-    transition: all .4s ease-in-out;
-
-    &:after {
-      background: $white;
-      bottom: 0;
-      content: '';
-      color: transparent;
-      margin: auto;
-      position: absolute;
-      left: 0;
-      right: 0;
-      width: 0;
-      height: 1px;
-      transition: all .2s ease-in-out;
-    }
-
-    &:hover {
-      &:after {
-        width: 100%;
-      }
-    }
-
-    @include breakpoint('medium') {
-      display: inline;
-      font-size: .8rem;
-    }
-
-    @include breakpoint('large') {
-      font-size: 1rem;
     }
   }
 

@@ -11,23 +11,4 @@
       background: none;
     }
   }
-  .card {
-    @include breakpoint('large') {  
-      &.span-2 {
-        grid-column-end: span 2;
-        .card__content {
-          max-width: 50%;
-        }
-      }
-    }
-    &:hover {
-      transform: scale(1.1);
-    }
-    &__container {
-      margin-bottom: $spacer*5;
-    }
-    &__content {
-      align-self: end;
-    }
-  }
 }

@@ -4,13 +4,29 @@
   padding: $spacer * 2;
   transition: all 0.2s ease-in-out;
 
+  @include breakpoint('large') {  
+    &.span-2 {
+      grid-column-end: span 2;
+      .card__content {
+        max-width: 50%;
+      }
+    }
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &__content {
+    align-self: end;
+  }
+
   .title {
     color: $white;
   }
 
   ul {
     padding: 0 0 $spacer;
-
     li {
       list-style: none;
       margin: 0;
@@ -32,12 +48,12 @@
     grid-column-gap: $spacer * 0.5;
     grid-row-gap: $spacer * 0.5;
     max-width: 80rem;
-    margin: 0 auto;
+    margin: 0 auto $spacer*4;
     padding: $spacer;
 
     @include breakpoint('small') {
       padding: $spacer*2;
     }
-    
   }
+  
 }

@@ -1,4 +1,5 @@
 .resume {
+  
   .hero {
     grid-template-columns: minmax($spacer, 1fr) minmax(50%, 75rem) minmax($spacer, 1fr);
     grid-template-rows: $spacer * 7.5 auto auto;
@@ -10,7 +11,6 @@
     &::after {
       background: none;
     }
-
     .btn {
       margin: $spacer * 2 auto 0;
 
@@ -22,6 +22,7 @@
   }
 
   .card {
+    pointer-events: none;
     .title {
       color: $grey;
       @include breakpoint('medium') {
@@ -29,15 +30,19 @@
       }
     }
     &__container {
+      margin-bottom: 0;
       @include breakpoint("medium") {
         grid-template-columns: repeat(3, 1fr);
       }
+    }
+    &__content {
+      align-self: start;
     }
   }
 
   .panel {
     display: grid;
-    grid-template-columns: 1fr minmax(80%, 75rem) 1fr;
+    grid-template-columns: 1fr minmax(80%, 48rem) 1fr;
     grid-template-areas:
     ". panel__content .";
 

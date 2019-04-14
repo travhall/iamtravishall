@@ -61,5 +61,7 @@ export class NavComponent implements OnInit {
 
   menuOpen() {
     this.status = !this.status;
+    document.body.classList.toggle('fixed');
+    // document.getElementById('root').classList.toggle('blurred');
   }
 }

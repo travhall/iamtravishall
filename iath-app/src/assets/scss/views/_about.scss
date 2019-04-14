@@ -1,4 +1,17 @@
 .about {
+  .skill {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      grid-auto-rows: minmax(400px, auto);
+      grid-column-gap: $spacer * 0.5;
+      grid-row-gap: $spacer * 0.5;
+      max-width: 80rem;
+      margin: 0 auto;
+    }
+  }
   .panel {
     background-attachment: fixed;
     background-repeat: no-repeat;

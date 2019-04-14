@@ -15,7 +15,7 @@ export const RouterTransition = trigger('routerTransition', [
         position: 'absolute',
         height: '100%',
         width: '100%',
-        opacity: '0'
+        // opacity: '0'
       }),
       { optional: true }
     ),
@@ -23,9 +23,9 @@ export const RouterTransition = trigger('routerTransition', [
       query(
         ':enter',
         [
-          style({ transform: 'translateY(100%)', opacity: '0' }),
+          style({ transform: 'translateY(100%)', opacity: '1', zIndex: '10' }),
           animate(
-            '0.6s 0.2s ease-out',
+            '0.45s 0.2s ease-out',
             style({ transform: 'translateY(0%)', opacity: '1' })
           )
         ],
@@ -34,10 +34,10 @@ export const RouterTransition = trigger('routerTransition', [
       query(
         ':leave',
         [
-          style({ transform: 'translateY(0%)', opacity: '1' }),
+          style({ transform: 'translateY(0%)', opacity: '1', zIndex: '-10', filter: 'blur(3px)' }),
           animate(
-            '0.5s ease-in-out',
-            style({ transform: 'translateY(0%)', opacity: '0' })
+            '0.35s ease-in-out',
+            style({ transform: 'translateY(-50%)', opacity: '0' })
           )
         ],
         { optional: true }

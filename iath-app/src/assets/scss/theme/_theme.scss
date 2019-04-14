@@ -165,3 +165,17 @@
     display: block;
   }
 }
+
+.fixed {
+  // filter: blur(3px);
+  overflow: hidden;
+  height: 100%;
+  @include breakpoint('medium') {
+    overflow: auto;
+  }
+}
+
+.blurred {
+  filter: blur(5px);
+  transition: transform .5s, filter .5s;
+}
