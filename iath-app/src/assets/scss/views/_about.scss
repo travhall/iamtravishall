@@ -1,23 +1,74 @@
 .about {
   .skill {
-    grid-column-start: 1;
-    grid-column-end: span 2;
+    display: grid;
+    grid-template-areas:
+      "icon"
+      "title"
+      "paragraph";
+    margin: 0 auto;
+    max-width: 42rem;
+    padding: 20vh $spacer;
+
+    [class^="display-"] {
+      grid-area: title;
+    }
+    .-graphic {
+      align-self: center;
+      grid-area: icon;
+      margin: ($spacer * 2) auto;
+      height: 64px;
+      width: 122px;
+
+      @include breakpoint("medium") {
+        margin: 0 $spacer 0 0;
+      }
+
+      @include breakpoint("large") {
+        margin: 0 $spacer * 2 0 0;
+      }
+    }
+    .paragraph {
+      grid-area: paragraph;
+    }
+    @include breakpoint("medium") {
+      grid-template-areas:
+        "icon title"
+        "icon paragraph";
+    }
+
+    &:nth-child(even) {
+      @include breakpoint("medium") {
+        grid-template-areas:
+          "title icon"
+          "paragraph icon";
+        text-align: right;
+
+        [class^="display-"]::after {
+          margin-left: auto;
+        }
+        .-graphic {
+          margin: 0 0 0 $spacer;
+          @include breakpoint("large") {
+            margin: 0 0 0 $spacer * 2;
+          }
+        }
+      }
+    }
+
     &__list {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      grid-auto-rows: minmax(400px, auto);
-      grid-column-gap: $spacer * 0.5;
-      grid-row-gap: $spacer * 0.5;
       max-width: 80rem;
       margin: 0 auto;
     }
   }
-  .panel {
+
+  .testimonials {
     background-attachment: fixed;
+    background-image: $linear-grad;
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: multiply;
     display: grid;
+    margin: $spacer*.75;
     min-height: 100vh;
     padding: $spacer * 2;
     position: relative;

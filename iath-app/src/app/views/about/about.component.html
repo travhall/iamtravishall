@@ -1,5 +1,4 @@
 <div class="about">
-
   <section class="hero" id="hero">
     <div class="hero__content">
       <h2>Hello again!</h2>
@@ -19,20 +18,33 @@
         and
         <a href="https://www.lacek.com/" target="_blank" title="The Lacek Group"
           >The Lacek Group</a
-        >. I've also worked on projects for brands like, Target and General Mills.
+        >. In the past I've worked on projects for brands like Target, General
+        Mills, and even the NBA. I've also lent a hand to agencies like, McCann,
+        Morsekode and playworkgroup.
       </p>
-      <a class="btn -ghost" title="Read more about me">
-        Get to know me<svg class="icon -sm">
+      <a
+        [scrollTo]="'#uxexpertise'"
+        [scrollDuration]="500"
+        class="btn -ghost"
+        title="A very particular set of skills"
+      >
+        Get to know me
+        <svg class="icon -sm">
           <use xlink:href="assets/symbol-defs.svg#icon-arrow-down"></use>
         </svg>
       </a>
     </div>
   </section>
 
-  <!-- <section class="skill__list">
-    <h3>Skills</h3>
-    
-    <div class="skill" id="uxexpertise">
+  <section class="skill__list" id="skills">
+    <div
+      class="skill"
+      id="uxexpertise"
+      data-aos="flip-right"
+      data-aos-duration="250"
+      data-aos-anchor-placement="top-center"
+      data-aos-once="true"
+    >
       <svg class="icon -graphic">
         <use xlink:href="assets/symbol-defs.svg#icon-ux-design"></use>
       </svg>
@@ -42,18 +54,27 @@
           I utilize user research, usability principles and user-centric
           interaction design to craft meaningful digital experiences.
         </p>
-        <a class="btn -ghost -disabled" title="Coming soon!">Case Studies<svg class="icon -sm">
-            <use xlink:href="assets/symbol-defs.svg#icon-chevron-outline-right"></use>
-          </svg></a>
-        <a class="btn -ghost -borderless" [scrollTo]="'#uiexpertise'" [scrollDuration]="500"
-          title="Front End &amp; UI Development">Continue<svg class="icon -sm">
+        <a
+          class="btn -ghost -borderless"
+          [scrollTo]="'#uiexpertise'"
+          [scrollDuration]="500"
+          title="Front End &amp; UI Development"
+          >Continue
+          <svg class="icon -sm">
             <use xlink:href="assets/symbol-defs.svg#icon-arrow-down"></use>
           </svg>
         </a>
       </div>
     </div>
 
-    <div class="skill" id="uiexpertise">
+    <div
+      class="skill"
+      id="uiexpertise"
+      data-aos="flip-left"
+      data-aos-duration="250"
+      data-aos-anchor-placement="top-center"
+      data-aos-once="true"
+    >
       <svg class="icon -graphic">
         <use xlink:href="assets/symbol-defs.svg#icon-ui-dev"></use>
       </svg>
@@ -63,18 +84,27 @@
           I specialize in building scalable, modular user interfaces that
           display consistently and function seamlessly for all devices.
         </p>
-        <a class="btn -ghost -disabled" title="Coming soon!">Case Studies<svg class="icon -sm">
-            <use xlink:href="assets/symbol-defs.svg#icon-chevron-outline-right"></use>
-          </svg></a>
-        <a class="btn -ghost -borderless" [scrollTo]="'#visexpertise'" [scrollDuration]="500"
-          title="Visual &amp; Interaction Design">Continue<svg class="icon -sm">
+        <a
+          class="btn -ghost -borderless"
+          [scrollTo]="'#visexpertise'"
+          [scrollDuration]="500"
+          title="Visual &amp; Interaction Design"
+          >Continue
+          <svg class="icon -sm">
             <use xlink:href="assets/symbol-defs.svg#icon-arrow-down"></use>
           </svg>
         </a>
       </div>
     </div>
 
-    <div class="skill" id="visexpertise">
+    <div
+      class="skill"
+      id="visexpertise"
+      data-aos="flip-right"
+      data-aos-duration="250"
+      data-aos-anchor-placement="top-center"
+      data-aos-once="true"
+    >
       <svg class="icon -graphic">
         <use xlink:href="assets/symbol-defs.svg#icon-vis-design"></use>
       </svg>
@@ -84,19 +114,21 @@
           My work is built on a solid foundation of visual and interaction
           design, ensuring it makes a lasting impression.
         </p>
-        <a class="btn -ghost -disabled" title="Coming soon!">Case Studies<svg class="icon -sm">
-            <use xlink:href="assets/symbol-defs.svg#icon-chevron-outline-right"></use>
-          </svg></a>
-        <a class="btn -ghost -borderless" [scrollTo]="'#outro'" [scrollDuration]="500"
-          title="You've come this far, why not?">Continue<svg class="icon -sm">
+        <a
+          class="btn -ghost -borderless"
+          [scrollTo]="'#process'"
+          [scrollDuration]="500"
+          title="You've come this far, why not?"
+          >Continue
+          <svg class="icon -sm">
             <use xlink:href="assets/symbol-defs.svg#icon-arrow-down"></use>
           </svg>
         </a>
       </div>
     </div>
-  </section> -->
+  </section>
 
-  <!-- <section class="principles">
+  <!-- <section class="principles" id="principles">
     <div class="container">
       <h3>Principles</h3>
       <div class="card__container">
@@ -122,21 +154,21 @@
     </div>
   </section> -->
 
-  <section class="process">
+  <section class="process" id="process">
     <div class="container">
       <h3>Process</h3>
     </div>
   </section>
 
-  <section class="testimonials">
-    <div class="container">
+  <section class="testimonials" id="testimonials">
+    <div class="testimonials__content">
       <h3>Testimonials</h3>
     </div>
   </section>
 
-  <section class="outro">
+  <!-- <section class="outro">
     <div class="container">
       <h3>Outro</h3>
     </div>
-  </section>
+  </section> -->
 </div>

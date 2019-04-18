@@ -3,6 +3,7 @@
   top: 0;
   right: 0;
   left: 0;
+  transition: all 0.35s ease-in-out;
   z-index: map-get($z-index, mobilenav);
 
   &__item {
@@ -10,17 +11,19 @@
     display: block;
     font-size: 1.25rem;
     font-weight: 200;
-    margin: 0 $spacer;
-    padding: $spacer 0;
-    text-align: center;
+    padding: ($spacer*.625) $spacer;
     text-transform: uppercase;
-    transition: all .4s ease-in-out;
 
-    &:after {
-      @include breakpoint('medium') {
+    @include breakpoint("medium") {
+      display: inline;
+      font-size: 0.8rem;
+      margin: 0 $spacer;
+      padding: $spacer 0;
+      text-align: center;
+      &:after {
         background: $white;
         bottom: 0;
-        content: '';
+        content: "";
         color: transparent;
         margin: auto;
         position: absolute;
@@ -28,41 +31,37 @@
         right: 0;
         width: 0;
         height: 1px;
-        transition: all .2s ease-in-out;
+        transition: all 0.2s ease-in-out;
       }
     }
 
+    @include breakpoint("large") {
+      font-size: 1rem;
+    }
+
     &:hover {
-      @include breakpoint('medium') {
+      @include breakpoint("medium") {
         &:after {
           width: 100%;
         }
       }
     }
-
-    @include breakpoint('medium') {
-      display: inline;
-      font-size: .8rem;
-    }
-
-    @include breakpoint('large') {
-      font-size: 1rem;
-    }
   }
 
   &__menu {
-    background: rgba($black, 0.9);
-    padding: $spacer;
+    background: rgba($black, 0.97);
+    padding: ($spacer*4) $spacer;
     position: absolute;
     height: 100vh;
     width: 100vw;
     top: -100vh;
     right: 0;
     left: 0;
-    transition: all .35s ease-in-out;
+    transition: all 0.35s ease-in-out;
 
-    @include breakpoint('medium') {
+    @include breakpoint("medium") {
       background: none;
+      padding: $spacer;
       position: absolute;
       top: $spacer;
       right: 0;
@@ -72,8 +71,8 @@
       width: auto;
     }
 
-    @include breakpoint('large') {
-      top: $spacer*2;
+    @include breakpoint("large") {
+      top: $spacer * 2;
       right: $spacer;
     }
 
@@ -81,9 +80,9 @@
       position: fixed;
       top: 0;
 
-      @include breakpoint('medium') {
+      @include breakpoint("medium") {
         position: absolute;
-        top: $spacer*2;
+        top: $spacer * 2;
       }
     }
   }
@@ -94,10 +93,10 @@
     width: $spacer;
     height: $spacer;
     position: absolute;
-    top: $spacer*1.5;
-    right: $spacer*1.5;
+    top: $spacer * 1.5;
+    right: $spacer * 1.5;
     transform: rotate(0deg);
-    transition: .5s ease-in-out;
+    transition: 0.5s ease-in-out;
     z-index: 5000000;
 
     &:focus,
@@ -106,7 +105,7 @@
       outline: $primary;
     }
 
-    @include breakpoint('medium') {
+    @include breakpoint("medium") {
       display: none;
     }
 
@@ -118,7 +117,7 @@
       background: $white;
       opacity: 1;
       transform: rotate(0deg);
-      transition: .25s ease-in-out;
+      transition: 0.25s ease-in-out;
 
       &:nth-child(even) {
         left: 50%;
@@ -148,14 +147,14 @@
       span {
         &:nth-child(1) {
           transform: rotate(45deg);
-          top: $spacer*.25;
+          top: $spacer * 0.25;
           left: 0;
         }
 
         &:nth-child(2) {
           transform: rotate(-45deg);
           left: calc(50% - 2px);
-          top: $spacer*.25;
+          top: $spacer * 0.25;
         }
 
         &:nth-child(3) {
@@ -172,14 +171,14 @@
 
         &:nth-child(5) {
           transform: rotate(-45deg);
-          top: $spacer*.625;
+          top: $spacer * 0.625;
           left: 0;
         }
 
         &:nth-child(6) {
           transform: rotate(45deg);
           left: calc(50% - 2px);
-          top: $spacer*.625;
+          top: $spacer * 0.625;
         }
       }
     }
@@ -190,15 +189,15 @@
   color: $white;
   opacity: 0;
   position: fixed;
-  right: -$spacer*3;
-  bottom: $spacer*3;
-  transition: all .5s ease-in-out;
+  right: -$spacer * 3;
+  bottom: $spacer * 3;
+  transition: all 0.5s ease-in-out;
   z-index: map-get($z-index, mobilenav);
 
   &.active {
-    @include breakpoint('medium') {
-      opacity: .6;
-      right: $spacer*1.25;
+    @include breakpoint("medium") {
+      opacity: 0.6;
+      right: $spacer * 1.25;
     }
   }
 
