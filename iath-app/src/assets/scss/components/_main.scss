@@ -6,6 +6,7 @@
   z-index: map-get($z-index, main);
 }
 section {
+  margin: 0;
   padding: 0 $spacer;
   position: relative;
   z-index: map-get($z-index, main);

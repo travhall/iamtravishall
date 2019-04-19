@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import * as AOS from 'aos';
+
 @Component({
   selector: 'app-nav',
   template: `
-    <nav class="nav" data-aos="fade-in">
+    <nav class="nav" data-aos="fade-in" data-aos-once="true">
       <div
         class="nav__toggle"
         (click)="menuOpen()"
@@ -50,14 +50,7 @@ export class NavComponent implements OnInit {
 
   status = false;
 
-  ngOnInit() {
-    AOS.init({
-      startEvent: 'load',
-      easing: 'ease-out-sine',
-      delay: 200,
-      once: true
-    });
-  }
+  ngOnInit() {}
 
   menuOpen() {
     this.status = !this.status;

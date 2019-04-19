@@ -11,4 +11,31 @@
       background: none;
     }
   }
+
+  .card {
+    @include breakpoint('medium') {
+      grid-column-end: span 2;
+    }
+    @include breakpoint('large') {
+      grid-column-end: span 3;
+    }
+    @include breakpoint('xlarge') {
+      grid-column-end: span 4;
+    }
+    
+    &__container {
+      @include breakpoint('medium') {
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: $spacer*2;
+        margin-bottom: $spacer*5;
+      }
+      @include breakpoint('large') {
+        grid-template-columns: repeat(6, 1fr);
+        margin-bottom: $spacer*15;
+      }
+      @include breakpoint('xlarge') {
+        grid-template-columns: repeat(8, 1fr);
+      }
+    }
+  }
 }

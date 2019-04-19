@@ -41,6 +41,7 @@
     padding: 1px 2px;
     text-decoration: none;
     transition: all 0.4s ease-in-out 0s;
+    white-space: nowrap;
 
     &:hover {
       background-size: 1px 50px;
@@ -178,3 +179,7 @@
   filter: blur(3px);
   transition: transform .5s, filter .5s;
 }
+
+// @include breakpoint('medium') {
+//   @include scrollbars($spacer*.5, $gold);
+// }

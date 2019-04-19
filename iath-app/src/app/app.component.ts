@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 // import { HostListener } from '@angular/core';
 import { RouterTransition } from './router.animations';
+import * as AOS from 'aos';
+
 @Component({
   selector: 'app-root',
   animations: [RouterTransition],
@@ -43,5 +45,12 @@ export class AppComponent {
     return outlet.activatedRouteData.state;
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    AOS.init({
+      startEvent: 'load',
+      easing: 'ease-in-sine',
+      delay: 200,
+      once: true
+    });
+  }
 }

@@ -1,4 +1,5 @@
 .about {
+  
   .skill {
     display: grid;
     grid-template-areas:
@@ -61,14 +62,14 @@
     }
   }
 
-  .testimonials {
+  .panel {
     background-attachment: fixed;
-    background-image: $linear-grad;
+    background-image: linear-gradient(125deg, shade($primary-lt, 60), $primary);
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: multiply;
     display: grid;
-    margin: $spacer*.75;
+    margin: $spacer*.625;
     min-height: 100vh;
     padding: $spacer * 2;
     position: relative;
@@ -84,4 +85,5 @@
       }
     }
   }
+
 }

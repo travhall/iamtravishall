@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import * as AOS from 'aos';
+
 @Component({
   selector: 'app-footer',
   template: `
     <footer
       class="footer"
       data-aos="fade-up"
-      data-aos-anchor-placement="top-bottom"
+      data-aos-anchor-placement="bottom-bottom"
+      data-aos-once="true"
     >
       <a routerLink="/" class="logo" title="iamtravishall">
         <svg width="84" height="73">
@@ -16,18 +17,18 @@ import * as AOS from 'aos';
 
       <ul>
 
-      <li>
-        <a
-          href="https://www.linkedin.com/in/travhall/"
-          class="link-icon"
-          target="_blank"
-          title="Find me on Linkedin"
-        >
-          <svg class="icon">
-            <use xlink:href="assets/symbol-defs.svg#icon-linkedin"></use>
-          </svg>
-        </a>
-      </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/travhall/"
+            class="link-icon"
+            target="_blank"
+            title="Find me on Linkedin"
+          >
+            <svg class="icon">
+              <use xlink:href="assets/symbol-defs.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
 
         <li>
           <a
@@ -59,7 +60,7 @@ import * as AOS from 'aos';
 
         <li>
           <small class="copyright">
-            &copy;&nbsp;{{ year | date: 'yyyy' }} Travis Hall
+            Website design and content &copy;&nbsp;{{ year | date: 'yyyy' }} Travis Hall.
           </small>
         </li>
 
@@ -73,12 +74,5 @@ export class FooterComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {
-    AOS.init({
-      startEvent: 'load',
-      easing: 'ease-in-sine',
-      delay: 200,
-      once: true
-    });
-  }
+  ngOnInit() {}
 }

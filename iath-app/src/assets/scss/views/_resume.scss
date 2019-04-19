@@ -16,20 +16,15 @@
 
       @include breakpoint("medium") {
         float: right;
-        margin: -($spacer * 2) ($spacer * 0.5) 0 0;
+        margin: -($spacer*2) ($spacer*0.5) 0 0;
       }
     }
   }
 
   .card {
     pointer-events: none;
-    .title {
-      color: $grey;
-      @include breakpoint('medium') {
-        font-size: 1.625rem;
-      }
-    }
     &__container {
+      grid-gap: ($spacer*.5);
       margin-bottom: 0;
       @include breakpoint("medium") {
         grid-template-columns: repeat(3, 1fr);
@@ -37,6 +32,12 @@
     }
     &__content {
       align-self: start;
+    }
+    .title {
+      color: $grey;
+      @include breakpoint('medium') {
+        font-size: 1.625rem;
+      }
     }
   }
 

@@ -20,8 +20,8 @@
       margin: 0 $spacer;
       padding: $spacer 0;
       text-align: center;
-      &:after {
-        background: $white;
+      &::after {
+        background: $gold;
         bottom: 0;
         content: "";
         color: transparent;
@@ -30,20 +30,30 @@
         left: 0;
         right: 0;
         width: 0;
-        height: 1px;
+        height: 2px;
         transition: all 0.2s ease-in-out;
+      }
+      &:hover {
+        &::after {
+          width: 100%;
+        }
       }
     }
 
     @include breakpoint("large") {
       font-size: 1rem;
+      margin: 0 ($spacer*1.25);
     }
 
-    &:hover {
-      @include breakpoint("medium") {
-        &:after {
-          width: 100%;
-        }
+    @include breakpoint("xlarge") {
+      font-size: 1rem;
+      margin: 0 ($spacer*1.5);
+    }
+
+    &.active {
+      &:hover,
+      &::after {
+        width: 30%;
       }
     }
   }
@@ -64,7 +74,7 @@
       padding: $spacer;
       position: absolute;
       top: $spacer;
-      right: 0;
+      right: $spacer*.5;
       bottom: auto;
       left: auto;
       height: auto;
@@ -72,7 +82,7 @@
     }
 
     @include breakpoint("large") {
-      top: $spacer * 2;
+      top: ($spacer*2);
       right: $spacer;
     }
 
@@ -82,7 +92,11 @@
 
       @include breakpoint("medium") {
         position: absolute;
-        top: $spacer * 2;
+        top: $spacer;
+      }
+      @include breakpoint("large") {
+        top: ($spacer*2);
+        right: $spacer;
       }
     }
   }
