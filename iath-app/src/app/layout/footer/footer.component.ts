@@ -5,8 +5,8 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <footer
       class="footer"
-      data-aos="fade-up"
-      data-aos-anchor-placement="bottom-bottom"
+      data-aos="fade-in"
+      data-aos-anchor-placement="top-bottom"
       data-aos-once="true"
     >
       <a routerLink="/" class="logo" title="iamtravishall">
@@ -17,18 +17,31 @@ import { Component, OnInit } from '@angular/core';
 
       <ul>
 
-        <li>
-          <a
-            href="https://www.linkedin.com/in/travhall/"
-            class="link-icon"
-            target="_blank"
-            title="Find me on Linkedin"
-          >
-            <svg class="icon">
-              <use xlink:href="assets/symbol-defs.svg#icon-linkedin"></use>
-            </svg>
-          </a>
-        </li>
+      <li>
+        <a
+          href="https://www.linkedin.com/in/travhall/"
+          class="link-icon"
+          target="_blank"
+          title="Find me on Linkedin"
+        >
+          <svg class="icon">
+            <use xlink:href="assets/symbol-defs.svg#icon-linkedin"></use>
+          </svg>
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="https://www.instagram.com/trebor_hass/"
+          class="link-icon"
+          target="_blank"
+          title="Find me on Instagram"
+        >
+          <svg class="icon">
+            <use xlink:href="assets/symbol-defs.svg#icon-instagram"></use>
+          </svg>
+        </a>
+      </li>
 
         <li>
           <a
@@ -39,8 +52,7 @@ import { Component, OnInit } from '@angular/core';
           >
             <svg class="icon -sm">
               <use xlink:href="assets/symbol-defs.svg#icon-file-pdf"></use>
-            </svg>
-            resum&eacute;
+            </svg> resum&eacute;
           </a>
         </li>
 
@@ -53,8 +65,7 @@ import { Component, OnInit } from '@angular/core';
           >
             <svg class="icon -sm">
               <use xlink:href="assets/symbol-defs.svg#icon-envelope"></use>
-            </svg>
-            hello@iamtravishall.com
+            </svg> hello@iamtravishall.com
           </a>
         </li>
 

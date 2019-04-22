@@ -30,20 +30,27 @@
     display: inline-block;
     font-size: 0.75rem;
     margin: $spacer*.5;
-
-    .icon {
-      margin: -2px 2px 0 0;
-    }
   }
 
   ul {
     list-style: none;
-
     @include breakpoint('medium') {
       padding: 0 $spacer;
-
-      li {
-        display: inline;
+    }
+  }
+  li {
+    display: inline-block;
+    &:nth-child(1),
+    &:nth-child(2) {
+      @include breakpoint('medium') {
+        position: absolute;
+        top: -($spacer*1.75);
+        right: $spacer;
+      }
+    }
+    &:nth-child(1) {
+      @include breakpoint('medium') {
+        right: ($spacer*3);
       }
     }
   }

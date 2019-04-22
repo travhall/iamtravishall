@@ -74,17 +74,10 @@ $Placeholder-Selectors: ();
     url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path style="fill:'+$color+';" d="M0 50l50,50 50,-50 -'+$thickness+', -'+$thickness+' -'+(50-$thickness)+','+(50-$thickness)+' -'+(50-$thickness)+',-'+(50-$thickness)+'z" transform="rotate('+$rotation+' 50 50 )"/></svg>');
 }
 
-
-
 button,
 input[type=button],
 .btn {
   @include button($primary);
-
-  // .icon {
-  //   margin: 0 ($spacer*.125) ($spacer*.125);
-  //   vertical-align: middle;
-  // }
 
   &.-dk {
     @include button($primary-dk);
@@ -188,10 +181,6 @@ input[type=button],
     }
   }
 
-  // >.icon {
-  //   margin: 0 -5px 0 5px;
-  // }
-
   &.-borderless {
     border: 1px solid transparent;
   }
@@ -209,8 +198,8 @@ input[type=button],
   display: inline-block;
   font-size: .5625rem;
   font-weight: 400;
-  margin: 0 $spacer/4 $spacer/4 0;
-  padding: $spacer/4 $spacer/2 $spacer/6;
+  margin: 0 ($spacer*.25) ($spacer*.25) 0;
+  padding: ($spacer*.25) ($spacer*.5);
   text-transform: uppercase;
   vertical-align: bottom;
 
@@ -266,3 +255,7 @@ input[type=button],
     cursor: default;
   }
 }
+
+// a.card:hover {
+//   transform: scale(1.1);
+// }

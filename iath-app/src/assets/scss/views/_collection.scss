@@ -13,28 +13,31 @@
   }
 
   .card {
-    @include breakpoint('medium') {
+    @include breakpoint('small') {
       grid-column-end: span 2;
     }
-    @include breakpoint('large') {
+    @include breakpoint('medium') {
       grid-column-end: span 3;
-    }
-    @include breakpoint('xlarge') {
-      grid-column-end: span 4;
+      &:nth-child(4n+0),
+      &:nth-child(4n+1) {
+        grid-column-end: span 5;
+      }
+      &:last-child(),
+      &:nth-last-child(-n+2) {
+        grid-column-end: span 4;
+      }
     }
     
     &__container {
-      @include breakpoint('medium') {
+      @include breakpoint('small') {
         grid-template-columns: repeat(4, 1fr);
         margin-top: $spacer*2;
         margin-bottom: $spacer*5;
       }
-      @include breakpoint('large') {
-        grid-template-columns: repeat(6, 1fr);
-        margin-bottom: $spacer*15;
-      }
-      @include breakpoint('xlarge') {
+      @include breakpoint('medium') {
         grid-template-columns: repeat(8, 1fr);
+        grid-auto-rows: minmax(70vh, 1fr);
+        margin-bottom: 10vh;
       }
     }
   }

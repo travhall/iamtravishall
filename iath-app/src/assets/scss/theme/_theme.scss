@@ -36,9 +36,10 @@
     background-position: 100%;
     background-repeat: repeat-x;
     background-size: 0 0;
+    border-radius: 2px;
     color: $white;
     line-height: 1;
-    padding: 1px 2px;
+    padding: 3px 2px;
     text-decoration: none;
     transition: all 0.4s ease-in-out 0s;
     white-space: nowrap;
@@ -47,6 +48,9 @@
       background-size: 1px 50px;
       color: $black;
       fill: $black;
+    }
+    .icon {
+      margin: -2px 2px 0 0;
     }
   }
 }

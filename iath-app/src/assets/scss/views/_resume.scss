@@ -24,7 +24,6 @@
   .card {
     pointer-events: none;
     &__container {
-      grid-gap: ($spacer*.5);
       margin-bottom: 0;
       @include breakpoint("medium") {
         grid-template-columns: repeat(3, 1fr);
@@ -32,12 +31,6 @@
     }
     &__content {
       align-self: start;
-    }
-    .title {
-      color: $grey;
-      @include breakpoint('medium') {
-        font-size: 1.625rem;
-      }
     }
   }
 
