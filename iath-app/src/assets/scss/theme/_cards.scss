@@ -1,11 +1,12 @@
 .card {
   background: rgba($white, 0.025);
   display: grid;
+  object-fit: cover;
   padding: $spacer * 2;
   transition: all 0.2s ease-in-out;
-  &:hover {
-    transform: scale(1.1);
-  }
+  // > a:hover {
+  //   transform: scale(1.1);
+  // }
 
   &__content {
     align-self: end;
@@ -18,8 +19,7 @@
     grid-gap: 0.2rem;
     grid-auto-flow: dense;
     max-width: 80rem;
-    margin: 0 auto $spacer*4;
-    padding: $spacer;
+    margin: 0 auto;
 
     @include breakpoint('small') {
       padding: $spacer*2;

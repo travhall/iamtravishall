@@ -9,11 +9,11 @@ import { Component, OnInit } from '@angular/core';
       data-aos-anchor-placement="top-bottom"
       data-aos-once="true"
     >
-      <a routerLink="/" class="logo" title="iamtravishall">
+      <div class="logo">
         <svg width="84" height="73">
           <use xlink:href="assets/symbol-defs.svg#icon-logo-iath-flag"></use>
         </svg>
-      </a>
+      </div>
 
       <ul>
 
@@ -58,7 +58,7 @@ import { Component, OnInit } from '@angular/core';
 
         <li>
           <a
-            href="mailto:hello@iamtravishall.com"
+            href="mailto:hello@iamtravishall.com?subject=Hello Travis!"
             class="link-icon"
             target="_blank"
             title="Email me at hello@iamtravishall.com"

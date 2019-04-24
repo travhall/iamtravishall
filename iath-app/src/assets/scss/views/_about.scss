@@ -1,5 +1,4 @@
 .about {
-  
   .skill {
     display: grid;
     grid-template-areas:
@@ -8,7 +7,7 @@
       "paragraph";
     margin: 0 auto;
     max-width: 42rem;
-    padding: 20vh $spacer;
+    padding: 20vh $spacer 30vh;
 
     [class^="display-"] {
       grid-area: title;
@@ -21,11 +20,11 @@
       width: 122px;
 
       @include breakpoint("medium") {
-        margin: 0 $spacer 0 0;
+        margin-right: $spacer;
       }
 
       @include breakpoint("large") {
-        margin: 0 $spacer * 2 0 0;
+        margin-right: ($spacer*2);
       }
     }
     .paragraph {
@@ -48,9 +47,9 @@
           margin-left: auto;
         }
         .-graphic {
-          margin: 0 0 0 $spacer;
+          margin-left: $spacer;
           @include breakpoint("large") {
-            margin: 0 0 0 $spacer * 2;
+            margin-left: ($spacer*2);
           }
         }
       }
@@ -61,29 +60,4 @@
       margin: 0 auto;
     }
   }
-
-  .panel {
-    background-attachment: fixed;
-    background-image: linear-gradient(125deg, shade($primary-lt, 60), $primary);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode: multiply;
-    display: grid;
-    margin: $spacer*.625;
-    min-height: 100vh;
-    padding: $spacer * 2;
-    position: relative;
-    align-content: center;
-    justify-content: center;
-    transform: skewY(-3.5deg);
-
-    &__content {
-      transform: skewY(3.5deg);
-
-      .btn {
-        margin-top: $spacer;
-      }
-    }
-  }
-
 }

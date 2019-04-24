@@ -14,12 +14,6 @@
     transition: all 0.3s ease-in-out 0s;
     vertical-align: bottom;
 
-    &:hover {
-      fill: $white;
-      transform-style: preserve-3d;
-      transform: perspective(10em) rotateX(8deg) translateZ(2em);
-    }
-
     @include breakpoint('medium') {
       display: block;
     }

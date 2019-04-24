@@ -16,9 +16,9 @@
     background-color: $black;
     content: '';
     display: block;
-    height: $spacer * 8;
+    height: ($spacer*8);
     position: absolute;
-    bottom: -$spacer * 3.5;
+    bottom: -($spacer*3.5);
     left: 0;
     right: 0;
     transform: skewY(-3.5deg);

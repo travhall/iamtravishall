@@ -27,6 +27,17 @@
         grid-column-end: span 4;
       }
     }
+    @include breakpoint('large') {
+      grid-column-end: span 5;
+      &:nth-child(4n+0),
+      &:nth-child(4n+1) {
+        grid-column-end: span 7;
+      }
+      &:last-child(),
+      &:nth-last-child(-n+2) {
+        grid-column-end: span 6;
+      }
+    }
     
     &__container {
       @include breakpoint('small') {
@@ -39,6 +50,14 @@
         grid-auto-rows: minmax(70vh, 1fr);
         margin-bottom: 10vh;
       }
+      @include breakpoint('large') {
+        grid-template-columns: repeat(12, 1fr);
+        margin-bottom: 15vh;
+      }
     }
+
+    // &__content {
+      
+    // }
   }
 }

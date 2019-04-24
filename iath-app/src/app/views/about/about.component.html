@@ -1,10 +1,11 @@
 <div class="about">
   <section class="hero" id="hero">
     <div class="hero__content">
-      <h2>Hello again!</h2>
+      <h2>Hello again</h2>
+      <h3 class="h4">&hellip; like I said, my name is Travis.</h3>
       <p>
-        I'm Travis, a Denver based designer/developer, currently leading a team
-        of very talented designers for
+        I'm a Denver based designer/developer, currently leading user
+        experience for
         <a
           href="https://www.arrow.com"
           target="_blank"
@@ -17,9 +18,7 @@
         and
         <a href="https://www.lacek.com/" target="_blank" title="The Lacek Group"
           >The Lacek Group</a
-        >. In the past I've worked on projects for brands like
-        <em>Target</em> and <em>General Mills</em>. I've also taken my talents
-        to agencies like
+        >. I've also worked with agencies like,
         <a href="http://www.mccannmpls.com/" target="_blank" title="McCann"
           >McCann</a
         >,
@@ -32,7 +31,9 @@
           target="_blank"
           title="playworkgroup"
           >playworkgroup</a
-        >.
+        >. Check out some of my
+        <a routerLink="/collection" routerLinkActive="active">work</a> or keep
+        reading to see what I have to offer.
       </p>
       <a
         [scrollTo]="'#uxexpertise'"
@@ -55,7 +56,6 @@
       data-aos="flip-right"
       data-aos-duration="250"
       data-aos-anchor-placement="top-center"
-      data-aos-once="true"
     >
       <svg class="icon -graphic">
         <use xlink:href="assets/symbol-defs.svg#icon-ux-design"></use>
@@ -63,16 +63,22 @@
       <h4 class="display-1">User Experience Design</h4>
       <div class="paragraph">
         <p>
-          I utilize user research, usability principles and user-centric
+          I rely on user research, usability principles and user-centric
           interaction design to craft meaningful digital experiences.
         </p>
-        <a href="" class="btn -white" title="View Projects">View Projects</a>
+        <a
+          class="btn -white"
+          title="View Projects"
+          routerLink="/collection"
+          routerLinkActive="active"
+          >View Projects</a
+        >
         <a
           class="btn -ghost -borderless"
           [scrollTo]="'#uiexpertise'"
           [scrollDuration]="500"
           title="Front End &amp; UI Development"
-          >Continue
+          >Continue Reading 
           <svg class="icon -sm">
             <use xlink:href="assets/symbol-defs.svg#icon-arrow-down"></use>
           </svg>
@@ -86,24 +92,29 @@
       data-aos="flip-left"
       data-aos-duration="250"
       data-aos-anchor-placement="top-center"
-      data-aos-once="true"
     >
       <svg class="icon -graphic">
         <use xlink:href="assets/symbol-defs.svg#icon-ui-dev"></use>
       </svg>
-      <h4 class="display-1">Front End Development</h4>
+      <h4 class="display-1">Front End and UI Development</h4>
       <div class="paragraph">
         <p>
           I specialize in building scalable, modular user interfaces that
-          display consistently and function seamlessly for all devices.
+          render consistently and function seamlessly for all devices.
         </p>
-        <a href="" class="btn -white" title="View Projects">View Projects</a>
+        <a
+          class="btn -white"
+          title="View Projects"
+          routerLink="/collection"
+          routerLinkActive="active"
+          >View Projects</a
+        >
         <a
           class="btn -ghost -borderless"
           [scrollTo]="'#visexpertise'"
           [scrollDuration]="500"
           title="Visual &amp; Interaction Design"
-          >Continue
+          >Continue Reading 
           <svg class="icon -sm">
             <use xlink:href="assets/symbol-defs.svg#icon-arrow-down"></use>
           </svg>
@@ -117,24 +128,29 @@
       data-aos="flip-right"
       data-aos-duration="250"
       data-aos-anchor-placement="top-center"
-      data-aos-once="true"
     >
       <svg class="icon -graphic">
         <use xlink:href="assets/symbol-defs.svg#icon-vis-design"></use>
       </svg>
-      <h4 class="display-1">Visual &amp; Interaction Design</h4>
+      <h4 class="display-1">Visual and Interaction Design</h4>
       <div class="paragraph">
         <p>
           My work is built on a solid foundation of visual and interaction
           design, ensuring it makes a lasting impression.
         </p>
-        <a href="" class="btn -white" title="View Projects">View Projects</a>
+        <a
+          class="btn -white"
+          title="View Projects"
+          routerLink="/collection"
+          routerLinkActive="active"
+          >View Projects</a
+        >
         <a
           class="btn -ghost -borderless"
-          [scrollTo]="'#process'"
+          [scrollTo]="'#testimonials'"
           [scrollDuration]="500"
           title="You've come this far, why not?"
-          >Continue
+          >Continue Reading 
           <svg class="icon -sm">
             <use xlink:href="assets/symbol-defs.svg#icon-arrow-down"></use>
           </svg>
@@ -144,40 +160,39 @@
   </section>
 
   <section class="testimonials panel" id="testimonials">
-    <div class="panel__content">
+    <div class="panel__content -center">
       <h3>Testimonials</h3>
+      <h4>&hellip; coming soon.</h4>
     </div>
   </section>
 
   <section class="principles" id="principles">
-    <div class="container">
-      <h3>Principles</h3>
-      <div class="card__container">
-        <div class="card">
-          Principle One
-        </div>
-        <div class="card">
-          Principle Two
-        </div>
-        <div class="card">
-          Principle Three
-        </div>
-        <div class="card">
-          Principle Four
-        </div>
-        <div class="card">
-          Principle Five
-        </div>
-        <div class="card">
-          Principle Six
-        </div>
+    <h3 class="-center">Principles</h3>
+    <div class="card__container">
+      <div class="card">
+        Principle One
+      </div>
+      <div class="card">
+        Principle Two
+      </div>
+      <div class="card">
+        Principle Three
+      </div>
+      <div class="card">
+        Principle Four
+      </div>
+      <div class="card">
+        Principle Five
+      </div>
+      <div class="card">
+        Principle Six
       </div>
     </div>
   </section>
 
   <section class="process" id="process">
     <div class="container">
-      <h3>Process</h3>
+      <h3 class="-center">Process</h3>
     </div>
   </section>
 
@@ -186,4 +201,5 @@
       <h3>Outro</h3>
     </div>
   </section>
+
 </div>

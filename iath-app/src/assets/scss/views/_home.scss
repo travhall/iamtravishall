@@ -35,7 +35,7 @@
         padding-bottom: $spacer*5;
       }
       @include breakpoint('large') {
-        margin-bottom: $spacer*15;
+        margin-bottom: 15vh;
       }
     }
   }

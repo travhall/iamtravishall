@@ -33,45 +33,4 @@
       align-self: start;
     }
   }
-
-  .panel {
-    display: grid;
-    grid-template-columns: 1fr minmax(80%, 48rem) 1fr;
-    grid-template-areas:
-    ". panel__content .";
-
-    &:nth-child(odd) {
-      background: rgba($white, 0.025);
-    }
-
-    &__content {
-      grid-area: panel__content;
-      padding: ($spacer*4) $spacer;
-
-      ul {
-        list-style: none;
-        padding: 0;
-        li {
-          padding: $spacer * 1.5 0 $spacer * 3;
-        }
-      }
-      small {
-        color: $bronze;
-        display: block;
-        font-style: italic;
-      }
-    }
-    h4 span {
-      color: $bronze;
-      display: inline-block;
-      font-size: 75%;
-      font-style: italic;
-      font-weight: 100;
-
-      @include breakpoint("medium") {
-        display: inline-block;
-        padding-left: $spacer * 2;
-      }
-    }
-  }
 }

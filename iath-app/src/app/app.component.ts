@@ -48,8 +48,7 @@ export class AppComponent {
   ngOnInit() {
     AOS.init({
       startEvent: 'load',
-      easing: 'ease-in-sine',
-      delay: 200,
+      easing: 'ease-out',
       once: true
     });
   }
