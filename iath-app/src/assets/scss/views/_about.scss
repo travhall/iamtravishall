@@ -60,4 +60,13 @@
       margin: 0 auto;
     }
   }
+
+  // .card {
+  //   &:last-child:nth-child(3n - 1) {
+  //     grid-column-start: 2;
+  //   }
+  //   &:last-child:nth-child(3n - 2) {
+  //     grid-column-start: 4;
+  //   }
+  // }
 }
