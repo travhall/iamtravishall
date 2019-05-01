@@ -4,11 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-nav',
   template: `
     <nav class="nav" data-aos="fade-in" data-aos-once="true">
-      <div
-        class="nav__toggle"
-        (click)="menuOpen()"
-        [ngClass]="status ? 'open' : 'closed'"
-      >
+      <div class="nav__toggle" (click)="menuOpen()" [ngClass]="status ? 'open' : 'closed'">
         <span></span>
         <span></span>
         <span></span>
@@ -16,6 +12,7 @@ import { Component, OnInit } from '@angular/core';
         <span></span>
         <span></span>
       </div>
+
       <div class="nav__menu" [ngClass]="status ? 'open' : 'closed'">
         <a
           routerLink="/collection"
@@ -46,15 +43,14 @@ import { Component, OnInit } from '@angular/core';
   `
 })
 export class NavComponent implements OnInit {
-  constructor() {}
+  constructor() { }
 
   status = false;
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   menuOpen() {
     this.status = !this.status;
     document.body.classList.toggle('fixed');
-    // document.getElementById('root').classList.toggle('blurred');
   }
 }

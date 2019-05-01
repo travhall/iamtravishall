@@ -4,8 +4,7 @@ import {
   query,
   style,
   animate,
-  group,
-  stagger
+  group
 } from '@angular/animations';
 
 export const RouterTransition = trigger('routerTransition', [
@@ -16,7 +15,7 @@ export const RouterTransition = trigger('routerTransition', [
         position: 'absolute',
         height: '100%',
         width: '100%',
-        opacity: '0',
+        opacity: '0'
       }),
       { optional: true }
     ),
@@ -24,9 +23,15 @@ export const RouterTransition = trigger('routerTransition', [
       query(
         ':enter',
         [
-          style({ transform: 'translateY(100%)', opacity: '0', zIndex: '10' }),
-          animate('0.45s ease-out',
-            style({ transform: 'translateY(0%)', opacity: '1' })
+          style({
+            transform: 'translateY(50%)',
+            zIndex: '10'
+          }),
+          animate('0.5s 0.25s ease-out',
+            style({
+              transform: 'translateY(0%)',
+              opacity: '1'
+            })
           )
         ],
         { optional: true }
@@ -34,10 +39,17 @@ export const RouterTransition = trigger('routerTransition', [
       query(
         ':leave',
         [
-          style({ transform: 'translateY(0%)', opacity: '1', zIndex: '-10', filter: 'blur(3px)' }),
-          animate(
-            '0.35s ease-in-out',
-            style({ transform: 'translateY(-100%)', opacity: '0' })
+          style({
+            transform: 'translateY(0%)',
+            opacity: '1',
+            zIndex: '-10',
+            filter: 'blur(3px)'
+          }),
+          animate('0.5s cubic-bezier(.75,.1,.1,.75)',
+            style({
+              transform: 'translateY(-10%)',
+              opacity: '0'
+            })
           )
         ],
         { optional: true }

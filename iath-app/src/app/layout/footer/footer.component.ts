@@ -6,14 +6,14 @@ import { Component, OnInit } from '@angular/core';
     <footer
       class="footer"
       data-aos="fade-in"
-      data-aos-anchor-placement="top-bottom"
-      data-aos-once="true"
+      data-aos-anchor="#main"
+      data-aos-anchor-placement="bottom-bottom"
     >
-      <div class="logo">
+      <a routerLink="/" class="logo" title="iamtravishall">
         <svg width="84" height="73">
           <use xlink:href="assets/symbol-defs.svg#icon-logo-iath-flag"></use>
         </svg>
-      </div>
+      </a>
 
       <ul>
 

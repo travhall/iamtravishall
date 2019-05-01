@@ -9,7 +9,7 @@ import * as AOS from 'aos';
   template: `
     <app-header></app-header>
     <app-nav></app-nav>
-    <main class="main" [@routerTransition]="getState(o)">
+    <main class="main" id="main" [@routerTransition]="getState(o)">
       <router-outlet #o="outlet"></router-outlet>
     </main>
     <app-footer></app-footer>
@@ -29,6 +29,18 @@ import * as AOS from 'aos';
 export class AppComponent {
   title = 'iamtravishall.com';
 
+  ngOnInit() {
+    AOS.init({
+      startEvent: 'load',
+      easing: 'ease-out',
+      once: true
+    });
+  }
+
+  getState(outlet) {
+    return outlet.activatedRouteData.state;
+  }
+
   // @HostListener('document:scroll', [])
   // onWindowScroll() {
   //   const offSet = window.pageYOffset;
@@ -40,16 +52,4 @@ export class AppComponent {
   //     backBtn.classList.remove('active');
   //   }
   // }
-
-  getState(outlet) {
-    return outlet.activatedRouteData.state;
-  }
-
-  ngOnInit() {
-    AOS.init({
-      startEvent: 'load',
-      easing: 'ease-out',
-      once: true
-    });
-  }
 }
