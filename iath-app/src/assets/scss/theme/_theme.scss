@@ -143,8 +143,18 @@
 .panel {
   display: grid;
   grid-template-columns: 1fr minmax(80%, 48rem) 1fr;
+  grid-template-rows: minmax(($spacer*2), 5vh) auto minmax(($spacer*2), 5vh);
   grid-template-areas:
-  ". panel__content .";
+    ". . ."
+    ". panel__content ."
+    ". . .";
+  padding: $spacer;
+  position: relative;
+
+  @include breakpoint('medium') {
+    grid-template-columns: minmax(100px, 1fr) minmax(75%, 48rem)  minmax(100px, 1fr);
+    padding: ($spacer*2);
+  }
 
   &:nth-child(odd) {
     background: rgba($white, 0.025);
@@ -152,21 +162,17 @@
 
   &__content {
     grid-area: panel__content;
-    padding: ($spacer*4) $spacer;
-
-    ul {
-      list-style: none;
-      padding: 0;
-      li {
-        padding: $spacer * 1.5 0 $spacer * 3;
-      }
-    }
+    padding: ($spacer*4) ($spacer*2);
+    position: relative;
     small {
       color: $bronze;
       display: block;
       font-style: italic;
+      padding: $spacer*.25 0;
+
     }
   }
+
   h4 span {
     color: $bronze;
     display: inline-block;
@@ -176,7 +182,7 @@
 
     @include breakpoint("medium") {
       display: inline-block;
-      padding-left: $spacer * 2;
+      padding-left: ($spacer*2);
     }
   }
 
@@ -187,44 +193,25 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: multiply;
-  
-    display: grid;
     grid-template-columns: 1fr minmax(50%, 80%) 1fr;
-    grid-template-rows: $spacer*7.5 auto $spacer*7.5;
-    grid-template-areas:
-      ". . ."
-      ". panel__content ."
-      ". . .";
-    min-height: 90vh;
-    margin: ($spacer*.75);
-    padding: 0;
-    position: relative;
-  
     margin: ($spacer*.625);
-    min-height: 90vh;
-    padding: ($spacer*2);
-    position: relative;
-    align-content: center;
-    justify-content: center;
+    min-height: 100vh;
     transform: skewY(-3.5deg);
-  
-    @include breakpoint('medium') {
-      grid-template-columns: minmax(100px, 1fr) minmax(40%, 48rem)  minmax(100px, 1fr);
-    }
-  
-    @include breakpoint('large') {
-      grid-template-columns: minmax(180px, 1fr) minmax(40%, 48rem) 1fr;
-    }
-  
+
     .panel__content {
       align-self: center;
-      grid-area: panel__content;
-      position: relative;
       z-index: map-get($z-index, main);
       transform: skewY(3.5deg);
-  
       .btn {
         margin-top: $spacer;
+      }
+    }
+  }
+
+  .resume & {
+    &:last-child {
+      li {
+        padding: $spacer 0 ($spacer*3);
       }
     }
   }

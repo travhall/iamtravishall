@@ -30,6 +30,26 @@ hr {
   margin: $spacer*2 auto;
 }
 
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  padding: ($spacer*.5) 0;
+  span {
+    color: $bronze;
+    font-size: 75%;
+    font-style: italic;
+    font-weight: 100;
+  }
+}
+
 ::selection {
   background: $white-shade;
   color: $black;
@@ -100,5 +120,3 @@ button,
 [type="submit"] {
   -webkit-appearance: button;
 }
-
-

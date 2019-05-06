@@ -4,9 +4,6 @@
   object-fit: cover;
   padding: $spacer * 2;
   transition: all 0.2s ease-in-out;
-  // > a:hover {
-  //   transform: scale(1.1);
-  // }
 
   &__content {
     align-self: end;
@@ -20,29 +17,10 @@
     grid-auto-flow: dense;
     max-width: 80rem;
     margin: 0 auto;
-
-    @include breakpoint('small') {
-      padding: $spacer*2;
-    }
+    padding: ($spacer*2);
   }
 
   .title {
     color: $white;
-  }
-  
-  ul {
-    padding: 0 0 $spacer;
-  }  
-  li {
-    list-style: none;
-    margin: 0;
-    padding: $spacer*.5;
-
-    span {
-      color: $bronze;
-      font-size: 75%;
-      font-style: italic;
-      font-weight: 100;
-    }
   }
 }

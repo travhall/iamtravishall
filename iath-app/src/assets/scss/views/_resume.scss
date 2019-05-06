@@ -1,5 +1,5 @@
 .resume {
-  
+
   .hero {
     grid-template-columns: minmax($spacer, 1fr) minmax(50%, 75rem) minmax($spacer, 1fr);
     grid-template-rows: $spacer * 7.5 auto auto;
@@ -16,7 +16,7 @@
 
       @include breakpoint("medium") {
         float: right;
-        margin: -($spacer*2) ($spacer*0.5) 0 0;
+        margin: -($spacer*.5) ($spacer*.5);
       }
     }
   }
