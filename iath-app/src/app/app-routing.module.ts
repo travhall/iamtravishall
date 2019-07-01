@@ -5,6 +5,7 @@ import { AboutComponent } from './views/about/about.component';
 import { ResumeComponent } from './views/resume/resume.component';
 import { CollectionComponent } from './views/collection/collection.component';
 import { NotFoundComponent } from './views/not-found/not-found.component';
+import { Project01Component } from './views/projects/project01/project01.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,11 @@ const routes: Routes = [
     path: 'collection',
     component: CollectionComponent,
     data: { state: 'collection' }
+  },
+  {
+    path: 'project01',
+    component: Project01Component,
+    data: { state: 'project01' }
   },
   {
     path: 'resume',

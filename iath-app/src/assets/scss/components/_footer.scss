@@ -1,9 +1,14 @@
 .footer {
   margin: 0;
+  padding: 0 ($spacer*.5);
   position: relative;
   width: 100%;
-  text-align: right;
   z-index: map-get($z-index, footer);
+
+  @include breakpoint('medium') {
+    padding: 0;
+    text-align: right;
+  }
 
   .logo {
     display: none;
@@ -21,7 +26,10 @@
   small {
     display: inline-block;
     font-size: 0.75rem;
-    margin: $spacer*.5;
+    margin: 0 $spacer*.25;
+    @include breakpoint('medium') {
+      margin: 0 $spacer*.75;
+    }
   }
 
   ul {
@@ -31,9 +39,13 @@
     }
   }
   li {
-    display: inline-block;
+
+    @include breakpoint('medium') {
+      display: inline-block;
+    }
     &:nth-child(1),
     &:nth-child(2) {
+      float: left;
       @include breakpoint('medium') {
         position: absolute;
         top: -($spacer*1.75);
